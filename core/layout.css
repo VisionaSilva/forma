@@ -1,0 +1,129 @@
+/* ==========================================================================
+   Forma Layout — Container, Grid, Section, Flex Utilities
+   ========================================================================== */
+
+/* ---- Container ---- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--content-padding);
+}
+
+.container--wide {
+  max-width: var(--max-width-wide);
+}
+
+/* ---- Section ---- */
+.section {
+  padding-block: var(--section-gap);
+}
+
+.section--sm {
+  padding-block: var(--space-12);
+}
+
+.section--lg {
+  padding-block: var(--space-32);
+}
+
+/* ---- Grid ---- */
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+  .grid--2,
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---- Flex Utilities ---- */
+.flex {
+  display: flex;
+}
+
+.flex--col {
+  flex-direction: column;
+}
+
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
+.flex--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex--gap-sm {
+  gap: var(--space-2);
+}
+
+.flex--gap-md {
+  gap: var(--space-4);
+}
+
+.flex--gap-lg {
+  gap: var(--space-8);
+}
+
+/* ---- Stack (vertical spacing) ---- */
+.stack > * + * {
+  margin-top: var(--space-4);
+}
+
+.stack--sm > * + * {
+  margin-top: var(--space-2);
+}
+
+.stack--lg > * + * {
+  margin-top: var(--space-8);
+}
+
+/* ---- Text alignment ---- */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* ---- Visually hidden (accessible) ---- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forma — Contract-First Design System</title>
+  <link rel="stylesheet" href="../build/forma-dusk.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container flex flex--between">
+      <div class="nav__logo">Forma</div>
+      <div class="nav__links">
+        <a href="#features" class="nav__link">Features</a>
+        <a href="#pricing" class="nav__link">Pricing</a>
+        <a href="#faq" class="nav__link">FAQ</a>
+      </div>
+      <button class="btn btn--primary nav__cta">Get Started</button>
+    </div>
+  </nav>
+
+  <section class="section section--lg">
+    <div class="container">
+      <div class="hero">
+        <div class="hero__content">
+          <div class="hero__eyebrow">Design System</div>
+          <h1 class="hero__title">Build Quality, Not Components</h1>
+          <p class="hero__subtitle">Forma is a contract-first design system. The same components work flawlessly across every theme. One quality bar. Infinite visual directions.</p>
+          <div class="hero__ctas">
+            <button class="btn btn--primary">Start Building</button>
+            <button class="btn btn--secondary">View Docs</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 60px;">
+        <h2 style="font-size: 36px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Why Forma</h2>
+        <p style="font-size: 18px; color: var(--text-secondary); max-width: 500px; margin: 0 auto;">Built on a single principle: website quality should be reproducible.</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-item">
+          <div class="feature-item__icon">🎯</div>
+          <h3 class="feature-item__title">Contract-First</h3>
+          <p class="feature-item__desc">Every theme declares which semantic tokens it supports. No surprises, no broken designs.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item__icon">🔄</div>
+          <h3 class="feature-item__title">Infinite Themes</h3>
+          <p class="feature-item__desc">Same components, same markup. Swap themes without touching HTML or component code.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item__icon">⚡</div>
+          <h3 class="feature-item__title">Ship Fast</h3>
+          <p class="feature-item__desc">No design debates. No component bloat. Three production-ready themes included.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background-color: var(--surface-elevated);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <h2 style="font-size: 36px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Three Themes Included</h2>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="card">
+          <h3 class="card__title">Dusk</h3>
+          <p class="card__description" style="margin-bottom: 12px;">Dark, premium, confident. Purple accent on near-black surfaces. For products that want to feel polished.</p>
+          <div style="display: flex; gap: 8px; padding-top: 12px; border-top: 1px solid var(--border-subtle);">
+            <span style="display: inline-block; width: 20px; height: 20px; background: oklch(0.10 0.020 280); border-radius: 4px;"></span>
+            <span style="display: inline-block; width: 20px; height: 20px; background: oklch(0.72 0.18 300); border-radius: 4px;"></span>
+            <span style="display: inline-block; width: 20px; height: 20px; background: oklch(0.95 0.005 280); border-radius: 4px;"></span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card__title">Graphite</h3>
+          <p class="card__description" style="margin-bottom: 12px;">Minimal, editorial, understated. Monochrome brutalism. For documentation and editorial work.</p>
+          <div style="display: flex; gap: 8px; padding-top: 12px; border-top: 1px solid var(--border-subtle);">
+            <span style="display: inline-block; width: 20px; height: 20px; background: oklch(0.12 0.002 270); border-radius: 4px;"></span>
+            <span style="display: inline-block; width: 20px; height: 20px; background: oklch(0.85 0.005 270); border-radius: 4px;"></span>
+            <span style="display: inline-block; width: 20px; height: 20px; background: oklch(0.93 0.002 270); border-radius: 4px;"></span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card__title">Ivory</h3>
+          <p class="card__description" style="margin-bottom: 12px;">Warm, literary, sophisticated. Cream base with amber accents. For magazines and editorial sites.</p>
+          <div style="display: flex; gap: 8px; padding-top: 12px; border-top: 1px solid var(--border-subtle);">
+            <span style="display: inline-block; width: 20px; height: 20px; background: oklch(0.98 0.008 80); border-radius: 4px;"></span>
+            <span style="display: inline-block; width: 20px; height: 20px; background: oklch(0.45 0.15 80); border-radius: 4px;"></span>
+            <span style="display: inline-block; width: 20px; height: 20px; background: oklch(0.18 0.015 80); border-radius: 4px;"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="pricing">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <h2 style="font-size: 36px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Simple, Transparent Pricing</h2>
+      </div>
+
+      <div class="pricing-cards">
+        <div class="pricing-card">
+          <h3 class="pricing-card__name">Open Source</h3>
+          <div class="pricing-card__price">$0</div>
+          <p class="pricing-card__period">forever</p>
+          <div class="pricing-card__features">
+            <div class="pricing-card__feature">✓ Full source code</div>
+            <div class="pricing-card__feature">✓ MIT license</div>
+            <div class="pricing-card__feature">✓ 3 themes</div>
+            <div class="pricing-card__feature">✓ Community support</div>
+          </div>
+          <button class="btn btn--secondary pricing-card__cta">Get Started</button>
+        </div>
+
+        <div class="pricing-card pricing-card--featured">
+          <h3 class="pricing-card__name">Professional</h3>
+          <div class="pricing-card__price">$199</div>
+          <p class="pricing-card__period">one-time</p>
+          <div class="pricing-card__features">
+            <div class="pricing-card__feature">✓ Everything in Open Source</div>
+            <div class="pricing-card__feature">✓ Custom theme generation</div>
+            <div class="pricing-card__feature">✓ Priority support</div>
+            <div class="pricing-card__feature">✓ Team collaboration</div>
+          </div>
+          <button class="btn btn--primary pricing-card__cta">Get License</button>
+        </div>
+
+        <div class="pricing-card">
+          <h3 class="pricing-card__name">Enterprise</h3>
+          <div class="pricing-card__price">Custom</div>
+          <p class="pricing-card__period">contact us</p>
+          <div class="pricing-card__features">
+            <div class="pricing-card__feature">✓ Everything in Professional</div>
+            <div class="pricing-card__feature">✓ Custom component development</div>
+            <div class="pricing-card__feature">✓ Dedicated support</div>
+            <div class="pricing-card__feature">✓ SLA guarantee</div>
+          </div>
+          <button class="btn btn--secondary pricing-card__cta">Contact Sales</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq" style="background-color: var(--surface-elevated);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <h2 style="font-size: 36px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Frequently Asked Questions</h2>
+      </div>
+
+      <div style="max-width: 700px; margin: 0 auto;">
+        <details class="faq-item">
+          <summary class="faq-trigger">
+            What makes Forma different from other design systems?
+            <span class="faq-icon">▼</span>
+          </summary>
+          <div class="faq-content">
+            Most design systems focus on components. Forma focuses on quality reproducibility. We use semantic tokens and a contract-based approach. The same HTML works in every theme without modification. That's the difference.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-trigger">
+            Do I need to buy a license?
+            <span class="faq-icon">▼</span>
+          </summary>
+          <div class="faq-content">
+            No. Forma is MIT licensed and completely open source. Use it freely in any project, commercial or personal. The Professional license is optional and unlocks custom theme generation and priority support.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-trigger">
+            Can I create my own theme?
+            <span class="faq-icon">▼</span>
+          </summary>
+          <div class="faq-content">
+            Absolutely. Create a new folder in /themes/ with a theme.json file. Define all the semantic color tokens, and run validate.js to ensure it matches the contract. All components will automatically adapt to your new theme.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-trigger">
+            How do I integrate Forma into my project?
+            <span class="faq-icon">▼</span>
+          </summary>
+          <div class="faq-content">
+            Link one of the compiled CSS files (forma-dusk.css, forma-graphite.css, or forma-ivory.css) in your HTML head. Use the semantic class names in your markup. That's it.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-trigger">
+            Is Forma production-ready?
+            <span class="faq-icon">▼</span>
+          </summary>
+          <div class="faq-content">
+            Yes. Forma includes 12 component categories covering all common UI patterns. The three included themes (Dusk, Graphite, Ivory) are production-ready and battle-tested.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="text-align: center;">
+    <div class="container">
+      <h2 style="font-size: 40px; font-weight: 700; margin-bottom: 24px; color: var(--text-primary);">Ready to Build?</h2>
+      <p style="font-size: 18px; color: var(--text-secondary); margin-bottom: 32px; max-width: 500px; margin-left: auto; margin-right: auto;">Start using Forma today. It's free, open source, and designed for teams that value quality.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <button class="btn btn--primary">Get Started</button>
+        <button class="btn btn--secondary">Read Docs</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div>
+          <div class="footer__brand">Forma</div>
+          <p style="color: var(--text-secondary); font-size: 14px; margin: 0;">Contract-first design system for teams that value quality.</p>
+        </div>
+        <div>
+          <div style="font-weight: 600; color: var(--text-primary); margin-bottom: 12px;">Resources</div>
+          <div class="footer__links">
+            <a href="#" class="footer__link">Components</a>
+            <a href="#" class="footer__link">Themes</a>
+            <a href="#" class="footer__link">Documentation</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-weight: 600; color: var(--text-primary); margin-bottom: 12px;">Company</div>
+          <div class="footer__links">
+            <a href="#" class="footer__link">GitHub</a>
+            <a href="#" class="footer__link">Twitter</a>
+            <a href="#" class="footer__link">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 Forma. Built with care.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

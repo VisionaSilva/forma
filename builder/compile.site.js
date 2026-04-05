@@ -26,6 +26,7 @@ const theme = manifest.theme || 'graphite';
 // Read compiled theme CSS
 const themeCSS = fs.readFileSync(path.join(BUILD_DIR, `forma-${theme}.css`), 'utf8');
 const motionCSS = fs.readFileSync(path.join(FORMA_ROOT, 'core', 'motion.css'), 'utf8');
+const blocksCSS = fs.readFileSync(path.join(FORMA_ROOT, 'core', 'blocks.css'), 'utf8');
 
 // Read block HTML
 function readBlock(blockId) {
@@ -183,11 +184,11 @@ function buildPage(pageKey, pageData) {
     : '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">'}
   <style>
 ${themeCSS}
+${blocksCSS}
 ${motionCSS}
 
 /* Token aliases — bridge block tokens to theme tokens */
 :root {
-  --surface-base: var(--surface-primary);
   --surface-card: var(--surface-elevated);
   --radius-xl: ${theme === 'terminal-green' ? '0px' : '1rem'};
   --shadow-glow: 0 0 20px var(--accent-primary, oklch(0.85 0.005 270) / 0.15);

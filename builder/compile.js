@@ -3,7 +3,12 @@
 const fs = require('fs');
 const path = require('path');
 
-const THEMES = ['dusk', 'graphite', 'ivory', 'terminal-green'];
+// Auto-discover themes from themes/ directory
+const THEMES_DIR = path.join(__dirname, '..', 'themes');
+const THEMES = fs.readdirSync(THEMES_DIR).filter(d => 
+  fs.statSync(path.join(THEMES_DIR, d)).isDirectory() && 
+  fs.existsSync(path.join(THEMES_DIR, d, 'theme.json'))
+);
 const PROJECT_ROOT = path.join(__dirname, '..');
 
 console.log('🏗️  Building Forma compiled CSS files...\n');

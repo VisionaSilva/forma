@@ -5,7 +5,7 @@
     "domain": "forma.dev",
     "description": "The constraint engine for agent-built websites"
   },
-  "theme": "terminal-green",
+  "theme": "bone-and-ink",
   "goal": "lead_generation",
   "audience": "developers",
   "traffic": "cold",
@@ -151,11 +151,11 @@
             },
             {
               "name": "MIT",
-              "icon": "\u25c7"
+              "icon": ""
             },
             {
               "name": "OKLCH",
-              "icon": "\u25ce"
+              "icon": ""
             }
           ]
         },
@@ -165,22 +165,22 @@
           "section_eyebrow": "The Three Layers",
           "section_title": "Taste as a hard constraint, not a suggestion",
           "section_subtitle": "Every architectural decision compensates for agent failure modes \u2014 context collapse, state drift, hallucinated markup.",
-          "icon_1": "\ud83d\udcdc",
+          "icon_1": "\u2192",
           "feature_1_title": "Token Contract",
           "feature_1_description": "31 required semantic tokens. If a theme is missing one, the build fails. Not a warning \u2014 a failure. TypeScript for visual systems.",
-          "icon_2": "\ud83e\uddf1",
+          "icon_2": "\u2192",
           "feature_2_title": "Block Library",
           "feature_2_description": "10 pre-built, token-compliant sections. Agents stop writing HTML. They pick blocks, fill content, done. Zero hallucinated class names.",
-          "icon_3": "\ud83d\udccb",
+          "icon_3": "\u2192",
           "feature_3_title": "site.json Manifest",
           "feature_3_description": "Every build decision lives in a structured JSON file. Multi-agent coordination without shared context. State drift is structurally impossible.",
-          "icon_4": "\u2696\ufe0f",
+          "icon_4": "\u2192",
           "feature_4_title": "Forma Judge",
           "feature_4_description": "Built-in validator checks every manifest against the schema and goal-based rules. Missing a CTA? Build fails.",
-          "icon_5": "\ud83e\udd16",
+          "icon_5": "\u2192",
           "feature_5_title": "Multi-Agent Ready",
           "feature_5_description": "The manifest is the coordination layer. Specialist agents work in parallel \u2014 builder, QA, designer \u2014 without shared context.",
-          "icon_6": "\ud83c\udfa8",
+          "icon_6": "\u2192",
           "feature_6_title": "4 Themes",
           "feature_6_description": "Dusk, Graphite, Ivory, Terminal Green. Each with TASTE.md \u2014 design intent as machine-readable rationale. Swap one line, retheme everything."
         },

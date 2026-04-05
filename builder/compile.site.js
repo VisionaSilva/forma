@@ -107,38 +107,31 @@ function injectContent(blockHtml, blockData) {
     if (blockData.section_eyebrow) html = html.replace(/Features/, blockData.section_eyebrow);
     if (blockData.section_title) html = html.replace(/Everything you need to ship faster/, blockData.section_title);
     if (blockData.section_subtitle) html = html.replace(/Composable, accessible, and built with a design-token system that scales with your brand\./, blockData.section_subtitle);
-    // Replace feature items
-    if (blockData.icon_1 && blockData.feature_1_title) {
-      html = html.replace(/⚡/, blockData.icon_1);
-      html = html.replace(/Lightning Fast/, blockData.feature_1_title);
-      html = html.replace(/Zero-dependency HTML partials that load instantly\. No bloat, no build steps required\./, blockData.feature_1_description || '');
-    }
-    if (blockData.icon_2 && blockData.feature_2_title) {
-      html = html.replace(/🎨/, blockData.icon_2);
-      html = html.replace(/Token-Driven Design/, blockData.feature_2_title);
-      html = html.replace(/A unified CSS variable system means your brand flows through every block automatically\./, blockData.feature_2_description || '');
-    }
-    if (blockData.icon_3 && blockData.feature_3_title) {
-      html = html.replace(/♿/, blockData.icon_3);
-      html = html.replace(/Accessible by Default/, blockData.feature_3_title);
-      html = html.replace(/ARIA-compliant markup and semantic HTML out of the box\. Built for everyone\./, blockData.feature_3_description || '');
-    }
-    // Feature items 4-6
-    if (blockData.icon_4 && blockData.feature_4_title) {
-      html = html.replace(/📐/, blockData.icon_4);
-      html = html.replace(/Flexible Layouts/, blockData.feature_4_title);
-      html = html.replace(/Multiple variants per block let you mix and match without writing custom CSS\./, blockData.feature_4_description || '');
-    }
-    if (blockData.icon_5 && blockData.feature_5_title) {
-      html = html.replace(/🔌/, blockData.icon_5);
-      html = html.replace(/Drop-In Ready/, blockData.feature_5_title);
-      html = html.replace(/Works with any stack — plain HTML, React, Vue, Astro, whatever you're building with\./, blockData.feature_5_description || '');
-    }
-    if (blockData.icon_6 && blockData.feature_6_title) {
-      html = html.replace(/🌙/, blockData.icon_6);
-      html = html.replace(/Dark Mode Native/, blockData.feature_6_title);
-      html = html.replace(/CSS token architecture makes dark mode a first-class citizen, not an afterthought\./, blockData.feature_6_description || '');
-    }
+    // Replace feature items — match by default text in block HTML
+    const featureDefaults = [
+      { icon: '→', title: 'Lightning Fast', desc: 'Zero-dependency HTML partials that load instantly. No bloat, no build steps required.' },
+      { icon: '→', title: 'Token-Driven Design', desc: 'A unified CSS variable system means your brand flows through every block automatically.' },
+      { icon: '→', title: 'Accessible by Default', desc: 'ARIA-compliant markup and semantic HTML out of the box. Built for everyone.' },
+      { icon: '→', title: 'Flexible Layouts', desc: 'Multiple variants per block let you mix and match without writing custom CSS.' },
+      { icon: '→', title: 'Drop-In Ready', desc: 'Works with any stack — plain HTML, React, Vue, Astro, whatever you\'re building with.' },
+      { icon: '→', title: 'Dark Mode Native', desc: 'CSS token architecture makes dark mode a first-class citizen, not an afterthought.' },
+    ];
+    featureDefaults.forEach((defaults, i) => {
+      const idx = i + 1;
+      const newTitle = blockData[`feature_${idx}_title`];
+      const newDesc = blockData[`feature_${idx}_description`];
+      const newIcon = blockData[`icon_${idx}`];
+      if (newTitle) {
+        html = html.replace(new RegExp(defaults.title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')), newTitle);
+      }
+      if (newDesc) {
+        html = html.replace(new RegExp(defaults.desc.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')), newDesc);
+      }
+      if (newIcon != null) {
+        // Replace the icon in the corresponding feature-icon div (nth occurrence)
+        html = html.replace(defaults.icon, newIcon || '');
+      }
+    });
   }
 
   // Testimonials
@@ -231,6 +224,8 @@ function buildPage(pageKey, pageData) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   ${theme === 'terminal-green' 
     ? '<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">'
+    : theme === 'bone-and-ink'
+    ? '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">'
     : '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">'}
   <style>
 ${themeCSS}
@@ -240,9 +235,9 @@ ${motionCSS}
 /* Token aliases — bridge block tokens to theme tokens */
 :root {
   --surface-card: var(--surface-elevated);
-  --radius-xl: ${theme === 'terminal-green' ? '0px' : '1rem'};
-  --shadow-glow: 0 0 20px var(--accent-primary, oklch(0.85 0.005 270) / 0.15);
-  --shadow-lg: 0 8px 32px oklch(0 0 0 / 0.4);
+  --radius-xl: ${theme === 'terminal-green' || theme === 'bone-and-ink' ? '0px' : '1rem'};
+  --shadow-glow: ${theme === 'bone-and-ink' ? 'none' : '0 0 20px var(--accent-primary, oklch(0.85 0.005 270) / 0.15)'};
+  --shadow-lg: ${theme === 'bone-and-ink' ? 'none' : '0 8px 32px oklch(0 0 0 / 0.4)'};
   ${theme === 'terminal-green' ? `
   --font-sans: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
   --radius-sm: 0px;
@@ -250,6 +245,12 @@ ${motionCSS}
   --radius-lg: 0px;
   --radius-full: 9999px;
   font-size: 14px;
+  ` : theme === 'bone-and-ink' ? `
+  --font-sans: 'Inter', 'Helvetica Neue', Helvetica, sans-serif;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-full: 9999px;
   ` : ''}
 }
 

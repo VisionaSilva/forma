@@ -191,6 +191,10 @@ function injectContent(blockHtml, blockData) {
       html = html.replace(/Start Building Free/, blockData.cta_primary_text);
       html = html.replace(/href="\/signup"/g, `href="${blockData.cta_primary_href || '/contact'}"`);
     }
+    if (blockData.cta_secondary_text) {
+      html = html.replace(/Read the Docs/, blockData.cta_secondary_text);
+      html = html.replace(/href="\/docs"/, `href="${blockData.cta_secondary_href || '#'}"`);
+    }
   }
 
   // Footer

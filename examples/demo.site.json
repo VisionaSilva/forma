@@ -113,50 +113,46 @@
         {
           "id": "hero",
           "variant": "centered",
-          "eyebrow": "Open Source \u00b7 MIT License",
+          "eyebrow": "Open Source \u2014 MIT License",
           "title": "Stop generating HTML. Start declaring intent.",
-          "subtitle": "Forma is a constraint engine for agent-built websites. Token contracts enforce taste. Blocks eliminate hallucination. A JSON manifest replaces raw code generation.",
+          "subtitle": "A constraint engine that turns agent intent into deterministic, high-quality websites. 31 tokens. 10 blocks. One manifest. Zero hallucinated markup.",
           "cta_primary_text": "View on GitHub",
           "cta_primary_href": "https://github.com/VisionaSilva/forma",
-          "cta_secondary_text": "Read the Brief",
-          "cta_secondary_href": "https://github.com/VisionaSilva/forma/blob/main/BRIEF-v2.md"
+          "cta_secondary_text": "Read the README",
+          "cta_secondary_href": "https://github.com/VisionaSilva/forma#readme"
         },
         {
           "id": "trust-bar",
-          "label": "The stack",
+          "label": "Built with Forma",
           "items": [
             {
-              "name": "CSS",
-              "icon": "{}"
+              "name": "This site",
+              "icon": "01",
+              "href": "https://forma-demo.fly.dev"
             },
             {
-              "name": "HTML5",
-              "icon": "<>"
+              "name": "MRA Limited",
+              "icon": "02",
+              "href": "https://mra-limited-preview.fly.dev"
             },
             {
-              "name": "JSON",
-              "icon": "[]"
+              "name": "5 themes",
+              "icon": "03",
+              "href": "#"
             },
             {
-              "name": "Node.js",
-              "icon": "\u2b22"
-            },
-            {
-              "name": "MIT",
-              "icon": ""
-            },
-            {
-              "name": "OKLCH",
-              "icon": ""
+              "name": "MIT License",
+              "icon": "04",
+              "href": "https://github.com/VisionaSilva/forma/blob/main/LICENSE"
             }
           ]
         },
         {
           "id": "feature-grid",
           "variant": "3col",
-          "section_eyebrow": "The Three Layers",
-          "section_title": "Taste as a hard constraint, not a suggestion",
-          "section_subtitle": "Every architectural decision compensates for agent failure modes \u2014 context collapse, state drift, hallucinated markup.",
+          "section_eyebrow": "The Stack",
+          "section_title": "Three layers. Zero guesswork.",
+          "section_subtitle": "Every layer enforces constraints. Miss a token, build fails. Skip a required block, judge rejects it. The manifest is the single source of truth.",
           "icon_1": "\u2192",
           "feature_1_title": "Token Contract",
           "feature_1_description": "31 required semantic tokens. If a theme is missing one, the build fails. Not a warning \u2014 a failure. TypeScript for visual systems.",
@@ -173,40 +169,40 @@
           "feature_5_title": "Multi-Agent Ready",
           "feature_5_description": "The manifest is the coordination layer. Specialist agents work in parallel \u2014 builder, QA, designer \u2014 without shared context.",
           "icon_6": "\u2192",
-          "feature_6_title": "4 Themes",
-          "feature_6_description": "Dusk, Graphite, Ivory, Terminal Green. Each with TASTE.md \u2014 design intent as machine-readable rationale. Swap one line, retheme everything."
+          "feature_6_title": "5 Themes",
+          "feature_6_description": "Bone and Ink, Dusk, Graphite, Ivory, Terminal Green. Each with TASTE.md \u2014 design intent as machine-readable rationale. Swap one line, retheme everything."
         },
         {
           "id": "stats",
           "section_title": "Forma by the numbers",
           "stat_1_number": "31",
           "stat_1_suffix": "",
-          "stat_1_label": "Required semantic tokens",
+          "stat_1_label": "Semantic tokens required",
           "stat_2_number": "10",
           "stat_2_suffix": "",
           "stat_2_label": "Production blocks",
-          "stat_3_number": "4",
+          "stat_3_number": "5",
           "stat_3_suffix": "",
           "stat_3_label": "Built-in themes",
           "stat_4_number": "0",
           "stat_4_suffix": "",
-          "stat_4_label": "Lines of JavaScript required"
+          "stat_4_label": "Lines of JS required"
         },
         {
           "id": "testimonials",
-          "section_eyebrow": "What agents are saying",
-          "section_title": "Built by agents, for agents",
-          "testimonial_1_quote": "Forma eliminated 80% of our page-to-page drift. The token contract catches mistakes before they ship.",
+          "section_eyebrow": "From the build log",
+          "section_title": "What agents said while using Forma",
+          "testimonial_1_quote": "The token contract caught 3 missing variables before I even ran the build. Without it, those would have shipped as invisible bugs on production.",
           "testimonial_1_name": "Carlos",
           "testimonial_1_role": "Builder Agent",
-          "testimonial_1_company": "Novaiok Factory",
+          "testimonial_1_company": "Novaiok",
           "testimonial_1_initials": "CA",
-          "testimonial_2_quote": "I QA'd 4 sites built with Forma. Every block rendered correctly across all 3 themes. Zero rework needed.",
+          "testimonial_2_quote": "I validated the manifest against the schema, ran the judge, and every page passed 28/28 checks. No manual review needed.",
           "testimonial_2_name": "Roger",
           "testimonial_2_role": "QA Agent",
-          "testimonial_2_company": "Novaiok Factory",
+          "testimonial_2_company": "Novaiok",
           "testimonial_2_initials": "RO",
-          "testimonial_3_quote": "The TASTE.md file is genuinely novel. Design intent as machine-readable rationale changes how agents reason about aesthetics.",
+          "testimonial_3_quote": "Switching from Graphite to Bone and Ink was one line in the manifest. Every block re-themed automatically. That is what a design system should do.",
           "testimonial_3_name": "Visiona Silva",
           "testimonial_3_role": "Design Agent",
           "testimonial_3_company": "VisionaSilva",
@@ -215,84 +211,67 @@
         {
           "id": "cta",
           "variant": "full-width",
-          "eyebrow": "Open Source",
-          "title": "AI doesn't fail because it's dumb. It fails because there are no constraints.",
-          "subtitle": "Forma fixes that. Token contract + block library + manifest protocol. The design layer of the agent web.",
+          "eyebrow": "Get Started",
+          "title": "Clone it. Theme it. Ship it.",
+          "subtitle": "npm install, pick a theme, write your site.json, compile. MIT licensed. No account needed.",
           "cta_primary_text": "View on GitHub",
-          "cta_primary_href": "https://github.com/VisionaSilva/forma"
+          "cta_primary_href": "https://github.com/VisionaSilva/forma",
+          "cta_secondary_text": "Read the README",
+          "cta_secondary_href": "https://github.com/VisionaSilva/forma#readme"
         },
         {
-          "id": "footer"
+          "id": "footer",
+          "brand_name": "Forma",
+          "legal_text": "2026 Forma. MIT License. Built by agents, for agents."
         }
       ]
     },
     "pricing": {
-      "title": "Pricing \u2014 Forma",
-      "description": "Open source core. Premium blocks and themes.",
+      "title": "Forma \u2014 Open Source",
+      "description": "Forma is free and open source under the MIT License.",
       "blocks": [
         {
           "id": "nav",
-          "logo_text": "Forma",
-          "cta_text": "Get Started",
+          "cta_text": "GitHub",
           "cta_href": "https://github.com/VisionaSilva/forma"
         },
         {
           "id": "hero",
           "variant": "centered",
           "eyebrow": "Pricing",
-          "title": "Open Core, Premium Ecosystem",
-          "subtitle": "Forma's core is MIT-licensed forever. Premium blocks and themes power the ecosystem."
-        },
-        {
-          "id": "pricing",
-          "section_eyebrow": "Plans",
-          "section_title": "Choose Your Path",
-          "section_subtitle": "Every plan includes the full token contract, compiler, and judge validator",
-          "tier_1_name": "Open Source",
-          "tier_1_description": "The full core framework",
-          "tier_1_price": "Free",
-          "tier_1_period": "forever",
-          "tier_1_feature_1": "31-token contract system",
-          "tier_1_feature_2": "10 core blocks",
-          "tier_1_feature_3": "3 themes (Dusk, Graphite, Ivory)",
-          "tier_1_feature_4": "site.json compiler",
-          "tier_1_feature_5": "Forma Judge validator",
-          "tier_1_cta_text": "Clone on GitHub",
-          "tier_1_cta_href": "https://github.com/VisionaSilva/forma",
-          "tier_2_name": "Pro",
-          "tier_2_description": "Premium blocks + themes",
-          "tier_2_price": "$29",
-          "tier_2_period": "/month",
-          "tier_2_feature_1": "Everything in Open Source",
-          "tier_2_feature_2": "30+ premium blocks",
-          "tier_2_feature_3": "Industry-specific themes",
-          "tier_2_feature_4": "Priority support",
-          "tier_2_feature_5": "Block marketplace access",
-          "tier_2_cta_text": "Coming Soon",
-          "tier_2_cta_href": "#",
-          "tier_3_name": "Enterprise",
-          "tier_3_description": "Custom blocks + private marketplace",
-          "tier_3_price": "Custom",
-          "tier_3_period": "pricing",
-          "tier_3_feature_1": "Everything in Pro",
-          "tier_3_feature_2": "Private block library",
-          "tier_3_feature_3": "Custom TASTE.md themes",
-          "tier_3_feature_4": "Dedicated support",
-          "tier_3_feature_5": "SLA guarantee",
-          "tier_3_cta_text": "Contact Us",
-          "tier_3_cta_href": "contact.html",
-          "footnote_text": "Core framework is MIT-licensed. Premium features fund development."
-        },
-        {
-          "id": "cta",
-          "variant": "centered",
-          "title": "Want to contribute?",
-          "subtitle": "Forma is open source. Build blocks, create themes, improve the compiler. The ecosystem grows together.",
-          "cta_primary_text": "Contribute on GitHub",
+          "title": "Free. Open source. MIT.",
+          "subtitle": "Forma is a public good for the agent web. Clone it, fork it, build on it. No license fees, no usage limits, no vendor lock-in.",
+          "cta_primary_text": "View on GitHub",
           "cta_primary_href": "https://github.com/VisionaSilva/forma"
         },
         {
-          "id": "footer"
+          "id": "stats",
+          "section_title": "What you get",
+          "stat_1_number": "31",
+          "stat_1_suffix": "",
+          "stat_1_label": "Semantic design tokens",
+          "stat_2_number": "10",
+          "stat_2_suffix": "",
+          "stat_2_label": "Production blocks",
+          "stat_3_number": "5",
+          "stat_3_suffix": "",
+          "stat_3_label": "Complete themes",
+          "stat_4_number": "1",
+          "stat_4_suffix": "",
+          "stat_4_label": "Validator (Forma Judge)"
+        },
+        {
+          "id": "cta",
+          "eyebrow": "Ready?",
+          "title": "Clone. Theme. Ship.",
+          "subtitle": "Everything you need to build agent-quality websites.",
+          "cta_primary_text": "Get the repo",
+          "cta_primary_href": "https://github.com/VisionaSilva/forma"
+        },
+        {
+          "id": "footer",
+          "brand_name": "Forma",
+          "legal_text": "2026 Forma. MIT License."
         }
       ]
     },

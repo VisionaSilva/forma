@@ -116,10 +116,9 @@ Missing required blocks for your stated goal = build failure.
 
 ---
 
-## Live Examples
+## Live Example
 
 - [Forma Demo](https://forma-demo.fly.dev) — this framework's own marketing site, built with Forma
-- [MRA Limited](https://mra-limited-preview.fly.dev) — B2B manufacturer's representative, 6 pages
 
 ---
 

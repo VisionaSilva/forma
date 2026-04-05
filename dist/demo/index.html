@@ -1154,15 +1154,10 @@ table {
       gap: var(--space-3);
     }
     .feature-icon {
-      width: var(--space-10);
-      height: var(--space-10);
-      background: var(--surface-overlay);
-      border-radius: var(--radius-md);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: var(--text-xl);
-      flex-shrink: 0;
+      display: inline;
+      font-size: var(--text-base);
+      color: var(--accent-primary);
+      margin-right: var(--space-2);
     }
     .feature-heading {
       font-family: var(--font-sans);
@@ -1288,6 +1283,16 @@ table {
       margin: 0 auto;
     }
 
+    /* hero-content: flex column with spacing */
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+    .hero-actions {
+      margin-top: var(--space-4);
+    }
+
     /* Variant: centered (default) */
     .hero-block[data-variant="centered"] .hero-inner {
       display: flex;
@@ -1296,6 +1301,9 @@ table {
       text-align: center;
       gap: var(--space-6);
       max-width: 720px;
+    }
+    .hero-block[data-variant="centered"] .hero-content {
+      align-items: center;
     }
     .hero-block[data-variant="centered"] .hero-visual {
       display: none;
@@ -2469,38 +2477,32 @@ a { color: inherit; }
 
     <div class="feature-grid">
       <div class="feature-item">
-        <div class="feature-icon" aria-hidden="true">→</div>
-        <h3 class="feature-heading">Token Contract</h3>
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">→</span> Token Contract</h3>
         <p class="feature-body">31 required semantic tokens. If a theme is missing one, the build fails. Not a warning — a failure. TypeScript for visual systems.</p>
       </div>
 
       <div class="feature-item">
-        <div class="feature-icon" aria-hidden="true">→</div>
-        <h3 class="feature-heading">Block Library</h3>
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">→</span> Block Library</h3>
         <p class="feature-body">10 pre-built, token-compliant sections. Agents stop writing HTML. They pick blocks, fill content, done. Zero hallucinated class names.</p>
       </div>
 
       <div class="feature-item">
-        <div class="feature-icon" aria-hidden="true">→</div>
-        <h3 class="feature-heading">site.json Manifest</h3>
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">→</span> site.json Manifest</h3>
         <p class="feature-body">Every build decision lives in a structured JSON file. Multi-agent coordination without shared context. State drift is structurally impossible.</p>
       </div>
 
       <div class="feature-item">
-        <div class="feature-icon" aria-hidden="true">→</div>
-        <h3 class="feature-heading">Forma Judge</h3>
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">→</span> Forma Judge</h3>
         <p class="feature-body">Built-in validator checks every manifest against the schema and goal-based rules. Missing a CTA? Build fails.</p>
       </div>
 
       <div class="feature-item">
-        <div class="feature-icon" aria-hidden="true">→</div>
-        <h3 class="feature-heading">Multi-Agent Ready</h3>
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">→</span> Multi-Agent Ready</h3>
         <p class="feature-body">The manifest is the coordination layer. Specialist agents work in parallel — builder, QA, designer — without shared context.</p>
       </div>
 
       <div class="feature-item">
-        <div class="feature-icon" aria-hidden="true">→</div>
-        <h3 class="feature-heading">4 Themes</h3>
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">→</span> 4 Themes</h3>
         <p class="feature-body">Dusk, Graphite, Ivory, Terminal Green. Each with TASTE.md — design intent as machine-readable rationale. Swap one line, retheme everything.</p>
       </div>
     </div>

@@ -2234,6 +2234,255 @@ table {
   color: var(--accent-primary) !important;
 }
 
+/* ============================================
+   Block: pipeline — visual flow diagram
+   ============================================ */
+.pipeline-block {
+  background: var(--surface-primary);
+  padding: var(--space-20) var(--space-6);
+}
+.pipeline-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.pipeline-header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+.pipeline-eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-primary);
+  margin-bottom: var(--space-3);
+}
+.pipeline-title {
+  font-family: var(--font-sans);
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+}
+.pipeline-flow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--space-4);
+}
+.pipeline-step {
+  flex: 1;
+  max-width: 220px;
+  text-align: center;
+}
+.pipeline-step-number {
+  font-family: var(--font-sans);
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--accent-primary);
+  margin-bottom: var(--space-2);
+}
+.pipeline-step-label {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+.pipeline-step-desc {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.pipeline-arrow {
+  font-size: var(--text-2xl);
+  color: var(--text-muted);
+  padding-top: var(--space-3);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .pipeline-flow {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pipeline-step {
+    max-width: 100%;
+  }
+  .pipeline-arrow {
+    transform: rotate(90deg);
+    padding: 0;
+  }
+}
+
+/* ============================================
+   Block: before-after — comparison panel
+   ============================================ */
+.before-after-block {
+  background: var(--surface-secondary);
+  padding: var(--space-20) var(--space-6);
+}
+.before-after-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.before-after-header {
+  text-align: center;
+  margin-bottom: var(--space-10);
+}
+.before-after-eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-primary);
+  margin-bottom: var(--space-3);
+}
+.before-after-title {
+  font-family: var(--font-sans);
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+}
+.before-after-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+.before-panel,
+.after-panel {
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.panel-label {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  padding: var(--space-3) var(--space-4);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.panel-label--bad {
+  background: oklch(0.35 0.12 25);
+  color: oklch(0.90 0.05 25);
+}
+.panel-label--good {
+  background: oklch(0.35 0.12 145);
+  color: oklch(0.90 0.05 145);
+}
+.code-block {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  padding: var(--space-4);
+  margin: 0;
+  overflow-x: auto;
+  background: oklch(0.10 0.005 80);
+  color: oklch(0.85 0.01 80);
+  border: none;
+}
+.code-comment {
+  color: oklch(0.50 0.01 80);
+}
+
+@media (max-width: 768px) {
+  .before-after-grid {
+    grid-template-columns: 1fr;
+  }
+  .code-block {
+    font-size: 0.6875rem;
+  }
+}
+
+/* ============================================
+   Block: code-preview — manifest showcase
+   ============================================ */
+.code-preview-block {
+  background: var(--surface-primary);
+  padding: var(--space-20) var(--space-6);
+}
+.code-preview-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.code-preview-header {
+  text-align: center;
+  margin-bottom: var(--space-10);
+}
+.code-preview-eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-primary);
+  margin-bottom: var(--space-3);
+}
+.code-preview-title {
+  font-family: var(--font-sans);
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-3) 0;
+}
+.code-preview-subtitle {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+.code-preview-container {
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: var(--space-6);
+}
+.code-preview-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  background: var(--surface-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.code-preview-filename {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+.code-preview-badge {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--accent-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.code-block--large {
+  max-height: 500px;
+  overflow-y: auto;
+}
+.code-preview-footer-text {
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+.code-preview-footer-text code {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  background: var(--surface-secondary);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+}
+
 /* ==========================================================================
    Forma Motion — Optional scroll & interaction animations
    Include: forma-[theme].css + forma-motion.css
@@ -2441,6 +2690,116 @@ a { color: inherit; }
 </section>
 
 
+<!-- Block: pipeline | Custom block — visual pipeline diagram -->
+<section class="section pipeline-block">
+<div class="pipeline-inner" data-animate="fade-up">
+    <div class="pipeline-header">
+      <div class="pipeline-eyebrow">The Pipeline</div>
+      <h2 class="pipeline-title">From intent to production in one command</h2>
+    </div>
+
+    <div class="pipeline-flow">
+      <div class="pipeline-step">
+        <div class="pipeline-step-number">01</div>
+        <div class="pipeline-step-label">Agent Intent</div>
+        <div class="pipeline-step-desc">"Build a lead-gen site for a design tool. Dark theme. 4 pages."</div>
+      </div>
+
+      <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+
+      <div class="pipeline-step">
+        <div class="pipeline-step-number">02</div>
+        <div class="pipeline-step-label">site.json</div>
+        <div class="pipeline-step-desc">Theme, pages, blocks, content, goal, audience — all in one manifest.</div>
+      </div>
+
+      <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+
+      <div class="pipeline-step">
+        <div class="pipeline-step-number">03</div>
+        <div class="pipeline-step-label">Compile</div>
+        <div class="pipeline-step-desc">Blocks pulled, tokens applied, content injected. Static HTML out.</div>
+      </div>
+
+      <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+
+      <div class="pipeline-step">
+        <div class="pipeline-step-number">04</div>
+        <div class="pipeline-step-label">Forma Judge</div>
+        <div class="pipeline-step-desc">Schema validated. Goal rules checked. 28/28 passed. Ship it.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Block: before-after | Raw AI vs Forma output comparison -->
+<section class="section before-after-block">
+<div class="before-after-inner" data-animate="fade-up">
+    <div class="before-after-header">
+      <div class="before-after-eyebrow">The Difference</div>
+      <h2 class="before-after-title">Raw AI output vs Forma output</h2>
+    </div>
+
+    <div class="before-after-grid">
+      <div class="before-panel">
+        <div class="panel-label panel-label--bad">Without Forma</div>
+        <pre class="code-block"><code>&lt;div class="hero-section-main-wrapper-v2"&gt;
+  &lt;div class="container-fluid-xl 
+    padding-top-80 bg-gradient-dark"&gt;
+    &lt;h1 style="font-size: 48px; 
+      color: #1a1a2e; font-weight: bold;
+      font-family: Arial;"&gt;
+      Welcome to Our Platform
+    &lt;/h1&gt;
+    &lt;p style="color: #666; 
+      margin-top: 20px; 
+      font-size: 18px;"&gt;
+      We help you build better...
+    &lt;/p&gt;
+    &lt;a href="#" class="btn-primary-lg 
+      cta-main-action hover-effect-1"&gt;
+      Get Started
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+<span class="code-comment">// Hallucinated classes: 6</span>
+<span class="code-comment">// Inline styles: 4</span>
+<span class="code-comment">// Hardcoded values: 7</span>
+<span class="code-comment">// Will it match page 2? No.</span></code></pre>
+      </div>
+
+      <div class="after-panel">
+        <div class="panel-label panel-label--good">With Forma</div>
+        <pre class="code-block"><code>{
+  "theme": "bone-and-ink",
+  "goal": "lead_generation",
+  "pages": {
+    "index": {
+      "blocks": [
+        {
+          "id": "hero",
+          "variant": "centered",
+          "title": "Welcome to Our Platform",
+          "subtitle": "We help you build...",
+          "cta_primary_text": "Get Started"
+        }
+      ]
+    }
+  }
+}
+
+<span class="code-comment">// Hallucinated classes: 0</span>
+<span class="code-comment">// Inline styles: 0</span>
+<span class="code-comment">// Hardcoded values: 0</span>
+<span class="code-comment">// Will it match page 2? Always.</span></code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- Block: trust-bar | Variants: default (horizontal logo strip) -->
 <section class="section trust-bar-block">
 <div class="trust-bar-inner" data-animate="fade-up">
@@ -2506,6 +2865,61 @@ a { color: inherit; }
         <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">→</span> 5 Themes</h3>
         <p class="feature-body">Bone and Ink, Dusk, Graphite, Ivory, Terminal Green. Each with TASTE.md — design intent as machine-readable rationale.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Block: code-preview | Shows real site.json manifest -->
+<section class="section code-preview-block">
+<div class="code-preview-inner" data-animate="fade-up">
+    <div class="code-preview-header">
+      <div class="code-preview-eyebrow">Real Manifest</div>
+      <h2 class="code-preview-title">This is the site.json that built this page</h2>
+      <p class="code-preview-subtitle">Every page you're looking at was compiled from a manifest like this. No templates. No page builder. Just JSON and a compile command.</p>
+    </div>
+
+    <div class="code-preview-container">
+      <div class="code-preview-bar">
+        <span class="code-preview-filename">site.json</span>
+        <span class="code-preview-badge">Live manifest</span>
+      </div>
+      <pre class="code-block code-block--large"><code>{
+  "forma_version": "2.0.0",
+  "site": {
+    "name": "Forma",
+    "domain": "forma-demo.fly.dev"
+  },
+  "theme": "bone-and-ink",
+  "goal": "lead_generation",
+  "pages": {
+    "index": {
+      "title": "Forma — The Design Layer of the Agent Web",
+      "blocks": [
+        { "id": "nav" },
+        { "id": "hero",
+          "title": "Stop generating HTML. Start declaring intent.",
+          "cta_primary_text": "View on GitHub" },
+        { "id": "pipeline" },
+        { "id": "before-after" },
+        { "id": "feature-grid" },
+        { "id": "code-preview" },
+        { "id": "stats" },
+        { "id": "testimonials" },
+        { "id": "cta" },
+        { "id": "footer" }
+      ]
+    }
+  },
+  "constraints": {
+    "max_blocks_per_page": 12,
+    "required_blocks": ["nav", "hero", "cta", "footer"]
+  }
+}</code></pre>
+    </div>
+
+    <div class="code-preview-footer-text">
+      <code>node compile.site.js site.json dist/</code> &mdash; that's the whole build step.
     </div>
   </div>
 </section>

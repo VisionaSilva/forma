@@ -2234,6 +2234,255 @@ table {
   color: var(--accent-primary) !important;
 }
 
+/* ============================================
+   Block: pipeline — visual flow diagram
+   ============================================ */
+.pipeline-block {
+  background: var(--surface-primary);
+  padding: var(--space-20) var(--space-6);
+}
+.pipeline-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.pipeline-header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+.pipeline-eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-primary);
+  margin-bottom: var(--space-3);
+}
+.pipeline-title {
+  font-family: var(--font-sans);
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+}
+.pipeline-flow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--space-4);
+}
+.pipeline-step {
+  flex: 1;
+  max-width: 220px;
+  text-align: center;
+}
+.pipeline-step-number {
+  font-family: var(--font-sans);
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--accent-primary);
+  margin-bottom: var(--space-2);
+}
+.pipeline-step-label {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+.pipeline-step-desc {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.pipeline-arrow {
+  font-size: var(--text-2xl);
+  color: var(--text-muted);
+  padding-top: var(--space-3);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .pipeline-flow {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pipeline-step {
+    max-width: 100%;
+  }
+  .pipeline-arrow {
+    transform: rotate(90deg);
+    padding: 0;
+  }
+}
+
+/* ============================================
+   Block: before-after — comparison panel
+   ============================================ */
+.before-after-block {
+  background: var(--surface-secondary);
+  padding: var(--space-20) var(--space-6);
+}
+.before-after-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.before-after-header {
+  text-align: center;
+  margin-bottom: var(--space-10);
+}
+.before-after-eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-primary);
+  margin-bottom: var(--space-3);
+}
+.before-after-title {
+  font-family: var(--font-sans);
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+}
+.before-after-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+.before-panel,
+.after-panel {
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.panel-label {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  padding: var(--space-3) var(--space-4);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.panel-label--bad {
+  background: oklch(0.35 0.12 25);
+  color: oklch(0.90 0.05 25);
+}
+.panel-label--good {
+  background: oklch(0.35 0.12 145);
+  color: oklch(0.90 0.05 145);
+}
+.code-block {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  padding: var(--space-4);
+  margin: 0;
+  overflow-x: auto;
+  background: oklch(0.10 0.005 80);
+  color: oklch(0.85 0.01 80);
+  border: none;
+}
+.code-comment {
+  color: oklch(0.50 0.01 80);
+}
+
+@media (max-width: 768px) {
+  .before-after-grid {
+    grid-template-columns: 1fr;
+  }
+  .code-block {
+    font-size: 0.6875rem;
+  }
+}
+
+/* ============================================
+   Block: code-preview — manifest showcase
+   ============================================ */
+.code-preview-block {
+  background: var(--surface-primary);
+  padding: var(--space-20) var(--space-6);
+}
+.code-preview-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.code-preview-header {
+  text-align: center;
+  margin-bottom: var(--space-10);
+}
+.code-preview-eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-primary);
+  margin-bottom: var(--space-3);
+}
+.code-preview-title {
+  font-family: var(--font-sans);
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-3) 0;
+}
+.code-preview-subtitle {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+.code-preview-container {
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: var(--space-6);
+}
+.code-preview-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  background: var(--surface-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.code-preview-filename {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+.code-preview-badge {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--accent-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.code-block--large {
+  max-height: 500px;
+  overflow-y: auto;
+}
+.code-preview-footer-text {
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+.code-preview-footer-text code {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  background: var(--surface-secondary);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+}
+
 /* ==========================================================================
    Forma Motion — Optional scroll & interaction animations
    Include: forma-[theme].css + forma-motion.css

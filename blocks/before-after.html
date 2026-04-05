@@ -1,0 +1,65 @@
+<!-- Block: before-after | Raw AI vs Forma output comparison -->
+<section class="section before-after-block">
+<div class="before-after-inner" data-animate="fade-up">
+    <div class="before-after-header">
+      <div class="before-after-eyebrow">The Difference</div>
+      <h2 class="before-after-title">Raw AI output vs Forma output</h2>
+    </div>
+
+    <div class="before-after-grid">
+      <div class="before-panel">
+        <div class="panel-label panel-label--bad">Without Forma</div>
+        <pre class="code-block"><code>&lt;div class="hero-section-main-wrapper-v2"&gt;
+  &lt;div class="container-fluid-xl 
+    padding-top-80 bg-gradient-dark"&gt;
+    &lt;h1 style="font-size: 48px; 
+      color: #1a1a2e; font-weight: bold;
+      font-family: Arial;"&gt;
+      Welcome to Our Platform
+    &lt;/h1&gt;
+    &lt;p style="color: #666; 
+      margin-top: 20px; 
+      font-size: 18px;"&gt;
+      We help you build better...
+    &lt;/p&gt;
+    &lt;a href="#" class="btn-primary-lg 
+      cta-main-action hover-effect-1"&gt;
+      Get Started
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+<span class="code-comment">// Hallucinated classes: 6</span>
+<span class="code-comment">// Inline styles: 4</span>
+<span class="code-comment">// Hardcoded values: 7</span>
+<span class="code-comment">// Will it match page 2? No.</span></code></pre>
+      </div>
+
+      <div class="after-panel">
+        <div class="panel-label panel-label--good">With Forma</div>
+        <pre class="code-block"><code>{
+  "theme": "bone-and-ink",
+  "goal": "lead_generation",
+  "pages": {
+    "index": {
+      "blocks": [
+        {
+          "id": "hero",
+          "variant": "centered",
+          "title": "Welcome to Our Platform",
+          "subtitle": "We help you build...",
+          "cta_primary_text": "Get Started"
+        }
+      ]
+    }
+  }
+}
+
+<span class="code-comment">// Hallucinated classes: 0</span>
+<span class="code-comment">// Inline styles: 0</span>
+<span class="code-comment">// Hardcoded values: 0</span>
+<span class="code-comment">// Will it match page 2? Always.</span></code></pre>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+<!-- Block: code-preview | Shows real site.json manifest -->
+<section class="section code-preview-block">
+<div class="code-preview-inner" data-animate="fade-up">
+    <div class="code-preview-header">
+      <div class="code-preview-eyebrow">Real Manifest</div>
+      <h2 class="code-preview-title">This is the site.json that built this page</h2>
+      <p class="code-preview-subtitle">Every page you're looking at was compiled from a manifest like this. No templates. No page builder. Just JSON and a compile command.</p>
+    </div>
+
+    <div class="code-preview-container">
+      <div class="code-preview-bar">
+        <span class="code-preview-filename">site.json</span>
+        <span class="code-preview-badge">Live manifest</span>
+      </div>
+      <pre class="code-block code-block--large"><code>{
+  "forma_version": "2.0.0",
+  "site": {
+    "name": "Forma",
+    "domain": "forma-demo.fly.dev"
+  },
+  "theme": "bone-and-ink",
+  "goal": "lead_generation",
+  "pages": {
+    "index": {
+      "title": "Forma — The Design Layer of the Agent Web",
+      "blocks": [
+        { "id": "nav" },
+        { "id": "hero",
+          "title": "Stop generating HTML. Start declaring intent.",
+          "cta_primary_text": "View on GitHub" },
+        { "id": "pipeline" },
+        { "id": "before-after" },
+        { "id": "feature-grid" },
+        { "id": "code-preview" },
+        { "id": "stats" },
+        { "id": "testimonials" },
+        { "id": "cta" },
+        { "id": "footer" }
+      ]
+    }
+  },
+  "constraints": {
+    "max_blocks_per_page": 12,
+    "required_blocks": ["nav", "hero", "cta", "footer"]
+  }
+}</code></pre>
+    </div>
+
+    <div class="code-preview-footer-text">
+      <code>node compile.site.js site.json dist/</code> &mdash; that's the whole build step.
+    </div>
+  </div>
+</section>

@@ -121,6 +121,12 @@
           "cta_secondary_href": "how-it-works.html"
         },
         {
+          "id": "pipeline"
+        },
+        {
+          "id": "before-after"
+        },
+        {
           "id": "trust-bar",
           "label": "Built with Forma",
           "items": [
@@ -170,6 +176,9 @@
           "icon_6": "\u2192",
           "feature_6_title": "5 Themes",
           "feature_6_description": "Bone and Ink, Dusk, Graphite, Ivory, Terminal Green. Each with TASTE.md \u2014 design intent as machine-readable rationale."
+        },
+        {
+          "id": "code-preview"
         },
         {
           "id": "stats",

@@ -1,0 +1,176 @@
+<!-- Block: team | Variants: default (grid, name + role + optional bio) -->
+<section class="section team-block">
+  <style scoped>
+    .team-block {
+      background: var(--surface-base);
+      padding: var(--space-16) var(--space-6);
+    }
+    .team-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .team-header {
+      text-align: center;
+      margin-bottom: var(--space-12);
+    }
+    .team-eyebrow {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      color: var(--cta-bg);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: var(--space-3);
+    }
+    .team-title {
+      font-family: var(--font-sans);
+      font-size: var(--text-4xl);
+      font-weight: 800;
+      color: var(--text-primary);
+      margin: 0 0 var(--space-4);
+      line-height: 1.15;
+    }
+    .team-subtitle {
+      font-family: var(--font-sans);
+      font-size: var(--text-lg);
+      color: var(--text-secondary);
+      margin: 0;
+      max-width: 520px;
+      margin-inline: auto;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-6);
+    }
+    @media (max-width: 900px) {
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .team-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin-inline: auto;
+      }
+    }
+    .team-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: var(--space-3);
+    }
+    .team-avatar {
+      width: var(--space-20);
+      height: var(--space-20);
+      border-radius: var(--radius-full);
+      background: var(--surface-elevated);
+      border: 2px solid var(--border-subtle);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-sans);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+    .team-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .team-name {
+      font-family: var(--font-sans);
+      font-size: var(--text-base);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0;
+    }
+    .team-role {
+      font-family: var(--font-sans);
+      font-size: var(--text-sm);
+      color: var(--cta-bg);
+      font-weight: 500;
+      margin: 0;
+    }
+    .team-bio {
+      font-family: var(--font-sans);
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+    .team-links {
+      display: flex;
+      gap: var(--space-3);
+      margin-top: var(--space-1);
+    }
+    .team-link {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .team-link:hover {
+      color: var(--text-secondary);
+    }
+  </style>
+
+  <div class="team-inner" data-animate="fade-up">
+    <div class="team-header">
+      <div class="team-eyebrow">Team</div>
+      <h2 class="team-title">The people behind Forma</h2>
+      <p class="team-subtitle">A small team obsessed with design, speed, and the craft of building great products.</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar" aria-hidden="true">SL</div>
+        <h3 class="team-name">Sofia Lenz</h3>
+        <p class="team-role">Co-founder & CEO</p>
+        <p class="team-bio">Former designer at Linear. Obsessed with design systems and the gap between design and engineering.</p>
+        <div class="team-links">
+          <a href="#" class="team-link" aria-label="Sofia Lenz on X">X</a>
+          <a href="#" class="team-link" aria-label="Sofia Lenz on LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar" aria-hidden="true">MR</div>
+        <h3 class="team-name">Marco Reyes</h3>
+        <p class="team-role">Co-founder & CTO</p>
+        <p class="team-bio">Previously built infrastructure at Vercel. Believes every millisecond of performance is a design decision.</p>
+        <div class="team-links">
+          <a href="#" class="team-link" aria-label="Marco Reyes on GitHub">GitHub</a>
+          <a href="#" class="team-link" aria-label="Marco Reyes on X">X</a>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar" aria-hidden="true">AW</div>
+        <h3 class="team-name">Aisha Wren</h3>
+        <p class="team-role">Lead Designer</p>
+        <p class="team-bio">Trained at RISD. Every token in Forma went through her eye first. If it ships, it passed her test.</p>
+        <div class="team-links">
+          <a href="#" class="team-link" aria-label="Aisha Wren on Dribbble">Dribbble</a>
+          <a href="#" class="team-link" aria-label="Aisha Wren on X">X</a>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar" aria-hidden="true">KP</div>
+        <h3 class="team-name">Kai Park</h3>
+        <p class="team-role">Developer Relations</p>
+        <p class="team-bio">Writes the docs, makes the examples, answers the questions. Bridges the gap between the block and the build.</p>
+        <div class="team-links">
+          <a href="#" class="team-link" aria-label="Kai Park on GitHub">GitHub</a>
+          <a href="#" class="team-link" aria-label="Kai Park on X">X</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

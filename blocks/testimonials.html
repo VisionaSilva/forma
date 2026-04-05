@@ -1,0 +1,159 @@
+<!-- Block: testimonials | Variants: default (2col grid) -->
+<section class="section testimonials-block">
+  <style scoped>
+    .testimonials-block {
+      background: var(--surface-base);
+      padding: var(--space-16) var(--space-6);
+    }
+    .testimonials-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: var(--space-12);
+    }
+    .testimonials-eyebrow {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      color: var(--cta-bg);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: var(--space-3);
+    }
+    .testimonials-title {
+      font-family: var(--font-sans);
+      font-size: var(--text-4xl);
+      font-weight: 800;
+      color: var(--text-primary);
+      margin: 0;
+      line-height: 1.15;
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-5);
+    }
+    @media (max-width: 640px) {
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .testimonial-card {
+      background: var(--surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-5);
+    }
+    .testimonial-quote-mark {
+      font-family: var(--font-sans);
+      font-size: var(--text-4xl);
+      color: var(--cta-bg);
+      line-height: 1;
+      opacity: 0.6;
+    }
+    .testimonial-text {
+      font-family: var(--font-sans);
+      font-size: var(--text-base);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin: 0;
+      flex: 1;
+    }
+    .testimonial-attribution {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      padding-top: var(--space-4);
+      border-top: 1px solid var(--border-subtle);
+    }
+    .testimonial-avatar {
+      width: var(--space-10);
+      height: var(--space-10);
+      border-radius: var(--radius-full);
+      background: var(--surface-overlay);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--text-base);
+      font-weight: 700;
+      color: var(--text-secondary);
+      flex-shrink: 0;
+      font-family: var(--font-sans);
+    }
+    .testimonial-author-name {
+      font-family: var(--font-sans);
+      font-size: var(--text-sm);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0;
+    }
+    .testimonial-author-role {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      margin: 0;
+    }
+  </style>
+
+  <div class="testimonials-inner" data-animate="fade-up">
+    <div class="testimonials-header">
+      <div class="testimonials-eyebrow">Testimonials</div>
+      <h2 class="testimonials-title">What our customers say</h2>
+    </div>
+
+    <div class="testimonials-grid">
+      <blockquote class="testimonial-card">
+        <div class="testimonial-quote-mark" aria-hidden="true">"</div>
+        <p class="testimonial-text">Forma cut our landing page build time in half. The token system means every new page feels like it belongs — no design drift, ever.</p>
+        <div class="testimonial-attribution">
+          <div class="testimonial-avatar" aria-hidden="true">AK</div>
+          <div>
+            <p class="testimonial-author-name">Anika Kowalski</p>
+            <p class="testimonial-author-role">Head of Design, Orbit Labs</p>
+          </div>
+        </div>
+      </blockquote>
+
+      <blockquote class="testimonial-card">
+        <div class="testimonial-quote-mark" aria-hidden="true">"</div>
+        <p class="testimonial-text">I dropped the hero block in, changed four CSS variables, and it matched our brand perfectly. No custom CSS needed. That's wild.</p>
+        <div class="testimonial-attribution">
+          <div class="testimonial-avatar" aria-hidden="true">JM</div>
+          <div>
+            <p class="testimonial-author-name">James Moreau</p>
+            <p class="testimonial-author-role">Founder, Vertex</p>
+          </div>
+        </div>
+      </blockquote>
+
+      <blockquote class="testimonial-card">
+        <div class="testimonial-quote-mark" aria-hidden="true">"</div>
+        <p class="testimonial-text">The accessibility defaults alone are worth it. We passed our WCAG audit with zero rework on anything we built using Forma blocks.</p>
+        <div class="testimonial-attribution">
+          <div class="testimonial-avatar" aria-hidden="true">RN</div>
+          <div>
+            <p class="testimonial-author-name">Rania Nasser</p>
+            <p class="testimonial-author-role">Engineering Lead, Strata</p>
+          </div>
+        </div>
+      </blockquote>
+
+      <blockquote class="testimonial-card">
+        <div class="testimonial-quote-mark" aria-hidden="true">"</div>
+        <p class="testimonial-text">Our conversion rate went up 23% after switching to a Forma-built landing page. Clean design, fast load, clear hierarchy — it just works.</p>
+        <div class="testimonial-attribution">
+          <div class="testimonial-avatar" aria-hidden="true">TC</div>
+          <div>
+            <p class="testimonial-author-name">Tomás Campos</p>
+            <p class="testimonial-author-role">CEO, Pulsar</p>
+          </div>
+        </div>
+      </blockquote>
+    </div>
+  </div>
+</section>

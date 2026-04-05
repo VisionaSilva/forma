@@ -1,0 +1,279 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Forma Site Manifest Schema",
+  "description": "Complete schema for a Forma site.json manifest. Enforces contract-based design system configuration.",
+  "type": "object",
+  "required": [
+    "forma_version",
+    "site",
+    "theme",
+    "goal",
+    "audience",
+    "traffic",
+    "primaryCTA",
+    "globals"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "forma_version": {
+      "type": "string",
+      "pattern": "^[0-9]+(\\.[0-9]+)*$",
+      "description": "Forma version (e.g., '2.0.0')"
+    },
+    "site": {
+      "type": "object",
+      "required": ["name", "domain"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "description": "Site/company name"
+        },
+        "domain": {
+          "type": "string",
+          "description": "Primary domain (e.g., 'example.com')"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 160,
+          "description": "Site meta description (SEO)"
+        },
+        "logo_url": {
+          "type": "string",
+          "description": "Logo image URL"
+        },
+        "favicon_url": {
+          "type": "string",
+          "description": "Favicon URL"
+        }
+      }
+    },
+    "theme": {
+      "type": "string",
+      "enum": ["dusk", "graphite", "ivory"],
+      "description": "Color theme name. Dusk (dark/purple), Graphite (dark/mono), Ivory (light/warm)"
+    },
+    "goal": {
+      "type": "string",
+      "enum": ["lead_generation", "brand_awareness", "product_sales", "content", "portfolio"],
+      "description": "Primary business goal. Drives validation rules for required blocks."
+    },
+    "audience": {
+      "type": "string",
+      "enum": ["consumers", "b2b_buyers", "developers", "internal"],
+      "description": "Target audience type"
+    },
+    "traffic": {
+      "type": "string",
+      "enum": ["cold", "warm", "returning"],
+      "description": "Expected audience familiarity with brand. Affects messaging tone and CTA urgency."
+    },
+    "primaryCTA": {
+      "type": "object",
+      "required": ["text", "href"],
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 50,
+          "description": "Primary CTA button text (e.g., 'Get Started')"
+        },
+        "href": {
+          "type": "string",
+          "description": "Primary CTA link (e.g., '/signup' or absolute URL)"
+        }
+      },
+      "description": "Default CTA used across nav, hero, and main sections"
+    },
+    "globals": {
+      "type": "object",
+      "required": ["nav", "footer"],
+      "additionalProperties": false,
+      "properties": {
+        "nav": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["text", "href"],
+            "additionalProperties": false,
+            "properties": {
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 30
+              },
+              "href": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "Navigation menu items (text, href pairs)"
+        },
+        "footer": {
+          "type": "object",
+          "required": ["brand_name", "legal_text"],
+          "additionalProperties": true,
+          "properties": {
+            "brand_name": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "brand_tagline": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "legal_text": {
+              "type": "string",
+              "minLength": 10,
+              "maxLength": 500
+            },
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "links": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": ["text", "href"],
+                      "additionalProperties": false,
+                      "properties": {
+                        "text": {
+                          "type": "string"
+                        },
+                        "href": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "pages": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "index": {
+          "$ref": "#/definitions/page"
+        },
+        "about": {
+          "$ref": "#/definitions/page"
+        },
+        "pricing": {
+          "$ref": "#/definitions/page"
+        },
+        "blog": {
+          "$ref": "#/definitions/page"
+        },
+        "contact": {
+          "$ref": "#/definitions/page"
+        },
+        "terms": {
+          "$ref": "#/definitions/page"
+        },
+        "privacy": {
+          "$ref": "#/definitions/page"
+        }
+      },
+      "description": "Page definitions. At minimum, 'index' is required."
+    }
+  },
+  "definitions": {
+    "page": {
+      "type": "object",
+      "required": ["blocks"],
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string",
+          "maxLength": 60,
+          "description": "Page title (meta/h1)"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 160,
+          "description": "Page meta description"
+        },
+        "blocks": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["id"],
+            "additionalProperties": true,
+            "properties": {
+              "id": {
+                "type": "string",
+                "enum": ["nav", "hero", "trust-bar", "feature-grid", "testimonials", "pricing", "cta", "team", "stats", "footer"],
+                "description": "Block type identifier"
+              },
+              "variant": {
+                "type": "string",
+                "description": "Block variant (e.g., 'centered', '2col', 'full-width')"
+              }
+            }
+          },
+          "description": "Array of blocks composing this page, in order"
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "forma_version": "2.0.0",
+      "site": {
+        "name": "MRA Limited",
+        "domain": "mra-limited.com",
+        "description": "Industrial solutions for enterprise"
+      },
+      "theme": "graphite",
+      "goal": "lead_generation",
+      "audience": "b2b_buyers",
+      "traffic": "cold",
+      "primaryCTA": {
+        "text": "Request Demo",
+        "href": "/contact"
+      },
+      "globals": {
+        "nav": [
+          { "text": "Solutions", "href": "/solutions" },
+          { "text": "Pricing", "href": "/pricing" },
+          { "text": "About", "href": "/about" },
+          { "text": "Contact", "href": "/contact" }
+        ],
+        "footer": {
+          "brand_name": "MRA Limited",
+          "legal_text": "© 2026 MRA Limited. All rights reserved."
+        }
+      },
+      "pages": {
+        "index": {
+          "title": "Industrial Solutions",
+          "blocks": [
+            { "id": "nav" },
+            { "id": "hero", "variant": "centered" },
+            { "id": "trust-bar" },
+            { "id": "feature-grid", "variant": "3col" },
+            { "id": "cta", "variant": "centered" },
+            { "id": "footer" }
+          ]
+        }
+      }
+    }
+  ]
+}

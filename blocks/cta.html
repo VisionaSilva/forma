@@ -1,0 +1,136 @@
+<!-- Block: cta | Variants: centered (default), full-width -->
+<section class="section cta-block" data-variant="centered">
+  <style scoped>
+    .cta-block {
+      padding: var(--space-16) var(--space-6);
+    }
+
+    /* Variant: centered (default) */
+    .cta-block[data-variant="centered"] {
+      background: var(--surface-base);
+    }
+    .cta-block[data-variant="centered"] .cta-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+      background: var(--surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-2xl);
+      padding: var(--space-12) var(--space-10);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-5);
+    }
+
+    /* Variant: full-width */
+    .cta-block[data-variant="full-width"] {
+      background: var(--surface-overlay);
+      border-top: 1px solid var(--border-default);
+      border-bottom: 1px solid var(--border-default);
+    }
+    .cta-block[data-variant="full-width"] .cta-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-8);
+      flex-wrap: wrap;
+    }
+    .cta-block[data-variant="full-width"] .cta-content {
+      text-align: left;
+    }
+
+    @media (max-width: 640px) {
+      .cta-block[data-variant="full-width"] .cta-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .cta-block[data-variant="full-width"] .cta-content {
+        text-align: center;
+      }
+    }
+
+    .cta-eyebrow {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      color: var(--cta-bg);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .cta-headline {
+      font-family: var(--font-sans);
+      font-size: var(--text-3xl);
+      font-weight: 800;
+      color: var(--text-primary);
+      margin: 0;
+      line-height: 1.2;
+    }
+    .cta-subtext {
+      font-family: var(--font-sans);
+      font-size: var(--text-base);
+      color: var(--text-secondary);
+      margin: 0;
+      line-height: 1.6;
+    }
+    .cta-actions {
+      display: flex;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .cta-block[data-variant="full-width"] .cta-actions {
+      flex-shrink: 0;
+      justify-content: flex-start;
+    }
+    .cta-button-primary {
+      font-family: var(--font-sans);
+      font-size: var(--text-base);
+      font-weight: 600;
+      background: var(--cta-bg);
+      color: var(--cta-text);
+      border: none;
+      border-radius: var(--radius-md);
+      padding: var(--space-3) var(--space-7);
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .cta-button-primary:hover {
+      background: var(--cta-hover);
+    }
+    .cta-button-secondary {
+      font-family: var(--font-sans);
+      font-size: var(--text-base);
+      font-weight: 500;
+      color: var(--text-secondary);
+      background: transparent;
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-md);
+      padding: var(--space-3) var(--space-7);
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .cta-button-secondary:hover {
+      border-color: var(--text-muted);
+      color: var(--text-primary);
+    }
+  </style>
+
+  <div class="cta-inner" data-animate="fade-up">
+    <div class="cta-content">
+      <div class="cta-eyebrow">Get Started</div>
+      <h2 class="cta-headline">Ready to ship your next landing page?</h2>
+      <p class="cta-subtext">Join thousands of designers and engineers using Forma to build faster, better landing pages.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="/signup" class="cta-button-primary">Start Building Free</a>
+      <a href="/docs" class="cta-button-secondary">Read the Docs</a>
+    </div>
+  </div>
+</section>

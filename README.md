@@ -282,3 +282,197 @@ The result: consistent quality across infinite visual directions. One contract. 
 ---
 
 **Built with intention.** ✨
+
+---
+
+## Forma v2 — Block Library & Site Manifests
+
+**New:** Forma v2 introduces a composable block library + site.json manifests for rapid site generation.
+
+### What's New
+
+**Block Library** (`blocks/`)
+- 10 production-ready HTML blocks: Nav, Hero, Feature Grid, Trust Bar, Testimonials, Pricing, CTA, Team, Stats, Footer
+- Each block is a semantic HTML partial (no `<html>` wrapper) using Forma tokens
+- Variants system: hero supports `centered` or `split` layout, feature-grid supports `2col`/`3col`/`4col`, etc.
+- Built-in scroll animations: `data-animate="fade-up"` on all blocks
+- Zero dependencies — pure CSS + HTML
+
+**Site Manifest** (`site.json`)
+- Machine-readable site structure in JSON
+- Defines: theme, goal (lead_generation / product_sales / brand_awareness / content / portfolio), audience, traffic
+- Pages are composable from blocks
+- Global nav and footer configured once, shared across all pages
+
+**Forma Judge** (`builder/judge.js`)
+- Node.js validator for site.json manifests
+- Enforces JSON Schema validation
+- Enforces goal-based rules (e.g., `product_sales` goal requires pricing block, all goals need hero on index)
+- Checks block composition and required fields
+- Output: ✅ PASS / ❌ FAIL / ⚠️ WARN with final summary
+
+```bash
+node builder/judge.js examples/mra.site.json
+```
+
+### Using Blocks
+
+Blocks are semantic HTML partials. Use them as-is or customize with your content:
+
+```html
+<!-- Import form Cloudflare R2, local dir, or copy inline -->
+<link rel="stylesheet" href="build/forma-dusk.css">
+
+<!-- Nav block (from blocks/nav.html) -->
+<header class="nav-block" role="banner">
+  <nav class="nav container" aria-label="Main navigation">
+    <!-- nav content -->
+  </nav>
+</header>
+
+<!-- Hero block (from blocks/hero.html) -->
+<section class="section hero hero--centered" aria-label="Hero">
+  <div class="container">
+    <!-- hero content -->
+  </div>
+</section>
+```
+
+Each block uses only:
+- Forma token variables (`--text-primary`, `--surface-elevated`, `--accent-primary`, etc.)
+- Semantic HTML5 elements
+- Responsive design via CSS Grid and media queries
+- No external dependencies
+- No inline styles or hardcoded colors
+
+### Building a Site with Forma v2
+
+#### 1. Create a `site.json` manifest
+
+```json
+{
+  "forma_version": "2.0.0",
+  "site": {
+    "name": "My Company",
+    "domain": "example.com"
+  },
+  "theme": "graphite",
+  "goal": "lead_generation",
+  "audience": "b2b_buyers",
+  "traffic": "cold",
+  "primaryCTA": {
+    "text": "Get Started",
+    "href": "/signup"
+  },
+  "globals": {
+    "nav": [
+      { "text": "Features", "href": "/features" },
+      { "text": "Pricing", "href": "/pricing" },
+      { "text": "About", "href": "/about" },
+      { "text": "Contact", "href": "/contact" }
+    ],
+    "footer": {
+      "brand_name": "My Company",
+      "legal_text": "© 2026 My Company. All rights reserved."
+    }
+  },
+  "pages": {
+    "index": {
+      "title": "Home",
+      "blocks": [
+        { "id": "nav", "logo_text": "My Co", "cta_text": "Get Started", "cta_href": "/signup" },
+        { "id": "hero", "variant": "centered", "title": "...", "cta_primary_text": "...", "cta_primary_href": "..." },
+        { "id": "feature-grid", "variant": "3col", "section_title": "Features", ... },
+        { "id": "cta", "variant": "centered", "title": "Ready?", ... },
+        { "id": "footer", "brand_name": "My Co", ... }
+      ]
+    }
+  }
+}
+```
+
+#### 2. Validate with Forma Judge
+
+```bash
+node builder/judge.js my-site.site.json
+```
+
+Validator checks:
+- ✅ JSON Schema passes (forma_version, required fields, enum values)
+- ✅ Goal-based rules (lead_generation needs CTA, product_sales needs pricing)
+- ✅ Completeness (all goals need hero on index, nav/footer required)
+- ✅ Block composition (valid block types, variants, required fields)
+
+#### 3. Generate pages
+
+Use the site.json to generate HTML pages. Each page composition comes from the manifest.
+
+Example page structure for lead_generation goal:
+```
+index:
+  - nav
+  - hero (centered)
+  - trust-bar (logos)
+  - feature-grid (3col)
+  - testimonials (2col)
+  - cta (centered)
+  - footer
+```
+
+### Block Reference
+
+| Block | Variants | Use Case |
+|-------|----------|----------|
+| **nav** | default | Sticky top navigation |
+| **hero** | centered, split | Page headline + CTA |
+| **trust-bar** | default | Logo strip or social proof |
+| **feature-grid** | 2col, 3col, 4col | Feature showcase |
+| **testimonials** | default | Customer quotes (2col grid) |
+| **pricing** | default | 3-tier pricing table |
+| **cta** | centered, full-width | Call-to-action section |
+| **team** | default | Team member cards |
+| **stats** | default | Key metrics (3-4 items) |
+| **footer** | default | Multi-column footer |
+
+See `blocks/` directory for full HTML and variant documentation.
+
+### Example: MRA Limited
+
+See `examples/mra.site.json` for a complete, production-ready site manifest:
+- **Goal:** lead_generation (requires CTA)
+- **Theme:** graphite (dark/mono)
+- **Audience:** b2b_buyers
+- **Pages:** index, about, pricing, contact
+- **Block composition:** fully configured with real content
+
+Validate the example:
+```bash
+node builder/judge.js examples/mra.site.json
+```
+
+### Schema & Validation
+
+**site.schema.json** (JSON Schema Draft 7)
+- Defines the complete structure of site.json
+- Enforces: forma_version, site metadata, theme (dusk/graphite/ivory), goal (5 options), audience, traffic, globals, pages
+- Used by judge.js for schema validation
+- Extensible: add new themes, goals, or page types by updating the schema
+
+**blocks.json** (Block Registry)
+- Machine-readable registry of all available blocks
+- For each block: name, description, category, variants, required tokens, required/optional fields
+- Used by judge.js to validate block usage and field requirements
+
+---
+
+## Design Philosophy: Token-First
+
+Forma v2 extends the original v1 token-first philosophy:
+
+1. **Semantic Tokens Only** — No hardcoded colors in blocks. Use `--text-primary`, `--accent-primary`, `--surface-elevated`
+2. **Theme Independence** — Same HTML works across all themes (dusk/graphite/ivory) without modification
+3. **Composable Blocks** — Assemble pages from blocks. Each block is self-contained, reusable, tested
+4. **Manifest-Driven** — site.json is the single source of truth. Goals, audiences, and page structure are declarative
+5. **Contractual Validation** — Judge enforces the contract. Missing required fields? Build fails. Wrong block for your goal? Judge warns you.
+
+---

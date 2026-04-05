@@ -1,0 +1,370 @@
+{
+  "forma_version": "2.0.0",
+  "site": {
+    "name": "MRA Limited",
+    "domain": "mra-limited.com",
+    "description": "Industrial machinery solutions for enterprise manufacturing",
+    "logo_url": "https://mra-limited.com/logo.svg",
+    "favicon_url": "https://mra-limited.com/favicon.ico"
+  },
+  "theme": "graphite",
+  "goal": "lead_generation",
+  "audience": "b2b_buyers",
+  "traffic": "cold",
+  "primaryCTA": {
+    "text": "Request Demo",
+    "href": "/contact"
+  },
+  "globals": {
+    "nav": [
+      { "text": "Solutions", "href": "/solutions" },
+      { "text": "Pricing", "href": "/pricing" },
+      { "text": "About", "href": "/about" },
+      { "text": "Team", "href": "/team" },
+      { "text": "Contact", "href": "/contact" }
+    ],
+    "footer": {
+      "brand_name": "MRA Limited",
+      "brand_tagline": "Industrial solutions for enterprise manufacturers",
+      "legal_text": "© 2026 MRA Limited. All rights reserved. | Privacy Policy | Terms of Service",
+      "columns": [
+        {
+          "title": "Solutions",
+          "links": [
+            { "text": "Automation", "href": "/solutions/automation" },
+            { "text": "Quality Control", "href": "/solutions/qc" },
+            { "text": "Logistics", "href": "/solutions/logistics" },
+            { "text": "Documentation", "href": "/solutions/docs" }
+          ]
+        },
+        {
+          "title": "Company",
+          "links": [
+            { "text": "About", "href": "/about" },
+            { "text": "Blog", "href": "/blog" },
+            { "text": "Careers", "href": "/careers" },
+            { "text": "Press Kit", "href": "/press" }
+          ]
+        },
+        {
+          "title": "Support",
+          "links": [
+            { "text": "Knowledge Base", "href": "/kb" },
+            { "text": "API Docs", "href": "/api" },
+            { "text": "Contact", "href": "/contact" },
+            { "text": "Status", "href": "https://status.mra-limited.com" }
+          ]
+        }
+      ]
+    }
+  },
+  "pages": {
+    "index": {
+      "title": "MRA Limited — Industrial Solutions",
+      "description": "Enterprise automation and quality control for modern manufacturers",
+      "blocks": [
+        {
+          "id": "nav",
+          "logo_text": "MRA",
+          "cta_text": "Request Demo",
+          "cta_href": "/contact"
+        },
+        {
+          "id": "hero",
+          "variant": "centered",
+          "eyebrow": "Enterprise Solutions",
+          "title": "Manufacturing That Scales",
+          "subtitle": "Automate quality control, optimize logistics, and unlock data insights across your entire manufacturing operation.",
+          "cta_primary_text": "Request Demo",
+          "cta_primary_href": "/contact",
+          "cta_secondary_text": "View Pricing",
+          "cta_secondary_href": "/pricing"
+        },
+        {
+          "id": "trust-bar",
+          "label": "Trusted by leading manufacturers",
+          "logo_1_src": "https://mra-limited.com/logos/toyota.svg",
+          "logo_1_alt": "Toyota",
+          "logo_2_src": "https://mra-limited.com/logos/samsung.svg",
+          "logo_2_alt": "Samsung",
+          "logo_3_src": "https://mra-limited.com/logos/siemens.svg",
+          "logo_3_alt": "Siemens",
+          "logo_4_src": "https://mra-limited.com/logos/ge.svg",
+          "logo_4_alt": "General Electric",
+          "logo_5_src": "https://mra-limited.com/logos/bosch.svg",
+          "logo_5_alt": "Bosch",
+          "logo_6_src": "https://mra-limited.com/logos/daimler.svg",
+          "logo_6_alt": "Daimler"
+        },
+        {
+          "id": "feature-grid",
+          "variant": "3col",
+          "section_eyebrow": "Core Capabilities",
+          "section_title": "Built for Modern Manufacturing",
+          "section_subtitle": "Real-time insights, automated workflows, and intelligent quality control",
+          "icon_1": "⚙️",
+          "feature_1_title": "Process Automation",
+          "feature_1_description": "Reduce manual work by 80% with intelligent workflow automation. Integrate with existing systems seamlessly.",
+          "icon_2": "✓",
+          "feature_2_title": "Quality Intelligence",
+          "feature_2_description": "AI-powered defect detection catches issues before they reach customers. Real-time SPC dashboards.",
+          "icon_3": "📊",
+          "feature_3_title": "Data Platform",
+          "feature_3_description": "Centralize production data. Build custom reports. Make decisions based on real-time insights."
+        },
+        {
+          "id": "testimonials",
+          "section_eyebrow": "Customer Success",
+          "section_title": "Trusted by Industry Leaders",
+          "section_subtitle": "See how leading manufacturers use MRA to optimize their operations",
+          "testimonial_1_quote": "MRA reduced our defect rates by 45% in the first year. The ROI was immediate.",
+          "testimonial_1_name": "James Chen",
+          "testimonial_1_role": "VP Operations",
+          "testimonial_1_company": "Samsung Electronics",
+          "testimonial_1_initials": "JC",
+          "testimonial_2_quote": "Integrating MRA was painless. Our team was productive on day one.",
+          "testimonial_2_name": "Maria Rodriguez",
+          "testimonial_2_role": "Plant Manager",
+          "testimonial_2_company": "Siemens Industrial",
+          "testimonial_2_initials": "MR",
+          "testimonial_3_quote": "The dashboards give us visibility we never had before. Worth every penny.",
+          "testimonial_3_name": "Thomas Mueller",
+          "testimonial_3_role": "Engineering Director",
+          "testimonial_3_company": "Bosch Rexroth",
+          "testimonial_3_initials": "TM",
+          "testimonial_4_quote": "MRA's support team is exceptional. They understand manufacturing.",
+          "testimonial_4_name": "Sarah Park",
+          "testimonial_4_role": "Quality Lead",
+          "testimonial_4_company": "Daimler AG",
+          "testimonial_4_initials": "SP"
+        },
+        {
+          "id": "cta",
+          "variant": "centered",
+          "eyebrow": "Ready to Transform?",
+          "title": "Get a Custom Demo",
+          "subtitle": "See how MRA can optimize your specific manufacturing workflow. Our team will walk you through a live demonstration.",
+          "cta_primary_text": "Schedule Demo",
+          "cta_primary_href": "/contact"
+        },
+        {
+          "id": "footer",
+          "brand_name": "MRA Limited",
+          "brand_tagline": "Industrial solutions for enterprise manufacturers",
+          "col_1_title": "Solutions",
+          "col_1_link_1_text": "Automation",
+          "col_1_link_1_href": "/solutions/automation",
+          "col_1_link_2_text": "Quality Control",
+          "col_1_link_2_href": "/solutions/qc",
+          "col_1_link_3_text": "Logistics",
+          "col_1_link_3_href": "/solutions/logistics",
+          "col_2_title": "Company",
+          "col_2_link_1_text": "About",
+          "col_2_link_1_href": "/about",
+          "col_2_link_2_text": "Blog",
+          "col_2_link_2_href": "/blog",
+          "col_2_link_3_text": "Careers",
+          "col_2_link_3_href": "/careers",
+          "col_3_title": "Legal",
+          "col_3_link_1_text": "Privacy",
+          "col_3_link_1_href": "/privacy",
+          "col_3_link_2_text": "Terms",
+          "col_3_link_2_href": "/terms",
+          "col_3_link_3_text": "Contact",
+          "col_3_link_3_href": "/contact",
+          "legal_text": "© 2026 MRA Limited. All rights reserved."
+        }
+      ]
+    },
+    "about": {
+      "title": "About MRA Limited",
+      "description": "Meet the team building the future of manufacturing automation",
+      "blocks": [
+        {
+          "id": "nav",
+          "logo_text": "MRA",
+          "cta_text": "Request Demo",
+          "cta_href": "/contact"
+        },
+        {
+          "id": "hero",
+          "variant": "centered",
+          "eyebrow": "Our Story",
+          "title": "Solving Real Problems for Real Manufacturers",
+          "subtitle": "Founded in 2015 by manufacturing engineers who wanted better tools."
+        },
+        {
+          "id": "team",
+          "section_eyebrow": "Leadership",
+          "section_title": "Built by Industry Experts",
+          "section_subtitle": "20+ years of combined manufacturing engineering experience",
+          "member_1_name": "David Wong",
+          "member_1_title": "CEO & Co-founder",
+          "member_1_bio": "Former VP of Engineering at Siemens Industrial. 15+ years in automation.",
+          "member_1_photo": "https://mra-limited.com/team/david.jpg",
+          "member_1_linkedin": "https://linkedin.com/in/davidwong",
+          "member_2_name": "Elena Morales",
+          "member_2_title": "CTO & Co-founder",
+          "member_2_bio": "PhD in Manufacturing Systems from MIT. Built real-time systems for Tesla.",
+          "member_2_photo": "https://mra-limited.com/team/elena.jpg",
+          "member_2_linkedin": "https://linkedin.com/in/elenamorales",
+          "member_3_name": "James Park",
+          "member_3_title": "VP Product",
+          "member_3_bio": "Shipped 3 manufacturing software products. Customer obsessed.",
+          "member_3_photo": "https://mra-limited.com/team/james.jpg",
+          "member_3_linkedin": "https://linkedin.com/in/jamespark"
+        },
+        {
+          "id": "cta",
+          "variant": "full-width",
+          "eyebrow": "Let's Build Something",
+          "title": "Join Our Mission to Transform Manufacturing",
+          "cta_primary_text": "Work With Us",
+          "cta_primary_href": "/careers"
+        },
+        {
+          "id": "footer",
+          "brand_name": "MRA Limited",
+          "col_1_title": "Solutions",
+          "col_1_link_1_text": "Automation",
+          "col_1_link_1_href": "/solutions/automation",
+          "col_1_link_2_text": "Quality Control",
+          "col_1_link_2_href": "/solutions/qc",
+          "col_2_title": "Company",
+          "col_2_link_1_text": "About",
+          "col_2_link_1_href": "/about",
+          "col_2_link_2_text": "Blog",
+          "col_2_link_2_href": "/blog",
+          "col_3_title": "Legal",
+          "col_3_link_1_text": "Privacy",
+          "col_3_link_1_href": "/privacy",
+          "col_3_link_2_text": "Terms",
+          "col_3_link_2_href": "/terms",
+          "legal_text": "© 2026 MRA Limited. All rights reserved."
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Pricing — MRA Limited",
+      "description": "Flexible plans for manufacturers of any size",
+      "blocks": [
+        {
+          "id": "nav",
+          "logo_text": "MRA",
+          "cta_text": "Request Demo",
+          "cta_href": "/contact"
+        },
+        {
+          "id": "hero",
+          "variant": "centered",
+          "eyebrow": "Pricing",
+          "title": "Plans for Every Stage",
+          "subtitle": "From startups to enterprises, we have a plan that scales with your business"
+        },
+        {
+          "id": "pricing",
+          "section_eyebrow": "Transparent Pricing",
+          "section_title": "Choose Your Plan",
+          "section_subtitle": "All plans include 24/7 support and regular feature updates",
+          "tier_1_name": "Starter",
+          "tier_1_description": "For small to mid-size operations",
+          "tier_1_price": "$3,999",
+          "tier_1_period": "/month",
+          "tier_1_feature_1": "Up to 10 production lines",
+          "tier_1_feature_2": "Real-time dashboards",
+          "tier_1_feature_3": "Email support",
+          "tier_1_feature_4": "Advanced analytics",
+          "tier_1_feature_5": "Custom integrations",
+          "tier_1_cta_text": "Start Trial",
+          "tier_1_cta_href": "/trial",
+          "tier_2_name": "Professional",
+          "tier_2_description": "For growing manufacturers",
+          "tier_2_price": "$9,999",
+          "tier_2_period": "/month",
+          "tier_2_feature_1": "Unlimited production lines",
+          "tier_2_feature_2": "Advanced SPC analytics",
+          "tier_2_feature_3": "Priority phone support",
+          "tier_2_feature_4": "Custom dashboards",
+          "tier_2_feature_5": "API access",
+          "tier_2_cta_text": "Start Trial",
+          "tier_2_cta_href": "/trial",
+          "tier_3_name": "Enterprise",
+          "tier_3_description": "For large-scale operations",
+          "tier_3_price": "Custom",
+          "tier_3_period": "pricing",
+          "tier_3_feature_1": "Unlimited everything",
+          "tier_3_feature_2": "Dedicated account manager",
+          "tier_3_feature_3": "24/7 phone + chat support",
+          "tier_3_feature_4": "Custom implementations",
+          "tier_3_feature_5": "SLA guarantee",
+          "tier_3_cta_text": "Contact Sales",
+          "tier_3_cta_href": "/contact",
+          "footnote_text": "All prices in USD. Annual billing available at 20% discount. No setup fees."
+        },
+        {
+          "id": "cta",
+          "variant": "centered",
+          "title": "Need a Custom Plan?",
+          "subtitle": "Talk to our sales team about bulk discounts and special pricing",
+          "cta_primary_text": "Contact Sales",
+          "cta_primary_href": "/contact"
+        },
+        {
+          "id": "footer",
+          "brand_name": "MRA Limited",
+          "col_1_title": "Solutions",
+          "col_1_link_1_text": "Automation",
+          "col_1_link_1_href": "/solutions/automation",
+          "col_2_title": "Company",
+          "col_2_link_1_text": "About",
+          "col_2_link_1_href": "/about",
+          "col_3_title": "Legal",
+          "col_3_link_1_text": "Privacy",
+          "col_3_link_1_href": "/privacy",
+          "legal_text": "© 2026 MRA Limited. All rights reserved."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact — MRA Limited",
+      "description": "Get in touch with our team",
+      "blocks": [
+        {
+          "id": "nav",
+          "logo_text": "MRA",
+          "cta_text": "Request Demo",
+          "cta_href": "/contact"
+        },
+        {
+          "id": "hero",
+          "variant": "centered",
+          "eyebrow": "Get in Touch",
+          "title": "Let's Talk",
+          "subtitle": "Our team is ready to discuss how MRA can transform your manufacturing operation"
+        },
+        {
+          "id": "cta",
+          "variant": "centered",
+          "title": "Request a Demo",
+          "subtitle": "Fill out a quick form and our team will get back to you within 24 hours",
+          "cta_primary_text": "Book Demo",
+          "cta_primary_href": "https://calendly.com/mra-limited/demo"
+        },
+        {
+          "id": "footer",
+          "brand_name": "MRA Limited",
+          "col_1_title": "Solutions",
+          "col_1_link_1_text": "Automation",
+          "col_1_link_1_href": "/solutions/automation",
+          "col_2_title": "Company",
+          "col_2_link_1_text": "About",
+          "col_2_link_1_href": "/about",
+          "col_3_title": "Legal",
+          "col_3_link_1_text": "Privacy",
+          "col_3_link_1_href": "/privacy",
+          "legal_text": "© 2026 MRA Limited. All rights reserved."
+        }
+      ]
+    }
+  }
+}

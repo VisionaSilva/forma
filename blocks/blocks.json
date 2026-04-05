@@ -1,0 +1,425 @@
+{
+  "version": "2.0.0",
+  "blocks": [
+    {
+      "id": "nav",
+      "name": "Navigation",
+      "description": "Sticky top navigation bar with logo, links, and optional CTA button",
+      "category": "layout",
+      "variants": ["default"],
+      "requiredTokens": [
+        "surface-primary",
+        "border-subtle",
+        "text-primary",
+        "text-secondary",
+        "cta-bg",
+        "cta-text",
+        "cta-hover",
+        "duration-normal",
+        "ease-standard"
+      ],
+      "requiredFields": [
+        "logo_text",
+        "nav_link_1_text",
+        "nav_link_1_href",
+        "nav_link_2_text",
+        "nav_link_2_href",
+        "nav_link_3_text",
+        "nav_link_3_href",
+        "nav_link_4_text",
+        "nav_link_4_href",
+        "cta_text",
+        "cta_href"
+      ],
+      "optionalFields": [
+        "logo_href"
+      ]
+    },
+    {
+      "id": "hero",
+      "name": "Hero",
+      "description": "Large hero section with headline, subtitle, and CTAs. Supports centered or split (with image) layout",
+      "category": "section",
+      "variants": ["centered", "split"],
+      "requiredTokens": [
+        "surface-primary",
+        "text-primary",
+        "text-secondary",
+        "accent-primary",
+        "cta-bg",
+        "cta-text",
+        "cta-hover",
+        "shadow-glow",
+        "section-gap"
+      ],
+      "requiredFields": [
+        "title",
+        "cta_primary_text",
+        "cta_primary_href"
+      ],
+      "optionalFields": [
+        "eyebrow",
+        "subtitle",
+        "cta_secondary_text",
+        "cta_secondary_href",
+        "image_src",
+        "image_alt"
+      ]
+    },
+    {
+      "id": "trust-bar",
+      "name": "Trust Bar",
+      "description": "Logo strip or trust signals (awards, stats). Shows client logos or social proof metrics",
+      "category": "section",
+      "variants": ["default"],
+      "requiredTokens": [
+        "surface-elevated",
+        "border-subtle",
+        "text-muted",
+        "text-secondary",
+        "accent-primary",
+        "duration-normal",
+        "ease-standard"
+      ],
+      "requiredFields": [
+        "logo_1_src",
+        "logo_1_alt",
+        "logo_2_src",
+        "logo_2_alt",
+        "logo_3_src",
+        "logo_3_alt"
+      ],
+      "optionalFields": [
+        "label",
+        "logo_4_src",
+        "logo_4_alt",
+        "logo_5_src",
+        "logo_5_alt",
+        "logo_6_src",
+        "logo_6_alt",
+        "signal_1_value",
+        "signal_1_label",
+        "signal_2_value",
+        "signal_2_label",
+        "signal_3_value",
+        "signal_3_label",
+        "signal_4_value",
+        "signal_4_label"
+      ]
+    },
+    {
+      "id": "feature-grid",
+      "name": "Feature Grid",
+      "description": "Grid of feature cards with icons. Supports 2, 3, or 4 column layouts",
+      "category": "section",
+      "variants": ["2col", "3col", "4col"],
+      "requiredTokens": [
+        "surface-primary",
+        "surface-elevated",
+        "text-primary",
+        "text-secondary",
+        "accent-primary",
+        "border-subtle",
+        "section-gap"
+      ],
+      "requiredFields": [
+        "section_title",
+        "feature_1_title",
+        "feature_1_description",
+        "feature_2_title",
+        "feature_2_description",
+        "feature_3_title",
+        "feature_3_description"
+      ],
+      "optionalFields": [
+        "section_eyebrow",
+        "section_subtitle",
+        "icon_1",
+        "icon_2",
+        "icon_3",
+        "icon_4",
+        "icon_5",
+        "icon_6",
+        "feature_4_title",
+        "feature_4_description",
+        "feature_5_title",
+        "feature_5_description",
+        "feature_6_title",
+        "feature_6_description"
+      ]
+    },
+    {
+      "id": "testimonials",
+      "name": "Testimonials",
+      "description": "Quote cards in a 2-column grid with author avatars and ratings",
+      "category": "section",
+      "variants": ["default"],
+      "requiredTokens": [
+        "surface-elevated",
+        "border-subtle",
+        "text-primary",
+        "text-secondary",
+        "text-muted",
+        "accent-primary",
+        "accent-text",
+        "shadow-md",
+        "section-gap"
+      ],
+      "requiredFields": [
+        "section_title",
+        "testimonial_1_quote",
+        "testimonial_1_name",
+        "testimonial_1_role",
+        "testimonial_1_company",
+        "testimonial_1_initials"
+      ],
+      "optionalFields": [
+        "section_eyebrow",
+        "section_subtitle",
+        "testimonial_2_quote",
+        "testimonial_2_name",
+        "testimonial_2_role",
+        "testimonial_2_company",
+        "testimonial_2_initials",
+        "testimonial_3_quote",
+        "testimonial_3_name",
+        "testimonial_3_role",
+        "testimonial_3_company",
+        "testimonial_3_initials",
+        "testimonial_4_quote",
+        "testimonial_4_name",
+        "testimonial_4_role",
+        "testimonial_4_company",
+        "testimonial_4_initials"
+      ]
+    },
+    {
+      "id": "pricing",
+      "name": "Pricing",
+      "description": "Pricing table with 2-3 tiers. Middle tier can be highlighted as featured",
+      "category": "section",
+      "variants": ["default"],
+      "requiredTokens": [
+        "surface-elevated",
+        "surface-overlay",
+        "border-subtle",
+        "border-default",
+        "accent-primary",
+        "text-primary",
+        "text-secondary",
+        "text-muted",
+        "cta-bg",
+        "cta-text",
+        "cta-hover",
+        "shadow-lg",
+        "section-gap"
+      ],
+      "requiredFields": [
+        "section_title",
+        "tier_1_name",
+        "tier_1_price",
+        "tier_1_period",
+        "tier_1_feature_1",
+        "tier_2_name",
+        "tier_2_price",
+        "tier_2_period",
+        "tier_2_feature_1",
+        "tier_3_name",
+        "tier_3_price",
+        "tier_3_period",
+        "tier_3_feature_1"
+      ],
+      "optionalFields": [
+        "section_eyebrow",
+        "section_subtitle",
+        "tier_1_description",
+        "tier_1_feature_2",
+        "tier_1_feature_3",
+        "tier_1_feature_4",
+        "tier_1_feature_5",
+        "tier_1_cta_text",
+        "tier_1_cta_href",
+        "tier_2_description",
+        "tier_2_feature_2",
+        "tier_2_feature_3",
+        "tier_2_feature_4",
+        "tier_2_feature_5",
+        "tier_2_cta_text",
+        "tier_2_cta_href",
+        "tier_3_description",
+        "tier_3_feature_2",
+        "tier_3_feature_3",
+        "tier_3_feature_4",
+        "tier_3_feature_5",
+        "tier_3_cta_text",
+        "tier_3_cta_href",
+        "footnote_text"
+      ]
+    },
+    {
+      "id": "cta",
+      "name": "Call-to-Action",
+      "description": "CTA section. Variants: centered (boxed) or full-width (banner)",
+      "category": "section",
+      "variants": ["centered", "full-width"],
+      "requiredTokens": [
+        "surface-elevated",
+        "surface-overlay",
+        "accent-primary",
+        "cta-bg",
+        "cta-text",
+        "cta-hover",
+        "text-primary",
+        "text-secondary",
+        "shadow-glow",
+        "section-gap"
+      ],
+      "requiredFields": [
+        "title",
+        "cta_primary_text",
+        "cta_primary_href"
+      ],
+      "optionalFields": [
+        "eyebrow",
+        "subtitle",
+        "cta_secondary_text",
+        "cta_secondary_href"
+      ]
+    },
+    {
+      "id": "team",
+      "name": "Team",
+      "description": "Team member cards in a responsive grid with photos, bios, and social links",
+      "category": "section",
+      "variants": ["default"],
+      "requiredTokens": [
+        "surface-elevated",
+        "surface-primary",
+        "surface-sunken",
+        "border-subtle",
+        "border-default",
+        "text-primary",
+        "text-secondary",
+        "text-muted",
+        "accent-primary",
+        "shadow-md",
+        "section-gap"
+      ],
+      "requiredFields": [
+        "section_title",
+        "member_1_name",
+        "member_1_title",
+        "member_1_photo"
+      ],
+      "optionalFields": [
+        "section_eyebrow",
+        "section_subtitle",
+        "member_1_bio",
+        "member_1_linkedin",
+        "member_2_name",
+        "member_2_title",
+        "member_2_photo",
+        "member_2_bio",
+        "member_2_linkedin",
+        "member_3_name",
+        "member_3_title",
+        "member_3_photo",
+        "member_3_bio",
+        "member_3_linkedin",
+        "member_4_name",
+        "member_4_title",
+        "member_4_photo",
+        "member_4_bio",
+        "member_4_linkedin"
+      ]
+    },
+    {
+      "id": "stats",
+      "name": "Stats",
+      "description": "Key metrics or statistics in a horizontal row (3-4 items)",
+      "category": "section",
+      "variants": ["default"],
+      "requiredTokens": [
+        "surface-elevated",
+        "border-subtle",
+        "text-primary",
+        "text-secondary",
+        "text-muted",
+        "accent-primary",
+        "section-gap"
+      ],
+      "requiredFields": [
+        "stat_1_value",
+        "stat_1_label",
+        "stat_2_value",
+        "stat_2_label",
+        "stat_3_value",
+        "stat_3_label"
+      ],
+      "optionalFields": [
+        "section_title",
+        "stat_1_sublabel",
+        "stat_2_sublabel",
+        "stat_3_sublabel",
+        "stat_4_value",
+        "stat_4_label",
+        "stat_4_sublabel",
+        "footnote"
+      ]
+    },
+    {
+      "id": "footer",
+      "name": "Footer",
+      "description": "Multi-column footer with brand, links, and legal text",
+      "category": "layout",
+      "variants": ["default"],
+      "requiredTokens": [
+        "surface-elevated",
+        "border-subtle",
+        "text-primary",
+        "text-secondary",
+        "text-muted",
+        "accent-primary",
+        "section-gap"
+      ],
+      "requiredFields": [
+        "brand_name",
+        "col_1_title",
+        "col_1_link_1_text",
+        "col_1_link_1_href",
+        "col_2_title",
+        "col_2_link_1_text",
+        "col_2_link_1_href",
+        "col_3_title",
+        "col_3_link_1_text",
+        "col_3_link_1_href",
+        "legal_text"
+      ],
+      "optionalFields": [
+        "brand_tagline",
+        "col_1_link_2_text",
+        "col_1_link_2_href",
+        "col_1_link_3_text",
+        "col_1_link_3_href",
+        "col_1_link_4_text",
+        "col_1_link_4_href",
+        "col_2_link_2_text",
+        "col_2_link_2_href",
+        "col_2_link_3_text",
+        "col_2_link_3_href",
+        "col_2_link_4_text",
+        "col_2_link_4_href",
+        "col_3_link_2_text",
+        "col_3_link_2_href",
+        "col_3_link_3_text",
+        "col_3_link_3_href",
+        "col_3_link_4_text",
+        "col_3_link_4_href"
+      ]
+    }
+  ],
+  "categories": [
+    "layout",
+    "section"
+  ]
+}

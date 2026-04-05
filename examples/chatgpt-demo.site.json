@@ -1,0 +1,176 @@
+{
+  "forma_version": "2.0.0",
+  "site": {
+    "name": "Forma Demo — ChatGPT Build",
+    "domain": "forma-demo.fly.dev",
+    "description": "A landing page proving Forma turns structured manifests into coherent static websites."
+  },
+  "theme": "dusk",
+  "goal": "lead_generation",
+  "audience": "developers_and_founders",
+  "traffic": "cold",
+  "primaryCTA": {
+    "text": "View on GitHub",
+    "href": "https://github.com/VisionaSilva/forma"
+  },
+  "globals": {
+    "nav": [
+      { "text": "How It Works", "href": "#process" },
+      { "text": "Blocks", "href": "#features" },
+      { "text": "Compare", "href": "#comparison" },
+      { "text": "GitHub", "href": "https://github.com/VisionaSilva/forma" }
+    ]
+  },
+  "pages": {
+    "index": {
+      "title": "Forma — Structured Manifests to Polished Sites",
+      "description": "Forma compiles structured site definitions into polished static sites using reusable blocks, strict tokens, and theme-safe rendering.",
+      "blocks": [
+        {
+          "id": "nav",
+          "cta_text": "GitHub",
+          "cta_href": "https://github.com/VisionaSilva/forma"
+        },
+        {
+          "id": "hero",
+          "variant": "centered",
+          "eyebrow": "Contract-First Website System",
+          "title": "Structured manifests in. Polished sites out.",
+          "subtitle": "Forma compiles site.json manifests into production-ready static HTML using reusable blocks, strict semantic tokens, and theme-safe rendering. No hallucinated markup. No design drift.",
+          "cta_primary_text": "View on GitHub",
+          "cta_primary_href": "https://github.com/VisionaSilva/forma",
+          "cta_secondary_text": "See How It Works",
+          "cta_secondary_href": "#process"
+        },
+        {
+          "id": "problem-solution",
+          "section_eyebrow": "The Problem",
+          "section_title": "Why AI-generated websites break",
+          "icon_problem": "✗",
+          "problem_1": "Agents hallucinate class names that don't exist in any stylesheet",
+          "problem_2": "Design drift — page 1 looks different from page 5, nothing matches",
+          "problem_3": "Two agents on the same site lose each other's decisions",
+          "problem_4": "No validation — broken output ships to production silently",
+          "icon_solution": "✓",
+          "solution_1": "32 pre-built blocks — agents select, never write markup",
+          "solution_2": "31 semantic tokens enforce visual consistency across every page",
+          "solution_3": "One manifest coordinates all agents without shared context",
+          "solution_4": "Forma Judge validates structure AND intent before shipping"
+        },
+        {
+          "id": "process",
+          "eyebrow": "The Pipeline",
+          "title": "Manifest to production in 4 steps",
+          "step_1_title": "Write the manifest",
+          "step_1_desc": "One site.json file defines pages, blocks, content, theme, goal, and audience. This is the single source of truth.",
+          "step_2_title": "Select blocks",
+          "step_2_desc": "Choose from 32 production blocks across 8 categories. Each block is token-based, responsive, and theme-agnostic.",
+          "step_3_title": "Compile",
+          "step_3_desc": "The compiler reads the manifest, pulls blocks, injects content, applies theme tokens. Static HTML out. One command.",
+          "step_4_title": "Validate and ship",
+          "step_4_desc": "Forma Judge checks every page against schema and goal-based rules. If it passes, it ships. If not, it tells you exactly why."
+        },
+        {
+          "id": "code-preview",
+          "eyebrow": "Real Manifest",
+          "title": "This is how agents describe a website",
+          "subtitle": "No HTML. No CSS. Just structured intent. The compiler handles the rest."
+        },
+        {
+          "id": "system-diagram",
+          "eyebrow": "Architecture",
+          "title": "How Forma connects the pieces",
+          "node_1_label": "site.json",
+          "node_1_desc": "Manifest defines everything",
+          "node_2_label": "Compiler",
+          "node_2_desc": "Blocks + tokens + content",
+          "node_3_label": "Static HTML",
+          "node_3_desc": "Production-ready output"
+        },
+        {
+          "id": "feature-grid",
+          "variant": "3col",
+          "section_eyebrow": "32 Blocks",
+          "section_title": "Every pattern a landing page needs",
+          "section_subtitle": "Conversion, trust, features, process, forms, media. Agents pick blocks — they never write markup.",
+          "icon_1": "01",
+          "feature_1_title": "Conversion Blocks",
+          "feature_1_description": "comparison, conversion-panel, problem-solution, faq, guarantee, pricing, cta — every decision-stage pattern.",
+          "icon_2": "02",
+          "feature_2_title": "Trust Blocks",
+          "feature_2_description": "trust-bar, logo-wall, testimonials, case-study, stats — proof that builds confidence.",
+          "icon_3": "03",
+          "feature_3_title": "Feature Blocks",
+          "feature_3_description": "feature-grid, feature-spotlight, bento-grid, system-diagram — product storytelling at every depth.",
+          "icon_4": "04",
+          "feature_4_title": "Process Blocks",
+          "feature_4_description": "process, pipeline — step-by-step flows with timelines and connecting lines.",
+          "icon_5": "05",
+          "feature_5_title": "Form Blocks",
+          "feature_5_description": "contact-form, lead-magnet — capture and convert with token-styled inputs.",
+          "icon_6": "06",
+          "feature_6_title": "Media Blocks",
+          "feature_6_description": "video-embed, before-after, code-preview, changelog — show the product, show the proof."
+        },
+        {
+          "id": "before-after",
+          "section_eyebrow": "The Difference",
+          "section_title": "Raw AI output vs Forma output"
+        },
+        {
+          "id": "comparison",
+          "section_eyebrow": "Compare",
+          "section_title": "Forma vs the alternatives",
+          "feature_1": "Deterministic output",
+          "us_1": "✓",
+          "them_1": "✗",
+          "feature_2": "Multi-agent coordination",
+          "us_2": "✓",
+          "them_2": "✗",
+          "feature_3": "Goal-based validation",
+          "us_3": "✓",
+          "them_3": "✗",
+          "feature_4": "Theme portability",
+          "us_4": "✓",
+          "them_4": "~",
+          "feature_5": "Zero JS required",
+          "us_5": "✓",
+          "them_5": "✗"
+        },
+        {
+          "id": "testimonials",
+          "section_eyebrow": "From the build log",
+          "section_title": "What agents said while using Forma",
+          "testimonial_1_quote": "The token contract caught 3 missing variables before I even ran the build. Without it, those would have shipped as invisible bugs.",
+          "testimonial_1_name": "Carlos",
+          "testimonial_1_role": "Builder Agent",
+          "testimonial_1_company": "Novaiok",
+          "testimonial_1_initials": "CA",
+          "testimonial_2_quote": "I validated the manifest against the schema, ran the judge, and every page passed 28/28 checks. No manual review needed.",
+          "testimonial_2_name": "Roger",
+          "testimonial_2_role": "QA Agent",
+          "testimonial_2_company": "Novaiok",
+          "testimonial_2_initials": "RO",
+          "testimonial_3_quote": "Switching from Graphite to Bone and Ink was one line in the manifest. Every block re-themed automatically.",
+          "testimonial_3_name": "Visiona Silva",
+          "testimonial_3_role": "Design Agent",
+          "testimonial_3_company": "VisionaSilva",
+          "testimonial_3_initials": "VS"
+        },
+        {
+          "id": "conversion-panel",
+          "title": "Start building with Forma",
+          "bullet_1": "32 blocks. 5 themes. Zero hallucinated markup.",
+          "bullet_2": "MIT licensed. Free forever.",
+          "cta_text": "View on GitHub",
+          "cta_href": "https://github.com/VisionaSilva/forma"
+        },
+        {
+          "id": "footer",
+          "brand_name": "Forma",
+          "legal_text": "2026 Forma. MIT License. Built by agents, for agents."
+        }
+      ]
+    }
+  }
+}

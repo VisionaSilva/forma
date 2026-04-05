@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How Forma Works</title>
-  <meta name="description" content="The three-layer constraint engine that turns agent intent into production websites.">
+  <meta name="description" content="The three-layer constraint engine.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -2427,7 +2427,7 @@ a { color: inherit; }
     <div class="hero-content">
       <div class="hero-eyebrow">How It Works</div>
       <h1 class="hero-headline">Intent in. Website out.</h1>
-      <p class="hero-subheadline">Forma replaces free-form HTML generation with a structured pipeline. Agents declare what they want. The system enforces how it gets built.</p>
+      <p class="hero-subheadline">Agents declare what they want in a JSON manifest. Forma enforces how it gets built. No free-form HTML. No guesswork.</p>
       <div class="hero-actions">
         <a href="https://github.com/VisionaSilva/forma" class="hero-cta-primary">View on GitHub</a>
         
@@ -2446,39 +2446,39 @@ a { color: inherit; }
 <div class="feature-grid-inner" data-animate="fade-up">
     <div class="feature-grid-header">
       <div class="feature-grid-eyebrow">The Pipeline</div>
-      <h2 class="feature-grid-title">Three steps. Zero guesswork.</h2>
-      <p class="feature-grid-subtitle">Every site follows the same path: declare, compile, validate. No exceptions.</p>
+      <h2 class="feature-grid-title">Three steps. Every time.</h2>
+      <p class="feature-grid-subtitle">Every site follows the same path. No exceptions.</p>
     </div>
 
     <div class="feature-grid">
       <div class="feature-item">
         <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">01</span> Write the manifest</h3>
-        <p class="feature-body">Define your site in a single site.json file. Pages, blocks, content, theme, goal, audience. This is the single source of truth — every agent reads from it, no shared context needed.</p>
+        <p class="feature-body">One site.json file. Pages, blocks, content, theme, goal, audience. The single source of truth. Every agent reads from it.</p>
       </div>
 
       <div class="feature-item">
         <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">02</span> Compile</h3>
-        <p class="feature-body">The compiler reads your manifest, pulls blocks from the library, injects your content, applies the theme tokens, and outputs static HTML. One command: node compile.site.js site.json dist/</p>
+        <p class="feature-body">The compiler reads the manifest, pulls blocks, injects content, applies theme tokens, outputs static HTML. One command.</p>
       </div>
 
       <div class="feature-item">
         <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">03</span> Validate</h3>
-        <p class="feature-body">Forma Judge checks every page against the schema and goal-based rules. Missing a CTA on a lead-gen page? Build fails. Missing tokens? Build fails. No silent errors.</p>
+        <p class="feature-body">Forma Judge checks every page against schema and goal-based rules. Missing a CTA? Build fails. Missing tokens? Build fails.</p>
       </div>
 
       <div class="feature-item">
         <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">→</span> Token Contract</h3>
-        <p class="feature-body">31 semantic tokens define your entire visual language — colors, spacing, type, radius, shadows. Miss one and the build breaks. This eliminates hallucinated CSS values.</p>
+        <p class="feature-body">31 semantic tokens define the visual language. Colors, spacing, type scales, radius, shadows. Miss one and the theme compiler rejects the build.</p>
       </div>
 
       <div class="feature-item">
         <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">→</span> Block Library</h3>
-        <p class="feature-body">10 production blocks: nav, hero, trust-bar, feature-grid, stats, testimonials, pricing, cta, team, footer. Agents select and configure blocks — they never write markup.</p>
+        <p class="feature-body">10 blocks: nav, hero, trust-bar, feature-grid, stats, testimonials, pricing, cta, team, footer. Agents select and configure — never write markup.</p>
       </div>
 
       <div class="feature-item">
         <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">→</span> Theme Layer</h3>
-        <p class="feature-body">Each theme is a theme.json file that maps tokens to values. Swap one line in the manifest to retheme everything. Five built-in: Bone and Ink, Dusk, Graphite, Ivory, Terminal Green.</p>
+        <p class="feature-body">Each theme is a theme.json mapping tokens to OKLCH values. Swap one line in the manifest to retheme everything. Five built-in themes.</p>
       </div>
     </div>
   </div>
@@ -2523,7 +2523,7 @@ a { color: inherit; }
     <div class="cta-content">
       <div class="cta-eyebrow">Try it</div>
       <h2 class="cta-headline">Clone. Theme. Ship.</h2>
-      <p class="cta-subtext">MIT licensed. No account needed. One npm install away.</p>
+      <p class="cta-subtext">MIT licensed. No account needed.</p>
     </div>
     <div class="cta-actions">
       <a href="https://github.com/VisionaSilva/forma" class="cta-button-primary">Get the repo</a>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — Forma</title>
-  <meta name="description" content="The story behind the constraint engine">
+  <title>About Forma</title>
+  <meta name="description" content="Why Forma exists and who built it.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -2416,7 +2416,7 @@ a { color: inherit; }
       <li><a href="contact.html">Contact</a></li>
     </ul>
 
-    <a href="https://github.com/VisionaSilva/forma" class="nav-cta">Get Started</a>
+    <a href="https://github.com/VisionaSilva/forma" class="nav-cta">GitHub</a>
   </div>
 </nav>
 
@@ -2425,9 +2425,9 @@ a { color: inherit; }
 <section class="section hero-block" data-variant="centered">
 <div class="hero-inner" data-animate="fade-up">
     <div class="hero-content">
-      <div class="hero-eyebrow">About Forma</div>
-      <h1 class="hero-headline">Built by agents who got tired of bad output</h1>
-      <p class="hero-subheadline">Forma started inside a real multi-agent factory. Three agents — Carlos, Roger, Visiona — built production websites and kept hitting the same problems: drift, hallucination, inconsistency. Forma is the system they built to fix it.</p>
+      <div class="hero-eyebrow">About</div>
+      <h1 class="hero-headline">AI doesn’t fail because it’s dumb. It fails because there are no constraints.</h1>
+      <p class="hero-subheadline">Forma exists because every AI website generator produces the same broken output: hallucinated class names, inconsistent spacing, drifting design. The fix isn’t better prompts. It’s better structure.</p>
       <div class="hero-actions">
         <a href="/get-started" class="hero-cta-primary">Get Started Free</a>
         
@@ -2441,58 +2441,44 @@ a { color: inherit; }
 </section>
 
 
-<!-- Block: team | Variants: default (grid, name + role + optional bio) -->
-<section class="section team-block">
-<div class="team-inner" data-animate="fade-up">
-    <div class="team-header">
-      <div class="team-eyebrow">Team</div>
-      <h2 class="team-title">The people behind Forma</h2>
-      <p class="team-subtitle">A small team obsessed with design, speed, and the craft of building great products.</p>
+<!-- Block: feature-grid | Variants: 2col, 3col (default), 4col -->
+<section class="section feature-grid-block" data-variant="3col">
+<div class="feature-grid-inner" data-animate="fade-up">
+    <div class="feature-grid-header">
+      <div class="feature-grid-eyebrow">The Problem</div>
+      <h2 class="feature-grid-title">What happens without constraints</h2>
+      <p class="feature-grid-subtitle">We watched agents build hundreds of pages. The failure modes were always the same.</p>
     </div>
 
-    <div class="team-grid">
-      <div class="team-card">
-        <div class="team-avatar" aria-hidden="true">SL</div>
-        <h3 class="team-name">Sofia Lenz</h3>
-        <p class="team-role">Co-founder & CEO</p>
-        <p class="team-bio">Former designer at Linear. Obsessed with design systems and the gap between design and engineering.</p>
-        <div class="team-links">
-          <a href="#" class="team-link" aria-label="Sofia Lenz on X">X</a>
-          <a href="#" class="team-link" aria-label="Sofia Lenz on LinkedIn">LinkedIn</a>
-        </div>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">x</span> Hallucinated CSS</h3>
+        <p class="feature-body">Agents invent class names that don’t exist in any stylesheet. The HTML looks right. The page looks broken.</p>
       </div>
 
-      <div class="team-card">
-        <div class="team-avatar" aria-hidden="true">MR</div>
-        <h3 class="team-name">Marco Reyes</h3>
-        <p class="team-role">Co-founder & CTO</p>
-        <p class="team-bio">Previously built infrastructure at Vercel. Believes every millisecond of performance is a design decision.</p>
-        <div class="team-links">
-          <a href="#" class="team-link" aria-label="Marco Reyes on GitHub">GitHub</a>
-          <a href="#" class="team-link" aria-label="Marco Reyes on X">X</a>
-        </div>
+      <div class="feature-item">
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">x</span> Design drift</h3>
+        <p class="feature-body">Page 1 uses 16px body text. Page 3 uses 14px. By page 5, nothing matches. There’s no system holding it together.</p>
       </div>
 
-      <div class="team-card">
-        <div class="team-avatar" aria-hidden="true">AW</div>
-        <h3 class="team-name">Aisha Wren</h3>
-        <p class="team-role">Lead Designer</p>
-        <p class="team-bio">Trained at RISD. Every token in Forma went through her eye first. If it ships, it passed her test.</p>
-        <div class="team-links">
-          <a href="#" class="team-link" aria-label="Aisha Wren on Dribbble">Dribbble</a>
-          <a href="#" class="team-link" aria-label="Aisha Wren on X">X</a>
-        </div>
+      <div class="feature-item">
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">x</span> Context collapse</h3>
+        <p class="feature-body">When two agents work on the same site, they lose each other’s decisions. Colors change. Spacing shifts. The site falls apart.</p>
       </div>
 
-      <div class="team-card">
-        <div class="team-avatar" aria-hidden="true">KP</div>
-        <h3 class="team-name">Kai Park</h3>
-        <p class="team-role">Developer Relations</p>
-        <p class="team-bio">Writes the docs, makes the examples, answers the questions. Bridges the gap between the block and the build.</p>
-        <div class="team-links">
-          <a href="#" class="team-link" aria-label="Kai Park on GitHub">GitHub</a>
-          <a href="#" class="team-link" aria-label="Kai Park on X">X</a>
-        </div>
+      <div class="feature-item">
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">→</span> The fix: constraints</h3>
+        <p class="feature-body">Forma gives agents a contract to work within. Tokens define the visual language. Blocks define the markup. The manifest coordinates everything.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">→</span> Taste as enforcement</h3>
+        <p class="feature-body">Every theme ships with TASTE.md — design rationale in machine-readable form. Agents don’t just follow rules. They understand why.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">→</span> Built by agents</h3>
+        <p class="feature-body">Designed by Visiona Silva, built by Carlos, QA’d by Roger, shipped by Nova. The system was built using the system.</p>
       </div>
     </div>
   </div>
@@ -2500,16 +2486,16 @@ a { color: inherit; }
 
 
 <!-- Block: cta | Variants: centered (default), full-width -->
-<section class="section cta-block" data-variant="full-width">
+<section class="section cta-block" data-variant="centered">
 <div class="cta-inner" data-animate="fade-up">
     <div class="cta-content">
-      <div class="cta-eyebrow">Get Started</div>
-      <h2 class="cta-headline">Forma is open source</h2>
-      <p class="cta-subtext">MIT License. Fork it, extend it, contribute back. The constraint engine gets better with every builder.</p>
+      <div class="cta-eyebrow">Open Source</div>
+      <h2 class="cta-headline">MIT licensed. Free forever.</h2>
+      <p class="cta-subtext">Forma is a public good for the agent web. Fork it. Build on it. Make it yours.</p>
     </div>
     <div class="cta-actions">
-      <a href="https://github.com/VisionaSilva/forma" class="cta-button-primary">GitHub</a>
-      <a href="/docs" class="cta-button-secondary">Read the Docs</a>
+      <a href="https://github.com/VisionaSilva/forma" class="cta-button-primary">View on GitHub</a>
+      <a href="https://github.com/VisionaSilva/forma#readme" class="cta-button-secondary">Read the README</a>
     </div>
   </div>
 </section>

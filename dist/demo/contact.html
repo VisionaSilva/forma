@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — Forma</title>
-  <meta name="description" content="Get in touch">
+  <title>Contact</title>
+  <meta name="description" content="Get in touch about Forma.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -2416,7 +2416,7 @@ a { color: inherit; }
       <li><a href="contact.html">Contact</a></li>
     </ul>
 
-    <a href="https://github.com/VisionaSilva/forma" class="nav-cta">Get Started</a>
+    <a href="https://github.com/VisionaSilva/forma" class="nav-cta">GitHub</a>
   </div>
 </nav>
 
@@ -2426,11 +2426,11 @@ a { color: inherit; }
 <div class="hero-inner" data-animate="fade-up">
     <div class="hero-content">
       <div class="hero-eyebrow">Contact</div>
-      <h1 class="hero-headline">Let's talk</h1>
-      <p class="hero-subheadline">Questions about Forma? Want to contribute? Building something with the block library? Reach out.</p>
+      <h1 class="hero-headline">Open an issue. Start a discussion.</h1>
+      <p class="hero-subheadline">Forma is open source. The best way to reach us is through GitHub — issues for bugs, discussions for ideas.</p>
       <div class="hero-actions">
-        <a href="/get-started" class="hero-cta-primary">Get Started Free</a>
-        
+        <a href="https://github.com/VisionaSilva/forma/issues" class="hero-cta-primary">Open an Issue</a>
+        <a href="https://github.com/VisionaSilva/forma/discussions" class="hero-cta-secondary">Start a Discussion</a>
       </div>
     </div>
     <div class="hero-visual" aria-hidden="true">
@@ -2441,17 +2441,45 @@ a { color: inherit; }
 </section>
 
 
-<!-- Block: cta | Variants: centered (default), full-width -->
-<section class="section cta-block" data-variant="centered">
-<div class="cta-inner" data-animate="fade-up">
-    <div class="cta-content">
-      <div class="cta-eyebrow">Get Started</div>
-      <h2 class="cta-headline">Open Source Community</h2>
-      <p class="cta-subtext">File issues, submit PRs, or just say hello on GitHub.</p>
+<!-- Block: feature-grid | Variants: 2col, 3col (default), 4col -->
+<section class="section feature-grid-block" data-variant="3col">
+<div class="feature-grid-inner" data-animate="fade-up">
+    <div class="feature-grid-header">
+      <div class="feature-grid-eyebrow">Get Involved</div>
+      <h2 class="feature-grid-title">Three ways to contribute</h2>
+      <p class="feature-grid-subtitle">Composable, accessible, and built with a design-token system that scales with your brand.</p>
     </div>
-    <div class="cta-actions">
-      <a href="https://github.com/VisionaSilva/forma/issues" class="cta-button-primary">GitHub Issues</a>
-      <a href="/docs" class="cta-button-secondary">Read the Docs</a>
+
+    <div class="feature-grid">
+      <div class="feature-item">
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">01</span> Report a bug</h3>
+        <p class="feature-body">Found something broken? Open an issue with the manifest that triggered it. We fix fast.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">02</span> Build a theme</h3>
+        <p class="feature-body">Create a theme.json with 31 tokens and a TASTE.md. Submit a PR. If it passes the judge, it ships.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">03</span> Build a block</h3>
+        <p class="feature-body">Write HTML that uses only Forma tokens. No hardcoded values. No framework dependencies. Submit a PR.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">→</span> Flexible Layouts</h3>
+        <p class="feature-body">Multiple variants per block let you mix and match without writing custom CSS.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">→</span> Drop-In Ready</h3>
+        <p class="feature-body">Works with any stack — plain HTML, React, Vue, Astro, whatever you're building with.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">→</span> Dark Mode Native</h3>
+        <p class="feature-body">CSS token architecture makes dark mode a first-class citizen, not an afterthought.</p>
+      </div>
     </div>
   </div>
 </section>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forma — Open Source</title>
-  <meta name="description" content="Forma is free and open source under the MIT License.">
+  <title>How Forma Works</title>
+  <meta name="description" content="The three-layer constraint engine that turns agent intent into production websites.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -2411,7 +2411,7 @@ a { color: inherit; }
     </button>
 
     <ul class="nav-links">
-      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="how-it-works.html">How It Works</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -2425,9 +2425,9 @@ a { color: inherit; }
 <section class="section hero-block" data-variant="centered">
 <div class="hero-inner" data-animate="fade-up">
     <div class="hero-content">
-      <div class="hero-eyebrow">Pricing</div>
-      <h1 class="hero-headline">Free. Open source. MIT.</h1>
-      <p class="hero-subheadline">Forma is a public good for the agent web. Clone it, fork it, build on it. No license fees, no usage limits, no vendor lock-in.</p>
+      <div class="hero-eyebrow">How It Works</div>
+      <h1 class="hero-headline">Intent in. Website out.</h1>
+      <p class="hero-subheadline">Forma replaces free-form HTML generation with a structured pipeline. Agents declare what they want. The system enforces how it gets built.</p>
       <div class="hero-actions">
         <a href="https://github.com/VisionaSilva/forma" class="hero-cta-primary">View on GitHub</a>
         
@@ -2441,32 +2441,76 @@ a { color: inherit; }
 </section>
 
 
+<!-- Block: feature-grid | Variants: 2col, 3col (default), 4col -->
+<section class="section feature-grid-block" data-variant="3col">
+<div class="feature-grid-inner" data-animate="fade-up">
+    <div class="feature-grid-header">
+      <div class="feature-grid-eyebrow">The Pipeline</div>
+      <h2 class="feature-grid-title">Three steps. Zero guesswork.</h2>
+      <p class="feature-grid-subtitle">Every site follows the same path: declare, compile, validate. No exceptions.</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-item">
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">01</span> Write the manifest</h3>
+        <p class="feature-body">Define your site in a single site.json file. Pages, blocks, content, theme, goal, audience. This is the single source of truth — every agent reads from it, no shared context needed.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">02</span> Compile</h3>
+        <p class="feature-body">The compiler reads your manifest, pulls blocks from the library, injects your content, applies the theme tokens, and outputs static HTML. One command: node compile.site.js site.json dist/</p>
+      </div>
+
+      <div class="feature-item">
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">03</span> Validate</h3>
+        <p class="feature-body">Forma Judge checks every page against the schema and goal-based rules. Missing a CTA on a lead-gen page? Build fails. Missing tokens? Build fails. No silent errors.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">→</span> Token Contract</h3>
+        <p class="feature-body">31 semantic tokens define your entire visual language — colors, spacing, type, radius, shadows. Miss one and the build breaks. This eliminates hallucinated CSS values.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">→</span> Block Library</h3>
+        <p class="feature-body">10 production blocks: nav, hero, trust-bar, feature-grid, stats, testimonials, pricing, cta, team, footer. Agents select and configure blocks — they never write markup.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3 class="feature-heading"><span class="feature-icon" aria-hidden="true">→</span> Theme Layer</h3>
+        <p class="feature-body">Each theme is a theme.json file that maps tokens to values. Swap one line in the manifest to retheme everything. Five built-in: Bone and Ink, Dusk, Graphite, Ivory, Terminal Green.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- Block: stats | Variants: default (3-4 large stat numbers with labels) -->
 <section class="section stats-block">
 <div class="stats-inner" data-animate="fade-up">
     <div class="stats-header">
-      <p class="stats-title">What you get</p>
+      <p class="stats-title">What the system enforces</p>
     </div>
 
     <div class="stats-grid" role="list" aria-label="Key statistics">
       <div class="stat-item" role="listitem">
         <div class="stat-number">31<span class="stat-suffix"></span></div>
-        <div class="stat-label">Semantic design tokens</div>
+        <div class="stat-label">Required tokens per theme</div>
       </div>
 
       <div class="stat-item" role="listitem">
-        <div class="stat-number">10<span class="stat-suffix"></span></div>
-        <div class="stat-label">Production blocks</div>
-      </div>
-
-      <div class="stat-item" role="listitem">
-        <div class="stat-number">5<span class="stat-suffix"></span></div>
-        <div class="stat-label">Complete themes</div>
+        <div class="stat-number">0<span class="stat-suffix"></span></div>
+        <div class="stat-label">Raw HTML written by agents</div>
       </div>
 
       <div class="stat-item" role="listitem">
         <div class="stat-number">1<span class="stat-suffix"></span></div>
-        <div class="stat-label">Validator (Forma Judge)</div>
+        <div class="stat-label">Source of truth (site.json)</div>
+      </div>
+
+      <div class="stat-item" role="listitem">
+        <div class="stat-number">100<span class="stat-suffix">%</span></div>
+        <div class="stat-label">Validator coverage</div>
       </div>
     </div>
   </div>
@@ -2477,13 +2521,13 @@ a { color: inherit; }
 <section class="section cta-block" data-variant="centered">
 <div class="cta-inner" data-animate="fade-up">
     <div class="cta-content">
-      <div class="cta-eyebrow">Ready?</div>
+      <div class="cta-eyebrow">Try it</div>
       <h2 class="cta-headline">Clone. Theme. Ship.</h2>
-      <p class="cta-subtext">Everything you need to build agent-quality websites.</p>
+      <p class="cta-subtext">MIT licensed. No account needed. One npm install away.</p>
     </div>
     <div class="cta-actions">
       <a href="https://github.com/VisionaSilva/forma" class="cta-button-primary">Get the repo</a>
-      <a href="/docs" class="cta-button-secondary">Read the Docs</a>
+      <a href="https://github.com/VisionaSilva/forma#readme" class="cta-button-secondary">Read the README</a>
     </div>
   </div>
 </section>

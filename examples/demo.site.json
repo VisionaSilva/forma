@@ -16,8 +16,8 @@
   "globals": {
     "nav": [
       {
-        "text": "Pricing",
-        "href": "pricing.html"
+        "text": "How It Works",
+        "href": "how-it-works.html"
       },
       {
         "text": "About",
@@ -226,55 +226,6 @@
         }
       ]
     },
-    "pricing": {
-      "title": "Forma \u2014 Open Source",
-      "description": "Forma is free and open source under the MIT License.",
-      "blocks": [
-        {
-          "id": "nav",
-          "cta_text": "GitHub",
-          "cta_href": "https://github.com/VisionaSilva/forma"
-        },
-        {
-          "id": "hero",
-          "variant": "centered",
-          "eyebrow": "Pricing",
-          "title": "Free. Open source. MIT.",
-          "subtitle": "Forma is a public good for the agent web. Clone it, fork it, build on it. No license fees, no usage limits, no vendor lock-in.",
-          "cta_primary_text": "View on GitHub",
-          "cta_primary_href": "https://github.com/VisionaSilva/forma"
-        },
-        {
-          "id": "stats",
-          "section_title": "What you get",
-          "stat_1_number": "31",
-          "stat_1_suffix": "",
-          "stat_1_label": "Semantic design tokens",
-          "stat_2_number": "10",
-          "stat_2_suffix": "",
-          "stat_2_label": "Production blocks",
-          "stat_3_number": "5",
-          "stat_3_suffix": "",
-          "stat_3_label": "Complete themes",
-          "stat_4_number": "1",
-          "stat_4_suffix": "",
-          "stat_4_label": "Validator (Forma Judge)"
-        },
-        {
-          "id": "cta",
-          "eyebrow": "Ready?",
-          "title": "Clone. Theme. Ship.",
-          "subtitle": "Everything you need to build agent-quality websites.",
-          "cta_primary_text": "Get the repo",
-          "cta_primary_href": "https://github.com/VisionaSilva/forma"
-        },
-        {
-          "id": "footer",
-          "brand_name": "Forma",
-          "legal_text": "2026 Forma. MIT License."
-        }
-      ]
-    },
     "about": {
       "title": "About \u2014 Forma",
       "description": "The story behind the constraint engine",
@@ -353,6 +304,82 @@
         },
         {
           "id": "footer"
+        }
+      ]
+    },
+    "how-it-works": {
+      "title": "How Forma Works",
+      "description": "The three-layer constraint engine that turns agent intent into production websites.",
+      "blocks": [
+        {
+          "id": "nav",
+          "cta_text": "GitHub",
+          "cta_href": "https://github.com/VisionaSilva/forma"
+        },
+        {
+          "id": "hero",
+          "variant": "centered",
+          "eyebrow": "How It Works",
+          "title": "Intent in. Website out.",
+          "subtitle": "Forma replaces free-form HTML generation with a structured pipeline. Agents declare what they want. The system enforces how it gets built.",
+          "cta_primary_text": "View on GitHub",
+          "cta_primary_href": "https://github.com/VisionaSilva/forma"
+        },
+        {
+          "id": "feature-grid",
+          "variant": "3col",
+          "section_eyebrow": "The Pipeline",
+          "section_title": "Three steps. Zero guesswork.",
+          "section_subtitle": "Every site follows the same path: declare, compile, validate. No exceptions.",
+          "icon_1": "01",
+          "feature_1_title": "Write the manifest",
+          "feature_1_description": "Define your site in a single site.json file. Pages, blocks, content, theme, goal, audience. This is the single source of truth \u2014 every agent reads from it, no shared context needed.",
+          "icon_2": "02",
+          "feature_2_title": "Compile",
+          "feature_2_description": "The compiler reads your manifest, pulls blocks from the library, injects your content, applies the theme tokens, and outputs static HTML. One command: node compile.site.js site.json dist/",
+          "icon_3": "03",
+          "feature_3_title": "Validate",
+          "feature_3_description": "Forma Judge checks every page against the schema and goal-based rules. Missing a CTA on a lead-gen page? Build fails. Missing tokens? Build fails. No silent errors.",
+          "icon_4": "\u2192",
+          "feature_4_title": "Token Contract",
+          "feature_4_description": "31 semantic tokens define your entire visual language \u2014 colors, spacing, type, radius, shadows. Miss one and the build breaks. This eliminates hallucinated CSS values.",
+          "icon_5": "\u2192",
+          "feature_5_title": "Block Library",
+          "feature_5_description": "10 production blocks: nav, hero, trust-bar, feature-grid, stats, testimonials, pricing, cta, team, footer. Agents select and configure blocks \u2014 they never write markup.",
+          "icon_6": "\u2192",
+          "feature_6_title": "Theme Layer",
+          "feature_6_description": "Each theme is a theme.json file that maps tokens to values. Swap one line in the manifest to retheme everything. Five built-in: Bone and Ink, Dusk, Graphite, Ivory, Terminal Green."
+        },
+        {
+          "id": "stats",
+          "section_title": "What the system enforces",
+          "stat_1_number": "31",
+          "stat_1_suffix": "",
+          "stat_1_label": "Required tokens per theme",
+          "stat_2_number": "0",
+          "stat_2_suffix": "",
+          "stat_2_label": "Raw HTML written by agents",
+          "stat_3_number": "1",
+          "stat_3_suffix": "",
+          "stat_3_label": "Source of truth (site.json)",
+          "stat_4_number": "100",
+          "stat_4_suffix": "%",
+          "stat_4_label": "Validator coverage"
+        },
+        {
+          "id": "cta",
+          "eyebrow": "Try it",
+          "title": "Clone. Theme. Ship.",
+          "subtitle": "MIT licensed. No account needed. One npm install away.",
+          "cta_primary_text": "Get the repo",
+          "cta_primary_href": "https://github.com/VisionaSilva/forma",
+          "cta_secondary_text": "Read the README",
+          "cta_secondary_href": "https://github.com/VisionaSilva/forma#readme"
+        },
+        {
+          "id": "footer",
+          "brand_name": "Forma",
+          "legal_text": "2026 Forma. MIT License. Built by agents, for agents."
         }
       ]
     }

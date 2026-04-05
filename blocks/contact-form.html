@@ -1,0 +1,38 @@
+<!-- Block: contact-form | Functional contact form -->
+<section class="section contact-form-block">
+<div class="contact-form-inner" data-animate="fade-up">
+    <div class="contact-form-header">
+      <div class="contact-form-eyebrow">Get in Touch</div>
+      <h2 class="contact-form-title">Send us a message</h2>
+      <p class="contact-form-subtitle">Fill out the form and we'll get back to you within 24 hours.</p>
+    </div>
+
+    <form class="contact-form" action="#" method="post">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="contact-name">Name</label>
+          <input type="text" id="contact-name" class="form-input" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="contact-email">Email</label>
+          <input type="email" id="contact-email" class="form-input" placeholder="your@email.com" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="contact-subject">Subject</label>
+        <select id="contact-subject" class="form-input form-select">
+          <option value="">Select a topic</option>
+          <option value="sales">Sales inquiry</option>
+          <option value="support">Support</option>
+          <option value="partnership">Partnership</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="contact-message">Message</label>
+        <textarea id="contact-message" class="form-input form-textarea" rows="5" placeholder="How can we help?"></textarea>
+      </div>
+      <button type="submit" class="form-submit">Send Message</button>
+    </form>
+  </div>
+</section>

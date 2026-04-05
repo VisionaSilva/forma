@@ -140,12 +140,12 @@ function injectContent(blockHtml, blockData) {
   // CTA
   if (blockData.id === 'cta') {
     if (blockData.variant) html = html.replace(/data-variant="centered"/, `data-variant="${blockData.variant}"`);
-    if (blockData.eyebrow) html = html.replace(/Ready to build\?/, blockData.eyebrow);
-    if (blockData.title) html = html.replace(/Start with Forma today/, blockData.title);
-    if (blockData.subtitle) html = html.replace(/Download the blocks\. Add your theme\. Ship your site\./, blockData.subtitle);
+    if (blockData.eyebrow) html = html.replace(/Get Started/, blockData.eyebrow);
+    if (blockData.title) html = html.replace(/Ready to ship your next landing page\?/, blockData.title);
+    if (blockData.subtitle) html = html.replace(/Join thousands of designers and engineers using Forma to build faster, better landing pages\./, blockData.subtitle);
     if (blockData.cta_primary_text) {
-      html = html.replace(/Get Started Free/, blockData.cta_primary_text);
-      html = html.replace(/href="\/get-started"/g, `href="${blockData.cta_primary_href || '/contact'}"`);
+      html = html.replace(/Start Building Free/, blockData.cta_primary_text);
+      html = html.replace(/href="\/signup"/g, `href="${blockData.cta_primary_href || '/contact'}"`);
     }
   }
 

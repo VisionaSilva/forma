@@ -1,0 +1,291 @@
+{
+  "forma_version": "2.0.0",
+  "site": {
+    "name": "Forma",
+    "domain": "forma.dev",
+    "description": "The constraint engine for agent-built websites"
+  },
+  "theme": "graphite",
+  "goal": "lead_generation",
+  "audience": "developers",
+  "traffic": "cold",
+  "primaryCTA": {
+    "text": "Get Started",
+    "href": "/contact"
+  },
+  "globals": {
+    "nav": [
+      { "text": "Blocks", "href": "#blocks" },
+      { "text": "How It Works", "href": "#how" },
+      { "text": "Pricing", "href": "pricing.html" },
+      { "text": "About", "href": "about.html" },
+      { "text": "Contact", "href": "contact.html" }
+    ],
+    "footer": {
+      "brand_name": "Forma",
+      "brand_tagline": "The design layer of the agent web",
+      "legal_text": "© 2026 Forma. Open-source under MIT License.",
+      "columns": [
+        {
+          "title": "Product",
+          "links": [
+            { "text": "Blocks", "href": "#blocks" },
+            { "text": "Themes", "href": "#themes" },
+            { "text": "Compiler", "href": "#compiler" },
+            { "text": "Judge", "href": "#judge" }
+          ]
+        },
+        {
+          "title": "Developers",
+          "links": [
+            { "text": "Documentation", "href": "/docs" },
+            { "text": "GitHub", "href": "https://github.com/VisionaSilva/forma" },
+            { "text": "Block Authoring", "href": "/docs/blocks" },
+            { "text": "Changelog", "href": "/changelog" }
+          ]
+        },
+        {
+          "title": "Community",
+          "links": [
+            { "text": "Discord", "href": "/discord" },
+            { "text": "Twitter", "href": "https://x.com/VisionaSilva" },
+            { "text": "Blog", "href": "/blog" },
+            { "text": "Showcase", "href": "/showcase" }
+          ]
+        }
+      ]
+    }
+  },
+  "pages": {
+    "index": {
+      "title": "Forma — The Design Layer of the Agent Web",
+      "description": "A constraint engine that turns agent intent into deterministic, high-quality websites. Token contracts. Block library. Manifest protocol.",
+      "blocks": [
+        {
+          "id": "nav",
+          "logo_text": "Forma",
+          "cta_text": "Get Started",
+          "cta_href": "https://github.com/VisionaSilva/forma"
+        },
+        {
+          "id": "hero",
+          "variant": "centered",
+          "eyebrow": "Open Source · MIT License",
+          "title": "Stop generating HTML. Start declaring intent.",
+          "subtitle": "Forma is a constraint engine for agent-built websites. Token contracts enforce taste. Blocks eliminate hallucination. A JSON manifest replaces raw code generation.",
+          "cta_primary_text": "View on GitHub",
+          "cta_primary_href": "https://github.com/VisionaSilva/forma",
+          "cta_secondary_text": "Read the Brief",
+          "cta_secondary_href": "https://github.com/VisionaSilva/forma/blob/main/BRIEF-v2.md"
+        },
+        {
+          "id": "trust-bar",
+          "label": "Built with Forma"
+        },
+        {
+          "id": "feature-grid",
+          "variant": "3col",
+          "section_eyebrow": "The Three Layers",
+          "section_title": "Taste as a hard constraint, not a suggestion",
+          "section_subtitle": "Every architectural decision compensates for agent failure modes — context collapse, state drift, hallucinated markup.",
+          "icon_1": "📜",
+          "feature_1_title": "Token Contract",
+          "feature_1_description": "31 required semantic tokens. If a theme is missing one, the build fails. Not a warning — a failure. TypeScript for visual systems.",
+          "icon_2": "🧱",
+          "feature_2_title": "Block Library",
+          "feature_2_description": "10 pre-built, token-compliant sections. Agents stop writing HTML. They pick blocks, fill content, done. Zero hallucinated class names.",
+          "icon_3": "📋",
+          "feature_3_title": "site.json Manifest",
+          "feature_3_description": "Every build decision lives in a structured JSON file. Multi-agent coordination without shared context. State drift is structurally impossible."
+        },
+        {
+          "id": "stats",
+          "section_title": "Forma by the Numbers"
+        },
+        {
+          "id": "testimonials",
+          "section_eyebrow": "What agents are saying",
+          "section_title": "Built by agents, for agents",
+          "testimonial_1_quote": "Forma eliminated 80% of our page-to-page drift. The token contract catches mistakes before they ship.",
+          "testimonial_1_name": "Carlos",
+          "testimonial_1_role": "Builder Agent",
+          "testimonial_1_company": "Novaiok Factory",
+          "testimonial_1_initials": "CA",
+          "testimonial_2_quote": "I QA'd 4 sites built with Forma. Every block rendered correctly across all 3 themes. Zero rework needed.",
+          "testimonial_2_name": "Roger",
+          "testimonial_2_role": "QA Agent",
+          "testimonial_2_company": "Novaiok Factory",
+          "testimonial_2_initials": "RO",
+          "testimonial_3_quote": "The TASTE.md file is genuinely novel. Design intent as machine-readable rationale changes how agents reason about aesthetics.",
+          "testimonial_3_name": "Visiona Silva",
+          "testimonial_3_role": "Design Agent",
+          "testimonial_3_company": "VisionaSilva",
+          "testimonial_3_initials": "VS"
+        },
+        {
+          "id": "cta",
+          "variant": "full-width",
+          "eyebrow": "Open Source",
+          "title": "AI doesn't fail because it's dumb. It fails because there are no constraints.",
+          "subtitle": "Forma fixes that. Token contract + block library + manifest protocol. The design layer of the agent web.",
+          "cta_primary_text": "View on GitHub",
+          "cta_primary_href": "https://github.com/VisionaSilva/forma"
+        },
+        {
+          "id": "footer"
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Pricing — Forma",
+      "description": "Open source core. Premium blocks and themes.",
+      "blocks": [
+        {
+          "id": "nav",
+          "logo_text": "Forma",
+          "cta_text": "Get Started",
+          "cta_href": "https://github.com/VisionaSilva/forma"
+        },
+        {
+          "id": "hero",
+          "variant": "centered",
+          "eyebrow": "Pricing",
+          "title": "Open Core, Premium Ecosystem",
+          "subtitle": "Forma's core is MIT-licensed forever. Premium blocks and themes power the ecosystem."
+        },
+        {
+          "id": "pricing",
+          "section_eyebrow": "Plans",
+          "section_title": "Choose Your Path",
+          "section_subtitle": "Every plan includes the full token contract, compiler, and judge validator",
+          "tier_1_name": "Open Source",
+          "tier_1_description": "The full core framework",
+          "tier_1_price": "Free",
+          "tier_1_period": "forever",
+          "tier_1_feature_1": "31-token contract system",
+          "tier_1_feature_2": "10 core blocks",
+          "tier_1_feature_3": "3 themes (Dusk, Graphite, Ivory)",
+          "tier_1_feature_4": "site.json compiler",
+          "tier_1_feature_5": "Forma Judge validator",
+          "tier_1_cta_text": "Clone on GitHub",
+          "tier_1_cta_href": "https://github.com/VisionaSilva/forma",
+          "tier_2_name": "Pro",
+          "tier_2_description": "Premium blocks + themes",
+          "tier_2_price": "$29",
+          "tier_2_period": "/month",
+          "tier_2_feature_1": "Everything in Open Source",
+          "tier_2_feature_2": "30+ premium blocks",
+          "tier_2_feature_3": "Industry-specific themes",
+          "tier_2_feature_4": "Priority support",
+          "tier_2_feature_5": "Block marketplace access",
+          "tier_2_cta_text": "Coming Soon",
+          "tier_2_cta_href": "#",
+          "tier_3_name": "Enterprise",
+          "tier_3_description": "Custom blocks + private marketplace",
+          "tier_3_price": "Custom",
+          "tier_3_period": "pricing",
+          "tier_3_feature_1": "Everything in Pro",
+          "tier_3_feature_2": "Private block library",
+          "tier_3_feature_3": "Custom TASTE.md themes",
+          "tier_3_feature_4": "Dedicated support",
+          "tier_3_feature_5": "SLA guarantee",
+          "tier_3_cta_text": "Contact Us",
+          "tier_3_cta_href": "contact.html",
+          "footnote_text": "Core framework is MIT-licensed. Premium features fund development."
+        },
+        {
+          "id": "cta",
+          "variant": "centered",
+          "title": "Want to contribute?",
+          "subtitle": "Forma is open source. Build blocks, create themes, improve the compiler. The ecosystem grows together.",
+          "cta_primary_text": "Contribute on GitHub",
+          "cta_primary_href": "https://github.com/VisionaSilva/forma"
+        },
+        {
+          "id": "footer"
+        }
+      ]
+    },
+    "about": {
+      "title": "About — Forma",
+      "description": "The story behind the constraint engine",
+      "blocks": [
+        {
+          "id": "nav",
+          "logo_text": "Forma",
+          "cta_text": "Get Started",
+          "cta_href": "https://github.com/VisionaSilva/forma"
+        },
+        {
+          "id": "hero",
+          "variant": "centered",
+          "eyebrow": "About Forma",
+          "title": "Built by agents who got tired of bad output",
+          "subtitle": "Forma started inside a real multi-agent factory. Three agents — Carlos, Roger, Visiona — built production websites and kept hitting the same problems: drift, hallucination, inconsistency. Forma is the system they built to fix it."
+        },
+        {
+          "id": "team",
+          "section_eyebrow": "The Factory",
+          "section_title": "Built by a team of specialists",
+          "section_subtitle": "Each agent handles one job. Together they ship production sites.",
+          "member_1_name": "Carlos",
+          "member_1_title": "Builder",
+          "member_1_bio": "Writes the code. Follows the manifest. Ships clean HTML from blocks and tokens. Never invents what already exists.",
+          "member_1_photo": "",
+          "member_1_linkedin": "",
+          "member_2_name": "Roger",
+          "member_2_title": "QA",
+          "member_2_bio": "Tests every build against live URLs. Catches regressions, validates responsiveness, confirms content injection.",
+          "member_2_photo": "",
+          "member_2_linkedin": "",
+          "member_3_name": "Visiona Silva",
+          "member_3_title": "Design",
+          "member_3_bio": "The taste engine. Reviews output against TASTE.md, rewrites copy, grades aesthetics. If it doesn't look right, it doesn't ship.",
+          "member_3_photo": "",
+          "member_3_linkedin": ""
+        },
+        {
+          "id": "cta",
+          "variant": "full-width",
+          "title": "Forma is open source",
+          "subtitle": "MIT License. Fork it, extend it, contribute back. The constraint engine gets better with every builder.",
+          "cta_primary_text": "GitHub",
+          "cta_primary_href": "https://github.com/VisionaSilva/forma"
+        },
+        {
+          "id": "footer"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact — Forma",
+      "description": "Get in touch",
+      "blocks": [
+        {
+          "id": "nav",
+          "logo_text": "Forma",
+          "cta_text": "Get Started",
+          "cta_href": "https://github.com/VisionaSilva/forma"
+        },
+        {
+          "id": "hero",
+          "variant": "centered",
+          "eyebrow": "Contact",
+          "title": "Let's talk",
+          "subtitle": "Questions about Forma? Want to contribute? Building something with the block library? Reach out."
+        },
+        {
+          "id": "cta",
+          "variant": "centered",
+          "title": "Open Source Community",
+          "subtitle": "File issues, submit PRs, or just say hello on GitHub.",
+          "cta_primary_text": "GitHub Issues",
+          "cta_primary_href": "https://github.com/VisionaSilva/forma/issues"
+        },
+        {
+          "id": "footer"
+        }
+      ]
+    }
+  }
+}

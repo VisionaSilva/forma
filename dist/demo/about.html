@@ -1999,13 +1999,69 @@ table {
    Responsive Fixes — Global
    ============================================ */
 
+/* Nav hamburger — hidden on desktop */
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-2);
+  flex-direction: column;
+  gap: 5px;
+  z-index: 10;
+}
+.nav-hamburger-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text-primary);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+/* Hamburger → X animation */
+.nav-open .nav-hamburger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-open .nav-hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+.nav-open .nav-hamburger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 /* Nav mobile */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none !important;
+  .nav-hamburger {
+    display: flex;
   }
   .nav-inner {
-    justify-content: space-between !important;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    padding: var(--space-4) 0;
+    order: 3;
+  }
+  .nav-links li a {
+    display: block;
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .nav-open .nav-links {
+    display: flex;
+  }
+  .nav-cta {
+    display: none;
+  }
+  .nav-open .nav-cta {
+    display: block;
+    width: 100%;
+    text-align: center;
+    order: 4;
+    margin-top: var(--space-2);
   }
 }
 
@@ -2328,6 +2384,12 @@ a { color: inherit; }
 <nav class="section nav-block" aria-label="Main navigation">
 <div class="nav-inner" data-animate="fade-up">
     <a href="/" class="nav-logo">Forma</a>
+
+    <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'false' ? 'true' : 'false'); this.closest('.nav-block').classList.toggle('nav-open');">
+      <span class="nav-hamburger-line"></span>
+      <span class="nav-hamburger-line"></span>
+      <span class="nav-hamburger-line"></span>
+    </button>
 
     <ul class="nav-links">
       <li><a href="#blocks">Blocks</a></li>

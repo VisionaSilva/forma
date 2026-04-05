@@ -114,7 +114,7 @@
           "variant": "centered",
           "eyebrow": "Open Source / MIT",
           "title": "Stop generating HTML. Start declaring intent.",
-          "subtitle": "Forma is a constraint engine for agent-built websites. 31 tokens. 10 blocks. One manifest. Zero hallucinated markup.",
+          "subtitle": "Forma is a constraint engine for agent-built websites. 31 tokens. 32 blocks. One manifest. Zero hallucinated markup.",
           "cta_primary_text": "View on GitHub",
           "cta_primary_href": "https://github.com/VisionaSilva/forma",
           "cta_secondary_text": "How It Works",
@@ -372,7 +372,7 @@
           "feature_4_description": "31 semantic tokens define the visual language. Colors, spacing, type scales, radius, shadows. Miss one and the theme compiler rejects the build.",
           "icon_5": "\u2192",
           "feature_5_title": "Block Library",
-          "feature_5_description": "10 blocks: nav, hero, trust-bar, feature-grid, stats, testimonials, pricing, cta, team, footer. Agents select and configure \u2014 never write markup.",
+          "feature_5_description": "32 blocks across 8 categories: layout, hero, features, trust, conversion, process, forms, media. Agents select and configure \u2014 never write markup.",
           "icon_6": "\u2192",
           "feature_6_title": "Theme Layer",
           "feature_6_description": "Each theme is a theme.json mapping tokens to OKLCH values. Swap one line in the manifest to retheme everything. Five built-in themes."

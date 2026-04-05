@@ -17,7 +17,7 @@ console.log('🏗️  Building Forma compiled CSS files...\n');
 const resetCSS = fs.readFileSync(path.join(PROJECT_ROOT, 'core', 'reset.css'), 'utf8');
 const tokensCSS = fs.readFileSync(path.join(PROJECT_ROOT, 'core', 'tokens.css'), 'utf8');
 const layoutCSS = fs.readFileSync(path.join(PROJECT_ROOT, 'core', 'layout.css'), 'utf8');
-const componentsCSS = fs.readFileSync(path.join(PROJECT_ROOT, 'core', 'components.css'), 'utf8');
+const componentsCSS = fs.readFileSync(path.join(PROJECT_ROOT, 'core', 'blocks.css'), 'utf8');
 
 THEMES.forEach(themeName => {
   // Read theme.json

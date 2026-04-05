@@ -14,7 +14,7 @@ A complete contract-first CSS design system with semantic tokens, three producti
 - `core/reset.css` — Modern normalize base
 - `core/tokens.css` — All non-color tokens: spacing (32 levels), typography (6 sizes), radius, motion, layout
 - `core/layout.css` — Container, grid, section, flex utilities
-- `core/components.css` — 12 component categories with full semantic token implementation
+- `core/blocks.css` — 32 block categories with full semantic token implementation
 
 **Themes (3x):**
 - `themes/dusk/` — Dark, purple accent, premium feel

@@ -1,33 +1,95 @@
 # Forma
 
-**The agent-native web framework.**
-
-Forma is a constraint engine for AI agents building websites. Agents declare intent in a JSON manifest. Forma enforces design consistency, validates output, and compiles production-ready static HTML.
+**A contract-first website system that compiles structured manifests into taste-safe, theme-safe, static sites.**
 
 32 blocks. 5 themes. 31 semantic tokens. One manifest. Zero hallucinated markup.
+
+[Live Demo →](https://forma-demo.fly.dev)
 
 ---
 
 ## The Problem
 
 AI agents generate broken websites:
-- **Hallucinated CSS** — agents invent class names that don't exist
+- **Hallucinated CSS** — agents invent class names that don't exist in any stylesheet
 - **Design drift** — page 1 uses 16px text, page 3 uses 14px, nothing matches
-- **Context collapse** — two agents working on the same site lose each other's decisions
+- **Context collapse** — two agents on the same site lose each other's decisions
 
 The fix isn't better prompts. It's better structure.
 
-## The Solution
+---
 
-Forma gives agents a contract to work within:
+## Four Pillars
 
+### 1. Token Contract
+
+31 semantic tokens define every theme. Miss one and the build breaks.
+
+Colors, typography, spacing, shape, effects — all enforced at build time. No hardcoded hex. No magic numbers. No drift. Every block references tokens, never raw values.
+
+### 2. Block Library — 32 Blocks
+
+Every block is token-based, responsive, and works across all 5 themes automatically.
+
+**Conversion & Decision:**
+comparison, conversion-panel, problem-solution, faq, guarantee, pricing, cta
+
+**Trust & Proof:**
+trust-bar, logo-wall, testimonials, case-study, stats
+
+**Features & Product:**
+feature-grid, feature-spotlight, bento-grid, system-diagram
+
+**Process & Education:**
+process, pipeline
+
+**Forms & Capture:**
+contact-form, lead-magnet
+
+**Content & Media:**
+video-embed, before-after, code-preview, changelog, founder-note
+
+**Layout & Utility:**
+nav, hero, footer, banner, divider, team, integrations
+
+### 3. Site Manifest (`site.json`)
+
+All build decisions in one file. Pages, blocks, content, theme, goal, audience. Multiple agents coordinate without shared context — everyone reads the same source of truth.
+
+```json
+{
+  "theme": "bone-and-ink",
+  "goal": "lead_generation",
+  "pages": {
+    "index": {
+      "blocks": [
+        { "id": "hero", "title": "Stop generating HTML." },
+        { "id": "problem-solution" },
+        { "id": "comparison" },
+        { "id": "faq" },
+        { "id": "conversion-panel", "title": "Ready?", "cta_text": "Get Started" }
+      ]
+    }
+  }
+}
 ```
-Agent Intent → site.json → Compiler → Static HTML → Forma Judge ✓
-```
 
-1. **Write a manifest** — One `site.json` file. Pages, blocks, content, theme, goal.
-2. **Compile** — Blocks pulled, tokens applied, content injected. Static HTML out.
-3. **Validate** — Forma Judge checks structure AND intent. Missing a CTA on a lead-gen page? Build fails.
+### 4. Forma Judge (Compiler + Validator)
+
+The compiler reads the manifest, pulls blocks, injects content, applies theme tokens, outputs static HTML. One command.
+
+The judge validates structure AND intent:
+
+- **Lead generation** → must have CTA + contact form + trust element
+- **Product launch** → must have features + pricing + comparison
+- **Brand awareness** → must have testimonials + trust bar
+
+Missing required blocks for your stated goal = build failure.
+
+```bash
+node builder/compile.site.js site.json dist/    # Compile
+node builder/judge.js site.json                  # Validate
+```
 
 ---
 
@@ -37,30 +99,14 @@ Agent Intent → site.json → Compiler → Static HTML → Forma Judge ✓
 git clone https://github.com/VisionaSilva/forma.git
 cd forma
 
-# Compile the demo site
+# Build theme CSS
 node builder/compile.js
+
+# Compile the demo site
 node builder/compile.site.js examples/demo.site.json dist/demo
 
 # Open dist/demo/index.html
 ```
-
----
-
-## 32 Blocks
-
-Every block is token-based, responsive, and works across all 5 themes automatically.
-
-**Layout:** nav, footer, banner, divider
-**Hero:** hero, founder-note
-**Features:** feature-grid, feature-spotlight, bento-grid, system-diagram
-**Trust:** trust-bar, logo-wall, testimonials, case-study, stats
-**Conversion:** cta, conversion-panel, comparison, problem-solution, faq, guarantee, pricing
-**Process:** process, pipeline
-**Forms:** contact-form, lead-magnet
-**Media:** video-embed, before-after, code-preview, changelog
-**Team:** team, integrations
-
-[Full block reference →](AGENT-PROTOCOL.md)
 
 ---
 
@@ -76,13 +122,7 @@ Every block is token-based, responsive, and works across all 5 themes automatica
 
 Switch theme = change one line in the manifest. Every block re-themes automatically.
 
----
-
-## Token Contract
-
-31 semantic tokens define every theme. Miss one and the build breaks.
-
-Colors, typography, spacing, shape, effects — all enforced. No hardcoded hex. No magic numbers. No drift.
+Each theme ships with `TASTE.md` — design rationale in machine-readable form. Agents don't just follow rules. They understand *why*.
 
 ---
 
@@ -99,46 +139,41 @@ Deploy Agent     → compiles and ships
 
 All agents read from the same manifest. No shared context needed. No coordination overhead.
 
-[Read the Agent Protocol →](AGENT-PROTOCOL.md)
+[Read the full Agent Protocol →](AGENT-PROTOCOL.md)
 
 ---
 
-## Goal-Based Validation
+## Real Example: From Manifest to Page
 
-The Forma Judge validates intent, not just structure:
+This is the actual `site.json` that builds [forma-demo.fly.dev](https://forma-demo.fly.dev):
 
-- **Lead generation** → must have CTA + contact form + trust element
-- **Product launch** → must have features + pricing + comparison
-- **Brand awareness** → must have testimonials + trust bar
-- **Portfolio** → must have case studies + stats
-
-Missing required blocks for your stated goal = build failure.
-
----
-
-## Live Example
-
-- [Forma Demo](https://forma-demo.fly.dev) — this framework's own marketing site, built with Forma
-
----
-
-## TASTE.md
-
-Every theme ships with a `TASTE.md` — design rationale in machine-readable form. Agents don't just follow rules. They understand *why* the rules exist.
-
+```json
+{
+  "forma_version": "2.0.0",
+  "theme": "bone-and-ink",
+  "goal": "lead_generation",
+  "pages": {
+    "index": {
+      "title": "Forma — The Design Layer of the Agent Web",
+      "blocks": [
+        { "id": "nav" },
+        { "id": "hero", "title": "Stop generating HTML. Start declaring intent." },
+        { "id": "pipeline" },
+        { "id": "before-after" },
+        { "id": "trust-bar", "label": "Built with Forma" },
+        { "id": "feature-grid", "section_title": "Three layers. Zero guesswork." },
+        { "id": "code-preview" },
+        { "id": "stats" },
+        { "id": "testimonials" },
+        { "id": "cta", "title": "Clone it. Theme it. Ship it." },
+        { "id": "footer" }
+      ]
+    }
+  }
+}
 ```
-# TASTE.md — Bone and Ink
 
-## Core Principle
-Typography IS the design. If you need decoration, the type isn't working hard enough.
-
-## Rules
-- No border radius (except functional indicators)
-- No shadows
-- No gradients
-- Body text: 16px, 1.7 line height
-- Only two weights: 400 (body) and 800 (headlines)
-```
+That manifest compiles to a complete, production-ready page. No HTML written by agents. No CSS drift. Every token enforced.
 
 ---
 

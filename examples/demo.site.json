@@ -15,42 +15,93 @@
   },
   "globals": {
     "nav": [
-      { "text": "Blocks", "href": "#blocks" },
-      { "text": "How It Works", "href": "#how" },
-      { "text": "Pricing", "href": "pricing.html" },
-      { "text": "About", "href": "about.html" },
-      { "text": "Contact", "href": "contact.html" }
+      {
+        "text": "Blocks",
+        "href": "#blocks"
+      },
+      {
+        "text": "How It Works",
+        "href": "#how"
+      },
+      {
+        "text": "Pricing",
+        "href": "pricing.html"
+      },
+      {
+        "text": "About",
+        "href": "about.html"
+      },
+      {
+        "text": "Contact",
+        "href": "contact.html"
+      }
     ],
     "footer": {
       "brand_name": "Forma",
       "brand_tagline": "The design layer of the agent web",
-      "legal_text": "© 2026 Forma. Open-source under MIT License.",
+      "legal_text": "\u00a9 2026 Forma. Open-source under MIT License.",
       "columns": [
         {
           "title": "Product",
           "links": [
-            { "text": "Blocks", "href": "#blocks" },
-            { "text": "Themes", "href": "#themes" },
-            { "text": "Compiler", "href": "#compiler" },
-            { "text": "Judge", "href": "#judge" }
+            {
+              "text": "Blocks",
+              "href": "#blocks"
+            },
+            {
+              "text": "Themes",
+              "href": "#themes"
+            },
+            {
+              "text": "Compiler",
+              "href": "#compiler"
+            },
+            {
+              "text": "Judge",
+              "href": "#judge"
+            }
           ]
         },
         {
           "title": "Developers",
           "links": [
-            { "text": "Documentation", "href": "/docs" },
-            { "text": "GitHub", "href": "https://github.com/VisionaSilva/forma" },
-            { "text": "Block Authoring", "href": "/docs/blocks" },
-            { "text": "Changelog", "href": "/changelog" }
+            {
+              "text": "Documentation",
+              "href": "/docs"
+            },
+            {
+              "text": "GitHub",
+              "href": "https://github.com/VisionaSilva/forma"
+            },
+            {
+              "text": "Block Authoring",
+              "href": "/docs/blocks"
+            },
+            {
+              "text": "Changelog",
+              "href": "/changelog"
+            }
           ]
         },
         {
           "title": "Community",
           "links": [
-            { "text": "Discord", "href": "/discord" },
-            { "text": "Twitter", "href": "https://x.com/VisionaSilva" },
-            { "text": "Blog", "href": "/blog" },
-            { "text": "Showcase", "href": "/showcase" }
+            {
+              "text": "Discord",
+              "href": "/discord"
+            },
+            {
+              "text": "Twitter",
+              "href": "https://x.com/VisionaSilva"
+            },
+            {
+              "text": "Blog",
+              "href": "/blog"
+            },
+            {
+              "text": "Showcase",
+              "href": "/showcase"
+            }
           ]
         }
       ]
@@ -58,7 +109,7 @@
   },
   "pages": {
     "index": {
-      "title": "Forma — The Design Layer of the Agent Web",
+      "title": "Forma \u2014 The Design Layer of the Agent Web",
       "description": "A constraint engine that turns agent intent into deterministic, high-quality websites. Token contracts. Block library. Manifest protocol.",
       "blocks": [
         {
@@ -70,7 +121,7 @@
         {
           "id": "hero",
           "variant": "centered",
-          "eyebrow": "Open Source · MIT License",
+          "eyebrow": "Open Source \u00b7 MIT License",
           "title": "Stop generating HTML. Start declaring intent.",
           "subtitle": "Forma is a constraint engine for agent-built websites. Token contracts enforce taste. Blocks eliminate hallucination. A JSON manifest replaces raw code generation.",
           "cta_primary_text": "View on GitHub",
@@ -80,27 +131,74 @@
         },
         {
           "id": "trust-bar",
-          "label": "Built with Forma"
+          "label": "The stack",
+          "items": [
+            {
+              "name": "CSS",
+              "icon": "{}"
+            },
+            {
+              "name": "HTML5",
+              "icon": "<>"
+            },
+            {
+              "name": "JSON",
+              "icon": "[]"
+            },
+            {
+              "name": "Node.js",
+              "icon": "\u2b22"
+            },
+            {
+              "name": "MIT",
+              "icon": "\u25c7"
+            },
+            {
+              "name": "OKLCH",
+              "icon": "\u25ce"
+            }
+          ]
         },
         {
           "id": "feature-grid",
           "variant": "3col",
           "section_eyebrow": "The Three Layers",
           "section_title": "Taste as a hard constraint, not a suggestion",
-          "section_subtitle": "Every architectural decision compensates for agent failure modes — context collapse, state drift, hallucinated markup.",
-          "icon_1": "📜",
+          "section_subtitle": "Every architectural decision compensates for agent failure modes \u2014 context collapse, state drift, hallucinated markup.",
+          "icon_1": "\ud83d\udcdc",
           "feature_1_title": "Token Contract",
-          "feature_1_description": "31 required semantic tokens. If a theme is missing one, the build fails. Not a warning — a failure. TypeScript for visual systems.",
-          "icon_2": "🧱",
+          "feature_1_description": "31 required semantic tokens. If a theme is missing one, the build fails. Not a warning \u2014 a failure. TypeScript for visual systems.",
+          "icon_2": "\ud83e\uddf1",
           "feature_2_title": "Block Library",
           "feature_2_description": "10 pre-built, token-compliant sections. Agents stop writing HTML. They pick blocks, fill content, done. Zero hallucinated class names.",
-          "icon_3": "📋",
+          "icon_3": "\ud83d\udccb",
           "feature_3_title": "site.json Manifest",
-          "feature_3_description": "Every build decision lives in a structured JSON file. Multi-agent coordination without shared context. State drift is structurally impossible."
+          "feature_3_description": "Every build decision lives in a structured JSON file. Multi-agent coordination without shared context. State drift is structurally impossible.",
+          "icon_4": "\u2696\ufe0f",
+          "feature_4_title": "Forma Judge",
+          "feature_4_description": "Built-in validator checks every manifest against the schema and goal-based rules. Missing a CTA? Build fails.",
+          "icon_5": "\ud83e\udd16",
+          "feature_5_title": "Multi-Agent Ready",
+          "feature_5_description": "The manifest is the coordination layer. Specialist agents work in parallel \u2014 builder, QA, designer \u2014 without shared context.",
+          "icon_6": "\ud83c\udfa8",
+          "feature_6_title": "4 Themes",
+          "feature_6_description": "Dusk, Graphite, Ivory, Terminal Green. Each with TASTE.md \u2014 design intent as machine-readable rationale. Swap one line, retheme everything."
         },
         {
           "id": "stats",
-          "section_title": "Forma by the Numbers"
+          "section_title": "Forma by the numbers",
+          "stat_1_number": "31",
+          "stat_1_suffix": "",
+          "stat_1_label": "Required semantic tokens",
+          "stat_2_number": "10",
+          "stat_2_suffix": "",
+          "stat_2_label": "Production blocks",
+          "stat_3_number": "4",
+          "stat_3_suffix": "",
+          "stat_3_label": "Built-in themes",
+          "stat_4_number": "0",
+          "stat_4_suffix": "",
+          "stat_4_label": "Lines of JavaScript required"
         },
         {
           "id": "testimonials",
@@ -137,7 +235,7 @@
       ]
     },
     "pricing": {
-      "title": "Pricing — Forma",
+      "title": "Pricing \u2014 Forma",
       "description": "Open source core. Premium blocks and themes.",
       "blocks": [
         {
@@ -207,7 +305,7 @@
       ]
     },
     "about": {
-      "title": "About — Forma",
+      "title": "About \u2014 Forma",
       "description": "The story behind the constraint engine",
       "blocks": [
         {
@@ -221,7 +319,7 @@
           "variant": "centered",
           "eyebrow": "About Forma",
           "title": "Built by agents who got tired of bad output",
-          "subtitle": "Forma started inside a real multi-agent factory. Three agents — Carlos, Roger, Visiona — built production websites and kept hitting the same problems: drift, hallucination, inconsistency. Forma is the system they built to fix it."
+          "subtitle": "Forma started inside a real multi-agent factory. Three agents \u2014 Carlos, Roger, Visiona \u2014 built production websites and kept hitting the same problems: drift, hallucination, inconsistency. Forma is the system they built to fix it."
         },
         {
           "id": "team",
@@ -258,7 +356,7 @@
       ]
     },
     "contact": {
-      "title": "Contact — Forma",
+      "title": "Contact \u2014 Forma",
       "description": "Get in touch",
       "blocks": [
         {

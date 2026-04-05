@@ -83,9 +83,22 @@ function injectContent(blockHtml, blockData) {
     }
   }
 
-  // Trust bar — inject label
-  if (blockData.id === 'trust-bar' && blockData.label) {
-    html = html.replace(/Trusted by industry leaders/, blockData.label);
+  // Trust bar — full content injection
+  if (blockData.id === 'trust-bar') {
+    if (blockData.label) html = html.replace(/Trusted by teams at/, blockData.label);
+    // Replace logo items if provided
+    if (blockData.items && Array.isArray(blockData.items)) {
+      const logoHtml = blockData.items.map(item => 
+        `<a class="trust-logo" href="${item.href || '#'}" role="listitem" aria-label="${item.name}">
+          <div class="trust-logo-mark" aria-hidden="true">${item.icon || '◆'}</div>
+          <span class="trust-logo-name">${item.name}</span>
+        </a>`
+      ).join('\n      ');
+      html = html.replace(
+        /<a class="trust-logo"[\s\S]*?<\/a>(?:\s*<a class="trust-logo"[\s\S]*?<\/a>)*/,
+        logoHtml
+      );
+    }
   }
 
   // Feature grid
@@ -109,6 +122,22 @@ function injectContent(blockHtml, blockData) {
       html = html.replace(/♿/, blockData.icon_3);
       html = html.replace(/Accessible by Default/, blockData.feature_3_title);
       html = html.replace(/ARIA-compliant markup and semantic HTML out of the box\. Built for everyone\./, blockData.feature_3_description || '');
+    }
+    // Feature items 4-6
+    if (blockData.icon_4 && blockData.feature_4_title) {
+      html = html.replace(/📐/, blockData.icon_4);
+      html = html.replace(/Flexible Layouts/, blockData.feature_4_title);
+      html = html.replace(/Multiple variants per block let you mix and match without writing custom CSS\./, blockData.feature_4_description || '');
+    }
+    if (blockData.icon_5 && blockData.feature_5_title) {
+      html = html.replace(/🔌/, blockData.icon_5);
+      html = html.replace(/Drop-In Ready/, blockData.feature_5_title);
+      html = html.replace(/Works with any stack — plain HTML, React, Vue, Astro, whatever you're building with\./, blockData.feature_5_description || '');
+    }
+    if (blockData.icon_6 && blockData.feature_6_title) {
+      html = html.replace(/🌙/, blockData.icon_6);
+      html = html.replace(/Dark Mode Native/, blockData.feature_6_title);
+      html = html.replace(/CSS token architecture makes dark mode a first-class citizen, not an afterthought\./, blockData.feature_6_description || '');
     }
   }
 
@@ -135,6 +164,27 @@ function injectContent(blockHtml, blockData) {
       html = html.replace(/Rania Nasser/, blockData.testimonial_3_name || 'Rania Nasser');
       html = html.replace(/Engineering Lead, Strata/, `${blockData.testimonial_3_role || ''}, ${blockData.testimonial_3_company || ''}`);
       if (blockData.testimonial_3_initials) html = html.replace(/>RN</, `>${blockData.testimonial_3_initials}<`);
+    }
+  }
+
+  // Stats
+  if (blockData.id === 'stats') {
+    if (blockData.section_title) html = html.replace(/Trusted by builders worldwide/, blockData.section_title);
+    if (blockData.stat_1_number) {
+      html = html.replace(/50<span class="stat-suffix">\+<\/span>/, `${blockData.stat_1_number}<span class="stat-suffix">${blockData.stat_1_suffix || ''}</span>`);
+      html = html.replace(/Production-ready blocks/, blockData.stat_1_label || '');
+    }
+    if (blockData.stat_2_number) {
+      html = html.replace(/12<span class="stat-suffix">k<\/span>/, `${blockData.stat_2_number}<span class="stat-suffix">${blockData.stat_2_suffix || ''}</span>`);
+      html = html.replace(/Developers using Forma/, blockData.stat_2_label || '');
+    }
+    if (blockData.stat_3_number) {
+      html = html.replace(/98<span class="stat-suffix">%<\/span>/, `${blockData.stat_3_number}<span class="stat-suffix">${blockData.stat_3_suffix || ''}</span>`);
+      html = html.replace(/Lighthouse accessibility score/, blockData.stat_3_label || '');
+    }
+    if (blockData.stat_4_number) {
+      html = html.replace(/4<span class="stat-suffix">x<\/span>/, `${blockData.stat_4_number}<span class="stat-suffix">${blockData.stat_4_suffix || ''}</span>`);
+      html = html.replace(/Faster page builds on average/, blockData.stat_4_label || '');
     }
   }
 

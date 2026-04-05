@@ -16,14 +16,6 @@
   "globals": {
     "nav": [
       {
-        "text": "Blocks",
-        "href": "#blocks"
-      },
-      {
-        "text": "How It Works",
-        "href": "#how"
-      },
-      {
         "text": "Pricing",
         "href": "pricing.html"
       },

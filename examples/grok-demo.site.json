@@ -1,0 +1,108 @@
+{
+  "forma_version": "2.0.0",
+  "site": {
+    "name": "ChatGPT Demo",
+    "domain": "chatgpt-demo.fly.dev",
+    "description": "Talk to the world's most powerful AI — right here, right now."
+  },
+  "theme": "dusk",
+  "goal": "lead_generation",
+  "audience": "developers_and_creators",
+  "traffic": "cold",
+  "primaryCTA": {
+    "text": "Start Chatting",
+    "href": "#chat"
+  },
+  "globals": {
+    "nav": [
+      { "text": "Features", "href": "#features" },
+      { "text": "How it Works", "href": "#how" },
+      { "text": "Examples", "href": "#examples" },
+      { "text": "GitHub", "href": "https://github.com/VisionaSilva/forma" }
+    ]
+  },
+  "pages": {
+    "index": {
+      "title": "ChatGPT Demo — Talk to AI instantly",
+      "description": "A fully functional ChatGPT-style interface built 100% with Forma. No hallucinated CSS. Just intent + blocks + judge.",
+      "blocks": [
+        {
+          "id": "nav",
+          "cta_text": "Start Chatting",
+          "cta_href": "#chat"
+        },
+        {
+          "id": "hero",
+          "variant": "centered",
+          "eyebrow": "Now with Forma constraints",
+          "title": "The AI that actually listens.",
+          "subtitle": "Instant, intelligent chat. Built with 31 semantic tokens and 32 reusable blocks. Zero design drift.",
+          "cta_primary_text": "Try the demo",
+          "cta_primary_href": "#chat",
+          "cta_secondary_text": "See the manifest",
+          "cta_secondary_href": "https://github.com/VisionaSilva/forma"
+        },
+        {
+          "id": "feature-grid",
+          "variant": "3col",
+          "section_eyebrow": "Capabilities",
+          "section_title": "What you can do today",
+          "section_subtitle": "Same power as ChatGPT, now built with perfect design contracts.",
+          "icon_1": "01",
+          "feature_1_title": "Real-time answers",
+          "feature_1_description": "Ask anything. Get thoughtful replies in seconds.",
+          "icon_2": "02",
+          "feature_2_title": "Code & analysis",
+          "feature_2_description": "Write, debug, and explain code instantly.",
+          "icon_3": "03",
+          "feature_3_title": "Creative sparks",
+          "feature_3_description": "Brainstorm ideas, write stories, or generate images."
+        },
+        {
+          "id": "code-preview",
+          "eyebrow": "Under the Hood",
+          "title": "The manifest behind this demo",
+          "subtitle": "This entire page was declared in JSON. No HTML written. No CSS invented."
+        },
+        {
+          "id": "pipeline"
+        },
+        {
+          "id": "testimonials",
+          "section_eyebrow": "Real users",
+          "section_title": "What people are saying",
+          "testimonial_1_quote": "Finally an AI interface that looks as good as it thinks.",
+          "testimonial_1_name": "Sarah Chen",
+          "testimonial_1_role": "Product Designer",
+          "testimonial_1_company": "Independent",
+          "testimonial_1_initials": "SC",
+          "testimonial_2_quote": "The manifest-to-page pipeline is exactly what agent workflows needed. Ship once, theme forever.",
+          "testimonial_2_name": "Dev Team",
+          "testimonial_2_role": "Engineering",
+          "testimonial_2_company": "Forma Users",
+          "testimonial_2_initials": "DT",
+          "testimonial_3_quote": "I changed one line in the manifest and the entire site re-themed. That is how design systems should work.",
+          "testimonial_3_name": "Designer",
+          "testimonial_3_role": "UI/UX",
+          "testimonial_3_company": "Agency",
+          "testimonial_3_initials": "DS"
+        },
+        {
+          "id": "cta",
+          "eyebrow": "Ready?",
+          "title": "Start a conversation with AI",
+          "subtitle": "This entire page was built by declaring intent — not writing HTML.",
+          "cta_primary_text": "Try the Demo",
+          "cta_primary_href": "#chat",
+          "cta_secondary_text": "View on GitHub",
+          "cta_secondary_href": "https://github.com/VisionaSilva/forma"
+        },
+        {
+          "id": "footer",
+          "brand_name": "ChatGPT Demo",
+          "legal_text": "2026. Built with Forma. Contract-first. Agent-native. Not affiliated with OpenAI."
+        }
+      ]
+    }
+  }
+}

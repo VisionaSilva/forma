@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MRA Limited — Industrial Solutions</title>
+  <meta name="description" content="Enterprise automation and quality control for modern manufacturers">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --surface-primary: oklch(0.12 0.002 270);
+  --surface-elevated: oklch(0.16 0.002 270);
+  --surface-sunken: oklch(0.08 0.002 270);
+  --surface-overlay: oklch(0.18 0.003 270);
+  --text-primary: oklch(0.93 0.002 270);
+  --text-secondary: oklch(0.65 0.005 270);
+  --text-muted: oklch(0.45 0.005 270);
+  --text-disabled: oklch(0.32 0.003 270);
+  --text-inverse: oklch(0.12 0.002 270);
+  --border-subtle: oklch(0.22 0.003 270);
+  --border-default: oklch(0.30 0.004 270);
+  --border-strong: oklch(0.42 0.005 270);
+  --border-focus: oklch(0.85 0.005 270);
+  --accent-primary: oklch(0.85 0.005 270);
+  --accent-primary-hover: oklch(0.93 0.003 270);
+  --accent-primary-active: oklch(0.78 0.006 270);
+  --accent-text: oklch(0.12 0.002 270);
+  --state-hover: oklch(0.95 0 0 / 0.05);
+  --state-active: oklch(0.95 0 0 / 0.08);
+  --state-focus: oklch(0.85 0.005 270 / 0.30);
+  --feedback-success: oklch(0.72 0.12 155);
+  --feedback-warning: oklch(0.78 0.12 80);
+  --feedback-danger: oklch(0.65 0.16 25);
+  --feedback-info: oklch(0.72 0.10 230);
+  --cta-bg: oklch(0.93 0.002 270);
+  --cta-text: oklch(0.12 0.002 270);
+  --cta-hover: oklch(1.0 0 0);
+  --shadow-sm: 0 1px 3px oklch(0 0 0 / 0.25);
+  --shadow-md: 0 4px 12px oklch(0 0 0 / 0.35);
+  --shadow-lg: 0 12px 32px oklch(0 0 0 / 0.45);
+  --shadow-glow: 0 0 20px oklch(0.85 0.005 270 / 0.15);
+}
+
+/* ==========================================================================
+   Forma Reset — Modern Normalize
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--surface-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--accent-primary);
+  color: var(--accent-text);
+}
+
+
+/* ==========================================================================
+   Forma Tokens — Non-Color Design Tokens
+   Color tokens come from themes. These are universal.
+   ========================================================================== */
+
+:root {
+  /* ---- Typography ---- */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+
+  /* Fluid type scale — clamp(min, preferred, max)
+     min: floor size at narrowest viewport
+     preferred: scales with viewport width (vw) — +1rem ensures zoom accessibility
+     max: ceiling size at wide viewport
+  */
+  --text-xs:   clamp(0.70rem,  0.65rem + 0.25vw, 0.75rem);   /* 11–12px */
+  --text-sm:   clamp(0.825rem, 0.75rem + 0.40vw, 0.875rem);  /* 13–14px */
+  --text-base: clamp(0.925rem, 0.85rem + 0.40vw, 1rem);      /* 15–16px */
+  --text-lg:   clamp(1.05rem,  0.95rem + 0.60vw, 1.125rem);  /* 17–18px */
+  --text-xl:   clamp(1.15rem,  1.0rem  + 0.75vw, 1.25rem);   /* 18–20px */
+  --text-2xl:  clamp(1.25rem,  1.0rem  + 1.25vw, 1.5rem);    /* 20–24px */
+  --text-3xl:  clamp(1.5rem,   1.1rem  + 2.0vw,  1.875rem);  /* 24–30px */
+  --text-4xl:  clamp(1.75rem,  1.1rem  + 3.25vw, 2.25rem);   /* 28–36px */
+  --text-5xl:  clamp(2rem,     1.0rem  + 5.0vw,  3rem);      /* 32–48px */
+  --text-6xl:  clamp(2.25rem,  1.0rem  + 6.75vw, 3.75rem);   /* 36–60px */
+
+  --leading-tight:  1.2;
+  --leading-normal: 1.6;
+  --leading-loose:  1.8;
+
+  --tracking-tight:  -0.02em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.04em;
+  --tracking-widest:  0.08em;
+
+  --weight-normal:  400;
+  --weight-medium:  500;
+  --weight-semibold: 600;
+  --weight-bold:    700;
+  --weight-extrabold: 800;
+
+  /* Variable font axis ranges (Inter Variable) */
+  --weight-min: 100;
+  --weight-max: 900;
+
+  /* ---- Spacing (4px base) ---- */
+  --space-1:   0.25rem;   /* 4px */
+  --space-2:   0.5rem;    /* 8px */
+  --space-3:   0.75rem;   /* 12px */
+  --space-4:   1rem;      /* 16px */
+  --space-5:   1.25rem;   /* 20px */
+  --space-6:   1.5rem;    /* 24px */
+  --space-8:   2rem;      /* 32px */
+  --space-10:  2.5rem;    /* 40px */
+  --space-12:  3rem;      /* 48px */
+  --space-16:  4rem;      /* 64px */
+  --space-20:  5rem;      /* 80px */
+  --space-24:  6rem;      /* 96px */
+  --space-32:  8rem;      /* 128px */
+
+  /* ---- Border Radius ---- */
+  --radius-sm:   0.25rem;  /* 4px */
+  --radius-md:   0.5rem;   /* 8px */
+  --radius-lg:   0.75rem;  /* 12px */
+  --radius-full: 9999px;
+
+  /* ---- Motion ---- */
+  --duration-fast:   120ms;
+  --duration-normal: 200ms;
+  --duration-slow:   400ms;
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-in:       cubic-bezier(0.4, 0, 1, 1);
+  --ease-out:      cubic-bezier(0, 0, 0.2, 1);
+
+  /* ---- Layout ---- */
+  --max-width: 1024px;
+  --max-width-wide: 1200px;
+  --content-padding: var(--space-6);
+  --section-gap: var(--space-20);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --content-padding: var(--space-4);
+    --section-gap: var(--space-12);
+  }
+}
+
+
+/* ==========================================================================
+   Forma Layout — Container, Grid, Section, Flex Utilities
+   ========================================================================== */
+
+/* ---- Container ---- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--content-padding);
+}
+
+.container--wide {
+  max-width: var(--max-width-wide);
+}
+
+/* ---- Section ---- */
+.section {
+  padding-block: var(--section-gap);
+}
+
+.section--sm {
+  padding-block: var(--space-12);
+}
+
+.section--lg {
+  padding-block: var(--space-32);
+}
+
+/* ---- Grid ---- */
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+  .grid--2,
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---- Subgrid: aligned card anatomy across grid cells ---- */
+/* Usage: <div class="grid grid--3 grid--aligned"> */
+.grid--aligned > * {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+  gap: 0;
+}
+
+/* ---- Auto-fit fluid grid (no fixed column count needed) ---- */
+/* Usage: <div class="grid grid--fluid"> — columns auto-fit to 280px min */
+.grid--fluid {
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+}
+
+/* ---- Flex Utilities ---- */
+.flex {
+  display: flex;
+}
+
+.flex--col {
+  flex-direction: column;
+}
+
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
+.flex--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex--gap-sm {
+  gap: var(--space-2);
+}
+
+.flex--gap-md {
+  gap: var(--space-4);
+}
+
+.flex--gap-lg {
+  gap: var(--space-8);
+}
+
+/* ---- Stack (vertical spacing) ---- */
+.stack > * + * {
+  margin-top: var(--space-4);
+}
+
+.stack--sm > * + * {
+  margin-top: var(--space-2);
+}
+
+.stack--lg > * + * {
+  margin-top: var(--space-8);
+}
+
+/* ---- Text alignment ---- */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* ---- Visually hidden (accessible) ---- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+/* ==========================================================================
+   Forma Components — All Semantic, No Hardcoded Colors
+   ========================================================================== */
+
+/* ---- Button ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  transition: all var(--duration-normal) var(--ease-standard);
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background-color: var(--cta-bg);
+  color: var(--cta-text);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn--primary:hover {
+  background-color: var(--cta-hover);
+}
+
+.btn--primary:active {
+  transform: scale(0.98);
+}
+
+.btn--secondary {
+  background-color: var(--surface-elevated);
+  color: var(--text-primary);
+  border-color: var(--border-default);
+}
+
+.btn--secondary:hover {
+  background-color: var(--surface-overlay);
+  border-color: var(--border-strong);
+}
+
+.btn--ghost {
+  background-color: transparent;
+  color: var(--text-primary);
+  border-color: var(--border-subtle);
+}
+
+.btn--ghost:hover {
+  border-color: var(--border-default);
+  background-color: var(--state-hover);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---- Nav ---- */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--border-subtle);
+  background-color: var(--surface-primary);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav__logo {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  color: var(--text-primary);
+}
+
+.nav__links {
+  display: flex;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.nav__link {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  transition: color var(--duration-normal) var(--ease-standard);
+}
+
+.nav__link:hover {
+  color: var(--text-primary);
+}
+
+.nav__cta {
+  margin-left: var(--space-4);
+}
+
+@media (max-width: 768px) {
+  .nav__links {
+    display: none;
+  }
+}
+
+/* ---- Hero ---- */
+.hero {
+  padding: var(--space-20) 0;
+  background-color: var(--surface-primary);
+}
+
+.hero__content {
+  max-width: 600px;
+}
+
+.hero__eyebrow {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  margin-bottom: var(--space-4);
+}
+
+.hero__title {
+  font-size: var(--text-6xl);
+  font-weight: var(--weight-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-6);
+  line-height: 1.2;
+}
+
+.hero__subtitle {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-8);
+  line-height: var(--leading-loose);
+}
+
+.hero__ctas {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--space-12) 0;
+  }
+  .hero__title {
+    font-size: var(--text-4xl);
+  }
+}
+
+/* ---- Card ---- */
+.card {
+  background-color: var(--surface-elevated);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--duration-normal) var(--ease-standard);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-default);
+  box-shadow: var(--shadow-md);
+}
+
+.card--feature {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.card__icon {
+  font-size: var(--text-4xl);
+  line-height: 1;
+}
+
+.card__title {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+}
+
+.card__description {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: var(--leading-loose);
+}
+
+.card__meta {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+/* ---- Form ---- */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+.form-label {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-default);
+  background-color: var(--surface-primary);
+  color: var(--text-primary);
+  font-size: var(--text-base);
+  transition: border-color var(--duration-normal) var(--ease-standard);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px var(--state-focus);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: var(--font-sans);
+}
+
+.form-input--error {
+  border-color: var(--feedback-danger);
+}
+
+.form-input--success {
+  border-color: var(--feedback-success);
+}
+
+.form-help {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.form-error {
+  font-size: var(--text-sm);
+  color: var(--feedback-danger);
+}
+
+/* ---- Badge ---- */
+.badge {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  background-color: var(--surface-elevated);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+}
+
+.badge--success {
+  background-color: var(--feedback-success);
+  color: var(--surface-primary);
+  border-color: var(--feedback-success);
+}
+
+.badge--warning {
+  background-color: var(--feedback-warning);
+  color: var(--surface-primary);
+  border-color: var(--feedback-warning);
+}
+
+.badge--danger {
+  background-color: var(--feedback-danger);
+  color: var(--text-inverse);
+  border-color: var(--feedback-danger);
+}
+
+.badge--info {
+  background-color: var(--feedback-info);
+  color: var(--text-inverse);
+  border-color: var(--feedback-info);
+}
+
+/* ---- Feature Grid ---- */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-12);
+}
+
+.feature-item {
+  text-align: center;
+}
+
+.feature-item__icon {
+  font-size: var(--text-5xl);
+  margin-bottom: var(--space-6);
+  line-height: 1;
+}
+
+.feature-item__title {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.feature-item__desc {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: var(--leading-loose);
+}
+
+@media (max-width: 768px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}
+
+/* ---- Testimonials ---- */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-12);
+}
+
+.testimonial {
+  background-color: var(--surface-elevated);
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+}
+
+.testimonial__quote {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-6);
+  line-height: var(--leading-loose);
+  font-style: italic;
+}
+
+.testimonial__author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.testimonial__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background-color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-text);
+  font-weight: var(--weight-bold);
+}
+
+.testimonial__name {
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+}
+
+.testimonial__role {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Pricing ---- */
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+}
+
+.pricing-card {
+  background-color: var(--surface-elevated);
+  border-radius: var(--radius-lg);
+  padding: var(--space-12);
+  border: 1px solid var(--border-subtle);
+  text-align: center;
+  transition: all var(--duration-normal) var(--ease-standard);
+}
+
+.pricing-card--featured {
+  transform: scale(1.05);
+  background-color: var(--surface-overlay);
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-lg);
+}
+
+.pricing-card__name {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-6);
+}
+
+.pricing-card__price {
+  font-size: var(--text-5xl);
+  font-weight: var(--weight-bold);
+  color: var(--accent-primary);
+  margin-bottom: var(--space-2);
+}
+
+.pricing-card__period {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-8);
+}
+
+.pricing-card__features {
+  text-align: left;
+  margin-bottom: var(--space-8);
+}
+
+.pricing-card__feature {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.pricing-card__cta {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .pricing-cards {
+    grid-template-columns: 1fr;
+  }
+  .pricing-card--featured {
+    transform: none;
+  }
+}
+
+/* ---- FAQ / Accordion ---- */
+.faq-item {
+  border-bottom: 1px solid var(--border-subtle);
+  padding: var(--space-6) 0;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--space-4) 0;
+  background: none;
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+  cursor: pointer;
+  text-align: left;
+}
+
+.faq-trigger:hover {
+  color: var(--accent-primary);
+}
+
+.faq-icon {
+  transition: transform var(--duration-normal) var(--ease-standard);
+}
+
+.faq-item[open] .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-content {
+  padding: var(--space-4) 0;
+  color: var(--text-secondary);
+  line-height: var(--leading-loose);
+}
+
+/* ---- Footer ---- */
+.footer {
+  background-color: var(--surface-elevated);
+  border-top: 1px solid var(--border-subtle);
+  padding: var(--space-12) 0;
+  margin-top: var(--section-gap);
+}
+
+.footer__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-12);
+  margin-bottom: var(--space-12);
+}
+
+.footer__brand {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.footer__link {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  transition: color var(--duration-normal) var(--ease-standard);
+}
+
+.footer__link:hover {
+  color: var(--accent-primary);
+}
+
+.footer__bottom {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: var(--space-8);
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .footer__content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Utility Classes ---- */
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.opacity-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+/* ==========================================================================
+   Forma Motion — Optional scroll & interaction animations
+   Include: forma-[theme].css + forma-motion.css
+   Uses native CSS scroll-driven animations (Chrome 115+, no JS required)
+   Falls back gracefully in unsupported browsers (elements simply appear)
+   ========================================================================== */
+
+/* ---- Respect user preferences ---- */
+@media (prefers-reduced-motion: reduce) {
+  [data-animate] {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ---- Base: elements start hidden, animate in on scroll ---- */
+@supports (animation-timeline: scroll()) {
+  [data-animate] {
+    animation-fill-mode: both;
+    animation-timing-function: var(--ease-out);
+    animation-duration: var(--duration-slow);
+    animation-timeline: view();
+    animation-range: entry 0% entry 25%;
+  }
+
+  /* Fade up (default) */
+  [data-animate="fade-up"] {
+    animation-name: forma-fade-up;
+  }
+
+  /* Fade in */
+  [data-animate="fade-in"] {
+    animation-name: forma-fade-in;
+  }
+
+  /* Slide in from left */
+  [data-animate="slide-right"] {
+    animation-name: forma-slide-right;
+  }
+
+  /* Slide in from right */
+  [data-animate="slide-left"] {
+    animation-name: forma-slide-left;
+  }
+
+  /* Scale up */
+  [data-animate="scale-up"] {
+    animation-name: forma-scale-up;
+  }
+
+  /* Stagger delay utilities */
+  [data-delay="1"] { animation-delay: calc(var(--duration-fast) * 1); }
+  [data-delay="2"] { animation-delay: calc(var(--duration-fast) * 2); }
+  [data-delay="3"] { animation-delay: calc(var(--duration-fast) * 3); }
+  [data-delay="4"] { animation-delay: calc(var(--duration-fast) * 4); }
+}
+
+/* Fallback for unsupported browsers: just show the element */
+@supports not (animation-timeline: scroll()) {
+  [data-animate] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---- Keyframes ---- */
+@keyframes forma-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes forma-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes forma-slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes forma-slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes forma-scale-up {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ---- Variable font weight hover (requires Inter Variable) ---- */
+/* Usage: add class .text-animate-weight to any heading */
+.text-animate-weight {
+  transition: font-variation-settings var(--duration-normal) var(--ease-standard);
+  font-variation-settings: 'wght' var(--weight-bold);
+}
+
+.text-animate-weight:hover {
+  font-variation-settings: 'wght' var(--weight-max);
+}
+
+/* ---- Smooth scroll for the whole page ---- */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Token aliases — bridge block tokens to theme tokens */
+:root {
+  --surface-base: var(--surface-primary);
+  --surface-card: var(--surface-elevated);
+  --radius-xl: 1rem;
+  --shadow-glow: 0 0 20px var(--accent-primary, oklch(0.85 0.005 270) / 0.15);
+  --shadow-lg: 0 8px 32px oklch(0 0 0 / 0.4);
+}
+
+/* Page resets */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--surface-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; }
+a { color: inherit; }
+.section { padding: var(--section-gap) var(--content-padding); }
+  </style>
+</head>
+<body>
+
+<!-- Block: nav | Variants: default (sticky) -->
+<nav class="section nav-block" aria-label="Main navigation">
+  <style scoped>
+    .nav-block {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--surface-base);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: var(--space-3) var(--space-6);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .nav-logo {
+      font-family: var(--font-sans);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      color: var(--text-primary);
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: var(--space-5);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex: 1;
+      justify-content: center;
+    }
+    .nav-links a {
+      font-family: var(--font-sans);
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+    .nav-cta {
+      font-family: var(--font-sans);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      background: var(--cta-bg);
+      color: var(--cta-text);
+      border: none;
+      border-radius: var(--radius-md);
+      padding: var(--space-2) var(--space-4);
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .nav-cta:hover {
+      background: var(--cta-hover);
+    }
+  </style>
+
+  <div class="nav-inner" data-animate="fade-up">
+    <a href="/" class="nav-logo">MRA</a>
+
+    <ul class="nav-links">
+      <li><a href="/solutions">Solutions</a></li>
+      <li><a href="/pricing">Pricing</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/team">Team</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+
+    <a href="/contact" class="nav-cta">Request Demo</a>
+  </div>
+</nav>
+
+
+<!-- Block: hero | Variants: centered (default), split -->
+<section class="section hero-block" data-variant="centered">
+  <style scoped>
+    .hero-block {
+      background: var(--surface-base);
+      padding: var(--space-20) var(--space-6);
+    }
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Variant: centered (default) */
+    .hero-block[data-variant="centered"] .hero-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: var(--space-6);
+      max-width: 720px;
+    }
+    .hero-block[data-variant="centered"] .hero-visual {
+      display: none;
+    }
+
+    /* Variant: split */
+    .hero-block[data-variant="split"] .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: var(--space-12);
+    }
+    .hero-block[data-variant="split"] .hero-content {
+      text-align: left;
+    }
+
+    @media (max-width: 768px) {
+      .hero-block[data-variant="split"] .hero-inner {
+        grid-template-columns: 1fr;
+      }
+      .hero-block[data-variant="split"] .hero-visual {
+        display: none;
+      }
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      color: var(--cta-bg);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .hero-headline {
+      font-family: var(--font-sans);
+      font-size: var(--text-5xl);
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1.1;
+      margin: 0;
+    }
+    .hero-subheadline {
+      font-family: var(--font-sans);
+      font-size: var(--text-xl);
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+    .hero-actions {
+      display: flex;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .hero-block[data-variant="centered"] .hero-actions {
+      justify-content: center;
+    }
+    .hero-cta-primary {
+      font-family: var(--font-sans);
+      font-size: var(--text-base);
+      font-weight: 600;
+      background: var(--cta-bg);
+      color: var(--cta-text);
+      border: none;
+      border-radius: var(--radius-md);
+      padding: var(--space-3) var(--space-6);
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .hero-cta-primary:hover {
+      background: var(--cta-hover);
+    }
+    .hero-cta-secondary {
+      font-family: var(--font-sans);
+      font-size: var(--text-base);
+      font-weight: 500;
+      color: var(--text-secondary);
+      background: transparent;
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-md);
+      padding: var(--space-3) var(--space-6);
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .hero-cta-secondary:hover {
+      border-color: var(--text-muted);
+      color: var(--text-primary);
+    }
+    .hero-visual {
+      background: var(--surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-family: var(--font-sans);
+      font-size: var(--text-sm);
+    }
+  </style>
+
+  <div class="hero-inner" data-animate="fade-up">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Enterprise Solutions</div>
+      <h1 class="hero-headline">Manufacturing That Scales</h1>
+      <p class="hero-subheadline">Automate quality control, optimize logistics, and unlock data insights across your entire manufacturing operation.</p>
+      <div class="hero-actions">
+        <a href="/contact" class="hero-cta-primary">Request Demo</a>
+        <a href="/pricing" class="hero-cta-secondary">View Pricing</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <!-- Hero image / illustration slot -->
+      Product preview
+    </div>
+  </div>
+</section>
+
+
+<!-- Block: trust-bar | Variants: default (horizontal logo strip) -->
+<section class="section trust-bar-block">
+  <style scoped>
+    .trust-bar-block {
+      background: var(--surface-elevated);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: var(--space-8) var(--space-6);
+    }
+    .trust-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .trust-bar-label {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      text-align: center;
+      margin-bottom: var(--space-6);
+    }
+    .trust-bar-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-10);
+      flex-wrap: wrap;
+    }
+    .trust-logo {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      opacity: 0.5;
+      transition: opacity 0.2s;
+      text-decoration: none;
+    }
+    .trust-logo:hover {
+      opacity: 0.8;
+    }
+    .trust-logo-mark {
+      width: var(--space-8);
+      height: var(--space-8);
+      background: var(--surface-overlay);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--text-lg);
+      flex-shrink: 0;
+    }
+    .trust-logo-name {
+      font-family: var(--font-sans);
+      font-size: var(--text-sm);
+      font-weight: 700;
+      color: var(--text-secondary);
+      white-space: nowrap;
+    }
+  </style>
+
+  <div class="trust-bar-inner" data-animate="fade-up">
+    <p class="trust-bar-label">Trusted by teams at</p>
+    <div class="trust-bar-logos" role="list" aria-label="Trusted companies">
+      <a class="trust-logo" href="#" role="listitem" aria-label="Acme Corp">
+        <div class="trust-logo-mark" aria-hidden="true">◆</div>
+        <span class="trust-logo-name">Acme Corp</span>
+      </a>
+      <a class="trust-logo" href="#" role="listitem" aria-label="Vertex">
+        <div class="trust-logo-mark" aria-hidden="true">▲</div>
+        <span class="trust-logo-name">Vertex</span>
+      </a>
+      <a class="trust-logo" href="#" role="listitem" aria-label="Orbit Labs">
+        <div class="trust-logo-mark" aria-hidden="true">◉</div>
+        <span class="trust-logo-name">Orbit Labs</span>
+      </a>
+      <a class="trust-logo" href="#" role="listitem" aria-label="Strata">
+        <div class="trust-logo-mark" aria-hidden="true">▬</div>
+        <span class="trust-logo-name">Strata</span>
+      </a>
+      <a class="trust-logo" href="#" role="listitem" aria-label="Nexus">
+        <div class="trust-logo-mark" aria-hidden="true">✦</div>
+        <span class="trust-logo-name">Nexus</span>
+      </a>
+      <a class="trust-logo" href="#" role="listitem" aria-label="Pulsar">
+        <div class="trust-logo-mark" aria-hidden="true">◈</div>
+        <span class="trust-logo-name">Pulsar</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Block: feature-grid | Variants: 2col, 3col (default), 4col -->
+<section class="section feature-grid-block" data-variant="3col">
+  <style scoped>
+    .feature-grid-block {
+      background: var(--surface-base);
+      padding: var(--space-16) var(--space-6);
+    }
+    .feature-grid-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .feature-grid-header {
+      text-align: center;
+      margin-bottom: var(--space-12);
+    }
+    .feature-grid-eyebrow {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      color: var(--cta-bg);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: var(--space-3);
+    }
+    .feature-grid-title {
+      font-family: var(--font-sans);
+      font-size: var(--text-4xl);
+      font-weight: 800;
+      color: var(--text-primary);
+      margin: 0 0 var(--space-4);
+      line-height: 1.15;
+    }
+    .feature-grid-subtitle {
+      font-family: var(--font-sans);
+      font-size: var(--text-lg);
+      color: var(--text-secondary);
+      margin: 0;
+      max-width: 560px;
+      margin-inline: auto;
+      line-height: 1.6;
+    }
+    .feature-grid {
+      display: grid;
+      gap: var(--space-6);
+    }
+    .feature-grid-block[data-variant="2col"] .feature-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .feature-grid-block[data-variant="3col"] .feature-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .feature-grid-block[data-variant="4col"] .feature-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: 900px) {
+      .feature-grid-block[data-variant="3col"] .feature-grid,
+      .feature-grid-block[data-variant="4col"] .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 560px) {
+      .feature-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+    .feature-item {
+      background: var(--surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+    .feature-icon {
+      width: var(--space-10);
+      height: var(--space-10);
+      background: var(--surface-overlay);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--text-xl);
+      flex-shrink: 0;
+    }
+    .feature-heading {
+      font-family: var(--font-sans);
+      font-size: var(--text-base);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0;
+    }
+    .feature-body {
+      font-family: var(--font-sans);
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+  </style>
+
+  <div class="feature-grid-inner" data-animate="fade-up">
+    <div class="feature-grid-header">
+      <div class="feature-grid-eyebrow">Core Capabilities</div>
+      <h2 class="feature-grid-title">Built for Modern Manufacturing</h2>
+      <p class="feature-grid-subtitle">Real-time insights, automated workflows, and intelligent quality control</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-item">
+        <div class="feature-icon" aria-hidden="true">⚙️</div>
+        <h3 class="feature-heading">Process Automation</h3>
+        <p class="feature-body">Reduce manual work by 80% with intelligent workflow automation. Integrate with existing systems seamlessly.</p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon" aria-hidden="true">✓</div>
+        <h3 class="feature-heading">Quality Intelligence</h3>
+        <p class="feature-body">AI-powered defect detection catches issues before they reach customers. Real-time SPC dashboards.</p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon" aria-hidden="true">📊</div>
+        <h3 class="feature-heading">Data Platform</h3>
+        <p class="feature-body">Centralize production data. Build custom reports. Make decisions based on real-time insights.</p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon" aria-hidden="true">📐</div>
+        <h3 class="feature-heading">Flexible Layouts</h3>
+        <p class="feature-body">Multiple variants per block let you mix and match without writing custom CSS.</p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon" aria-hidden="true">🔌</div>
+        <h3 class="feature-heading">Drop-In Ready</h3>
+        <p class="feature-body">Works with any stack — plain HTML, React, Vue, Astro, whatever you're building with.</p>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon" aria-hidden="true">🌙</div>
+        <h3 class="feature-heading">Dark Mode Native</h3>
+        <p class="feature-body">CSS token architecture makes dark mode a first-class citizen, not an afterthought.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Block: testimonials | Variants: default (2col grid) -->
+<section class="section testimonials-block">
+  <style scoped>
+    .testimonials-block {
+      background: var(--surface-base);
+      padding: var(--space-16) var(--space-6);
+    }
+    .testimonials-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: var(--space-12);
+    }
+    .testimonials-eyebrow {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      color: var(--cta-bg);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: var(--space-3);
+    }
+    .testimonials-title {
+      font-family: var(--font-sans);
+      font-size: var(--text-4xl);
+      font-weight: 800;
+      color: var(--text-primary);
+      margin: 0;
+      line-height: 1.15;
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-5);
+    }
+    @media (max-width: 640px) {
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .testimonial-card {
+      background: var(--surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-5);
+    }
+    .testimonial-quote-mark {
+      font-family: var(--font-sans);
+      font-size: var(--text-4xl);
+      color: var(--cta-bg);
+      line-height: 1;
+      opacity: 0.6;
+    }
+    .testimonial-text {
+      font-family: var(--font-sans);
+      font-size: var(--text-base);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin: 0;
+      flex: 1;
+    }
+    .testimonial-attribution {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      padding-top: var(--space-4);
+      border-top: 1px solid var(--border-subtle);
+    }
+    .testimonial-avatar {
+      width: var(--space-10);
+      height: var(--space-10);
+      border-radius: var(--radius-full);
+      background: var(--surface-overlay);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--text-base);
+      font-weight: 700;
+      color: var(--text-secondary);
+      flex-shrink: 0;
+      font-family: var(--font-sans);
+    }
+    .testimonial-author-name {
+      font-family: var(--font-sans);
+      font-size: var(--text-sm);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0;
+    }
+    .testimonial-author-role {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      margin: 0;
+    }
+  </style>
+
+  <div class="testimonials-inner" data-animate="fade-up">
+    <div class="testimonials-header">
+      <div class="testimonials-eyebrow">Customer Success</div>
+      <h2 class="testimonials-title">Trusted by Industry Leaders</h2>
+      <p class="testimonials-subtitle">See how leading manufacturers use MRA to optimize their operations</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <blockquote class="testimonial-card">
+        <div class="testimonial-quote-mark" aria-hidden="true">"</div>
+        <p class="testimonial-text">MRA reduced our defect rates by 45% in the first year. The ROI was immediate.</p>
+        <div class="testimonial-attribution">
+          <div class="testimonial-avatar" aria-hidden="true">JC</div>
+          <div>
+            <p class="testimonial-author-name">James Chen</p>
+            <p class="testimonial-author-role">VP Operations, Samsung Electronics</p>
+          </div>
+        </div>
+      </blockquote>
+
+      <blockquote class="testimonial-card">
+        <div class="testimonial-quote-mark" aria-hidden="true">"</div>
+        <p class="testimonial-text">Integrating MRA was painless. Our team was productive on day one.</p>
+        <div class="testimonial-attribution">
+          <div class="testimonial-avatar" aria-hidden="true">MR</div>
+          <div>
+            <p class="testimonial-author-name">Maria Rodriguez</p>
+            <p class="testimonial-author-role">Plant Manager, Siemens Industrial</p>
+          </div>
+        </div>
+      </blockquote>
+
+      <blockquote class="testimonial-card">
+        <div class="testimonial-quote-mark" aria-hidden="true">"</div>
+        <p class="testimonial-text">The dashboards give us visibility we never had before. Worth every penny.</p>
+        <div class="testimonial-attribution">
+          <div class="testimonial-avatar" aria-hidden="true">TM</div>
+          <div>
+            <p class="testimonial-author-name">Thomas Mueller</p>
+            <p class="testimonial-author-role">Engineering Director, Bosch Rexroth</p>
+          </div>
+        </div>
+      </blockquote>
+
+      <blockquote class="testimonial-card">
+        <div class="testimonial-quote-mark" aria-hidden="true">"</div>
+        <p class="testimonial-text">Our conversion rate went up 23% after switching to a Forma-built landing page. Clean design, fast load, clear hierarchy — it just works.</p>
+        <div class="testimonial-attribution">
+          <div class="testimonial-avatar" aria-hidden="true">TC</div>
+          <div>
+            <p class="testimonial-author-name">Tomás Campos</p>
+            <p class="testimonial-author-role">CEO, Pulsar</p>
+          </div>
+        </div>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+
+<!-- Block: cta | Variants: centered (default), full-width -->
+<section class="section cta-block" data-variant="centered">
+  <style scoped>
+    .cta-block {
+      padding: var(--space-16) var(--space-6);
+    }
+
+    /* Variant: centered (default) */
+    .cta-block[data-variant="centered"] {
+      background: var(--surface-base);
+    }
+    .cta-block[data-variant="centered"] .cta-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+      background: var(--surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-2xl);
+      padding: var(--space-12) var(--space-10);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-5);
+    }
+
+    /* Variant: full-width */
+    .cta-block[data-variant="full-width"] {
+      background: var(--surface-overlay);
+      border-top: 1px solid var(--border-default);
+      border-bottom: 1px solid var(--border-default);
+    }
+    .cta-block[data-variant="full-width"] .cta-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-8);
+      flex-wrap: wrap;
+    }
+    .cta-block[data-variant="full-width"] .cta-content {
+      text-align: left;
+    }
+
+    @media (max-width: 640px) {
+      .cta-block[data-variant="full-width"] .cta-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .cta-block[data-variant="full-width"] .cta-content {
+        text-align: center;
+      }
+    }
+
+    .cta-eyebrow {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      color: var(--cta-bg);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .cta-headline {
+      font-family: var(--font-sans);
+      font-size: var(--text-3xl);
+      font-weight: 800;
+      color: var(--text-primary);
+      margin: 0;
+      line-height: 1.2;
+    }
+    .cta-subtext {
+      font-family: var(--font-sans);
+      font-size: var(--text-base);
+      color: var(--text-secondary);
+      margin: 0;
+      line-height: 1.6;
+    }
+    .cta-actions {
+      display: flex;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .cta-block[data-variant="full-width"] .cta-actions {
+      flex-shrink: 0;
+      justify-content: flex-start;
+    }
+    .cta-button-primary {
+      font-family: var(--font-sans);
+      font-size: var(--text-base);
+      font-weight: 600;
+      background: var(--cta-bg);
+      color: var(--cta-text);
+      border: none;
+      border-radius: var(--radius-md);
+      padding: var(--space-3) var(--space-7);
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .cta-button-primary:hover {
+      background: var(--cta-hover);
+    }
+    .cta-button-secondary {
+      font-family: var(--font-sans);
+      font-size: var(--text-base);
+      font-weight: 500;
+      color: var(--text-secondary);
+      background: transparent;
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-md);
+      padding: var(--space-3) var(--space-7);
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .cta-button-secondary:hover {
+      border-color: var(--text-muted);
+      color: var(--text-primary);
+    }
+  </style>
+
+  <div class="cta-inner" data-animate="fade-up">
+    <div class="cta-content">
+      <div class="cta-eyebrow">Get Started</div>
+      <h2 class="cta-headline">Ready to ship your next landing page?</h2>
+      <p class="cta-subtext">Join thousands of designers and engineers using Forma to build faster, better landing pages.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="/signup" class="cta-button-primary">Start Building Free</a>
+      <a href="/docs" class="cta-button-secondary">Read the Docs</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Block: footer | Variants: default (multi-column) -->
+<footer class="section footer-block">
+  <style scoped>
+    .footer-block {
+      background: var(--surface-elevated);
+      border-top: 1px solid var(--border-subtle);
+      padding: var(--space-12) var(--space-6) var(--space-6);
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: var(--space-8);
+      margin-bottom: var(--space-10);
+    }
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 480px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .footer-brand-name {
+      font-family: var(--font-sans);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--space-3);
+    }
+    .footer-brand-desc {
+      font-family: var(--font-sans);
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+      line-height: 1.6;
+      max-width: 280px;
+    }
+    .footer-col-title {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: var(--space-4);
+    }
+    .footer-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+    .footer-links a {
+      font-family: var(--font-sans);
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: var(--text-primary);
+    }
+    .footer-legal {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: var(--space-6);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+    }
+    .footer-legal-text {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+    }
+    .footer-legal-links {
+      display: flex;
+      gap: var(--space-4);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .footer-legal-links a {
+      font-family: var(--font-sans);
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-legal-links a:hover {
+      color: var(--text-secondary);
+    }
+  </style>
+
+  <div class="footer-inner" data-animate="fade-up">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-name">MRA Limited</div>
+        <p class="footer-brand-desc">Beautiful, composable landing page blocks for modern web projects. Ship faster. Design better.</p>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Product</div>
+        <ul class="footer-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#changelog">Changelog</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="/about">About</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/press">Press</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Legal</div>
+        <ul class="footer-links">
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/terms">Terms</a></li>
+          <li><a href="/cookies">Cookies</a></li>
+          <li><a href="/security">Security</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <span class="footer-legal-text">&copy; 2025 MRA Limited. All rights reserved.</span>
+      <ul class="footer-legal-links">
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/terms">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

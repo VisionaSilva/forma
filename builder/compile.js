@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const THEMES = ['dusk', 'graphite', 'ivory'];
+const THEMES = ['dusk', 'graphite', 'ivory', 'terminal-green'];
 const PROJECT_ROOT = path.join(__dirname, '..');
 
 console.log('🏗️  Building Forma compiled CSS files...\n');

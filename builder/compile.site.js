@@ -178,7 +178,9 @@ function buildPage(pageKey, pageData) {
   <meta name="description" content="${pageData.description || ''}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  ${theme === 'terminal-green' 
+    ? '<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">'
+    : '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">'}
   <style>
 ${themeCSS}
 ${motionCSS}
@@ -187,9 +189,17 @@ ${motionCSS}
 :root {
   --surface-base: var(--surface-primary);
   --surface-card: var(--surface-elevated);
-  --radius-xl: 1rem;
+  --radius-xl: ${theme === 'terminal-green' ? '0px' : '1rem'};
   --shadow-glow: 0 0 20px var(--accent-primary, oklch(0.85 0.005 270) / 0.15);
   --shadow-lg: 0 8px 32px oklch(0 0 0 / 0.4);
+  ${theme === 'terminal-green' ? `
+  --font-sans: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-full: 9999px;
+  font-size: 14px;
+  ` : ''}
 }
 
 /* Page resets */

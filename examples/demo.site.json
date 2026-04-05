@@ -5,7 +5,7 @@
     "domain": "forma.dev",
     "description": "The constraint engine for agent-built websites"
   },
-  "theme": "graphite",
+  "theme": "terminal-green",
   "goal": "lead_generation",
   "audience": "developers",
   "traffic": "cold",

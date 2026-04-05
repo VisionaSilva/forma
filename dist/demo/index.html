@@ -7,40 +7,40 @@
   <meta name="description" content="A constraint engine that turns agent intent into deterministic, high-quality websites. Token contracts. Block library. Manifest protocol.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
 :root {
-  --surface-primary: oklch(0.12 0.002 270);
-  --surface-elevated: oklch(0.16 0.002 270);
-  --surface-sunken: oklch(0.08 0.002 270);
-  --surface-overlay: oklch(0.18 0.003 270);
-  --text-primary: oklch(0.93 0.002 270);
-  --text-secondary: oklch(0.65 0.005 270);
-  --text-muted: oklch(0.45 0.005 270);
-  --text-disabled: oklch(0.32 0.003 270);
-  --text-inverse: oklch(0.12 0.002 270);
-  --border-subtle: oklch(0.22 0.003 270);
-  --border-default: oklch(0.30 0.004 270);
-  --border-strong: oklch(0.42 0.005 270);
-  --border-focus: oklch(0.85 0.005 270);
-  --accent-primary: oklch(0.85 0.005 270);
-  --accent-primary-hover: oklch(0.93 0.003 270);
-  --accent-primary-active: oklch(0.78 0.006 270);
-  --accent-text: oklch(0.12 0.002 270);
-  --state-hover: oklch(0.95 0 0 / 0.05);
-  --state-active: oklch(0.95 0 0 / 0.08);
-  --state-focus: oklch(0.85 0.005 270 / 0.30);
-  --feedback-success: oklch(0.72 0.12 155);
-  --feedback-warning: oklch(0.78 0.12 80);
-  --feedback-danger: oklch(0.65 0.16 25);
-  --feedback-info: oklch(0.72 0.10 230);
-  --cta-bg: oklch(0.93 0.002 270);
-  --cta-text: oklch(0.12 0.002 270);
-  --cta-hover: oklch(1.0 0 0);
-  --shadow-sm: 0 1px 3px oklch(0 0 0 / 0.25);
-  --shadow-md: 0 4px 12px oklch(0 0 0 / 0.35);
-  --shadow-lg: 0 12px 32px oklch(0 0 0 / 0.45);
-  --shadow-glow: 0 0 20px oklch(0.85 0.005 270 / 0.15);
+  --surface-primary: oklch(0.10 0.008 145);
+  --surface-elevated: oklch(0.12 0.010 145);
+  --surface-sunken: oklch(0.07 0.005 145);
+  --surface-overlay: oklch(0.16 0.015 145);
+  --text-primary: oklch(0.88 0.12 145);
+  --text-secondary: oklch(0.62 0.08 145);
+  --text-muted: oklch(0.42 0.06 145);
+  --text-disabled: oklch(0.28 0.04 145);
+  --text-inverse: oklch(0.08 0.010 145);
+  --border-subtle: oklch(0.18 0.018 145);
+  --border-default: oklch(0.24 0.025 145);
+  --border-strong: oklch(0.35 0.04 145);
+  --border-focus: oklch(0.80 0.22 145);
+  --accent-primary: oklch(0.80 0.22 145);
+  --accent-primary-hover: oklch(0.88 0.24 145);
+  --accent-primary-active: oklch(0.72 0.20 145);
+  --accent-text: oklch(0.08 0.010 145);
+  --state-hover: oklch(0.80 0.22 145 / 0.08);
+  --state-active: oklch(0.80 0.22 145 / 0.12);
+  --state-focus: oklch(0.80 0.22 145 / 0.30);
+  --feedback-success: oklch(0.80 0.22 145);
+  --feedback-warning: oklch(0.78 0.14 80);
+  --feedback-danger: oklch(0.58 0.22 25);
+  --feedback-info: oklch(0.68 0.12 230);
+  --cta-bg: oklch(0.80 0.22 145);
+  --cta-text: oklch(0.08 0.010 145);
+  --cta-hover: oklch(0.88 0.24 145);
+  --shadow-sm: 0 1px 3px oklch(0 0 0 / 0.40);
+  --shadow-md: 0 4px 12px oklch(0 0 0 / 0.50);
+  --shadow-lg: 0 12px 32px oklch(0 0 0 / 0.60);
+  --shadow-glow: 0 0 20px oklch(0.80 0.22 145 / 0.25);
 }
 
 /* ==========================================================================
@@ -1071,9 +1071,17 @@ html {
 :root {
   --surface-base: var(--surface-primary);
   --surface-card: var(--surface-elevated);
-  --radius-xl: 1rem;
+  --radius-xl: 0px;
   --shadow-glow: 0 0 20px var(--accent-primary, oklch(0.85 0.005 270) / 0.15);
   --shadow-lg: 0 8px 32px oklch(0 0 0 / 0.4);
+  
+  --font-sans: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-full: 9999px;
+  font-size: 14px;
+  
 }
 
 /* Page resets */

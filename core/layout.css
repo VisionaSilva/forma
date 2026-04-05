@@ -62,6 +62,21 @@
   }
 }
 
+/* ---- Subgrid: aligned card anatomy across grid cells ---- */
+/* Usage: <div class="grid grid--3 grid--aligned"> */
+.grid--aligned > * {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+  gap: 0;
+}
+
+/* ---- Auto-fit fluid grid (no fixed column count needed) ---- */
+/* Usage: <div class="grid grid--fluid"> — columns auto-fit to 280px min */
+.grid--fluid {
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+}
+
 /* ---- Flex Utilities ---- */
 .flex {
   display: flex;

@@ -1,0 +1,131 @@
+/* ==========================================================================
+   Forma Motion — Optional scroll & interaction animations
+   Include: forma-[theme].css + forma-motion.css
+   Uses native CSS scroll-driven animations (Chrome 115+, no JS required)
+   Falls back gracefully in unsupported browsers (elements simply appear)
+   ========================================================================== */
+
+/* ---- Respect user preferences ---- */
+@media (prefers-reduced-motion: reduce) {
+  [data-animate] {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ---- Base: elements start hidden, animate in on scroll ---- */
+@supports (animation-timeline: scroll()) {
+  [data-animate] {
+    animation-fill-mode: both;
+    animation-timing-function: var(--ease-out);
+    animation-duration: var(--duration-slow);
+    animation-timeline: view();
+    animation-range: entry 0% entry 25%;
+  }
+
+  /* Fade up (default) */
+  [data-animate="fade-up"] {
+    animation-name: forma-fade-up;
+  }
+
+  /* Fade in */
+  [data-animate="fade-in"] {
+    animation-name: forma-fade-in;
+  }
+
+  /* Slide in from left */
+  [data-animate="slide-right"] {
+    animation-name: forma-slide-right;
+  }
+
+  /* Slide in from right */
+  [data-animate="slide-left"] {
+    animation-name: forma-slide-left;
+  }
+
+  /* Scale up */
+  [data-animate="scale-up"] {
+    animation-name: forma-scale-up;
+  }
+
+  /* Stagger delay utilities */
+  [data-delay="1"] { animation-delay: calc(var(--duration-fast) * 1); }
+  [data-delay="2"] { animation-delay: calc(var(--duration-fast) * 2); }
+  [data-delay="3"] { animation-delay: calc(var(--duration-fast) * 3); }
+  [data-delay="4"] { animation-delay: calc(var(--duration-fast) * 4); }
+}
+
+/* Fallback for unsupported browsers: just show the element */
+@supports not (animation-timeline: scroll()) {
+  [data-animate] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---- Keyframes ---- */
+@keyframes forma-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes forma-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes forma-slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes forma-slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes forma-scale-up {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ---- Variable font weight hover (requires Inter Variable) ---- */
+/* Usage: add class .text-animate-weight to any heading */
+.text-animate-weight {
+  transition: font-variation-settings var(--duration-normal) var(--ease-standard);
+  font-variation-settings: 'wght' var(--weight-bold);
+}
+
+.text-animate-weight:hover {
+  font-variation-settings: 'wght' var(--weight-max);
+}
+
+/* ---- Smooth scroll for the whole page ---- */
+html {
+  scroll-behavior: smooth;
+}
